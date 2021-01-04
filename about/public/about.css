@@ -1,0 +1,165 @@
+
+/* CSS Document */
+
+/*图标*/
+.q-icon{
+	display:inline-block;
+	width:15px;
+	height:17px;
+	background-image:url(img/q-icon.png);
+}
+
+
+/*顶部间隔*/
+.top .nav{
+	margin-right:-18px;
+	color:#ccc;
+}
+.top .nav a{
+	color:#000;
+	font-size:14px;
+	margin:0 18px;
+}
+.top .nav a.on,.top .nav a:hover{
+	color:#ff6600;
+}
+.header .title {
+  width: 100%;
+  height: 3px;
+  padding: 0px;
+  margin: 0px auto;
+  background: #ff6600;
+  overflow: hidden;
+}
+
+
+/*关于房探*/
+.about-box{
+	min-width:100%;
+	height:400px;
+	margin: -37px auto 58px auto;
+	padding-top:1px;
+	font-size:14px;
+	background:url(img/aboutBG.jpg) no-repeat;
+	background-size:cover;
+}
+.about-box .section{
+	width:750px;
+	margin-top:62px;
+}
+.about-box .section .title{
+	margin-bottom:20px;
+	font-weight:bold;
+	font-size:20px;
+}
+.about-box .section p{
+	line-height:24px;
+}
+.about-brief{
+	position:relative;
+	height:373px;
+	border-bottom:1px dashed #ddd;
+}
+.about-brief.last{
+	border-bottom:none;
+}
+.about-brief img{
+	position:absolute;
+	width:378px;
+	height:260px;
+}
+.about-brief div{
+	position:absolute;
+	width:620px;
+}
+.about-brief div p{
+	line-height:25px;
+}
+.about-brief div i span{
+	margin-right:25px;
+}
+
+
+/*免责申明*/
+.disclaimer-box{
+	width:1130px;
+	border:1px  solid #eee;
+	padding:30px 40px 45px 30px;
+	margin-top:-7px;
+	font-size:14px;
+}
+.disclaimer-box .title{
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.disclaimer-box p{
+	line-height:30px;
+}
+
+
+/*联系我们*/
+.contact-box{
+	width:100%;
+	height:353px;
+	margin-top:-37px;
+	margin-bottom:64px;
+	padding-top:52px;
+	background-color:#eee;
+}
+.contact-box .web-width div.y,.contact-box .web-width div.z{
+	width:600px;
+	height:255px;
+}
+.contact-box .web-width div.y div{
+	margin-top:8px;
+	margin-left:32px;
+	border:1px solid #fff;
+	width:565px;
+	height:242px;
+}
+.contact-box .contact-btn{
+	display:inline-block;
+	width:150px;
+	height:35px;
+	line-height:35px;
+	background:#ff6600;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	border-radius:3px;
+}
+.contact-box .contact-btn:hover{
+	background:#e95d00;
+}
+.contact-box .contact-btn i{
+	vertical-align:-3px;
+	margin-right:8px;
+}
+.contact-info ul{
+	margin-bottom:42px;
+}
+.contact-info ul li{
+	list-style:none;
+	display:inline-block;
+	*zoom:1;
+	*display:inline;
+	height:135px;
+	font-size:14px;
+	line-height:24px;
+	overflow:hidden;
+}
+.contact-info ul li .title{
+	color:#3399ff;
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:17px;
+}
+
+
+
+
+
+
+

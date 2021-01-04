@@ -1,0 +1,27 @@
+
+/* CSS Document */
+
+
+/*房探 经纪人列表*/
+.jjr-list-d{margin:0 -30px 0 -30px;}
+.jjr-list-d li{position:relative;display:inline-block;*zoom:1;*display:inline;width:558px;height:150px;margin:-3px 28px -3px 28px;padding:20px 0 10px 0;border-bottom:1px solid #ddd;}
+.jjr-list-d li:hover{background:#eee;}
+
+.jjr-list-d .fang-info .title{margin-bottom: 12px;line-height:25px;font-size:16px;}
+.jjr-list-d .fang-info .title a{color:#000;}
+
+.jjr-list-d .consultation{position:absolute;top:20px;right:20px;}
+
+.jjr-list-d li div.z a img{height:130px;}
+
+/*列表链接*/
+.black-link a{color:#000;}
+.black-link a:hover{color:#ff6600;}
+
+
+
+
+
+
+
+

@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>找回密码_房探007</title>
+<link href="../css/css.css" type="text/css" rel="stylesheet">
+<script src="../themes/default/js/jquery.min.js" type="text/javascript"></script>
+<script src="../js/register.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header_top">
+		<div class="main logoWavp">
+			<a href="../index1.html" class="fl" title="房探007"><img src="../images/logo_007.jpg" width="110"></a>
+			<span class="fr">
+				<a href="../index1.html" title="返回首页">返回首页</a>
+			</span>
+		</div>
+	</div>
+	<div class="shadow"></div>
+	<div class="main">
+		<div class="header">
+			<span class="fl">找回密码</span>
+		</div>
+		<div class="main">
+		<form action="/register/forget_update.htm" method="post" id="forget_form" name="forget_form">
+			<div class="reg_frame">
+				<div class="overflow">
+					<div class="regbox">
+						<ul>
+							<li>
+								<label></label>
+								<div class="fl nvite">
+									<p><strong>通过手机号码找回</strong></p>
+									<p>输入您帐号的手机号码，将以短信的方式给您发送校验码！</p>
+								</div>
+							</li>
+							<li>
+								<label><span class="fontred">*</span>手机：</label>
+								<div class="fl">
+									<input name="tel" id="tel" type="text" class="utext" tip="请输入手机号码">
+									<div class="dis_box"><em></em><span></span></div>
+								</div>
+							</li>
+							<li>
+								<label><span class="fontred">*</span>校验码：</label>
+								<div class="fl" style="position: relative; ">
+									<input name="random" id="random" type="text" style="float:left; width:480px;" class="utext" tip="请输入手机收到的校验码">
+									<input id="req_random" type="button" value="获取校验码" class="ubtn" style="margin-left:-96px;width:95px;">
+									<div class="dis_box" style="clear:both;padding-top:5px;"><em></em><span></span></div>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+<style>
+.yzbox2 {
+    height: 77px;
+    left: 83%;
+    position: absolute;
+    top: -81px;
+    width: 196px;
+}
+
+.yzboxa {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #dbf2fe none repeat scroll 0 0;
+    border-color: #78c2f5 #78c2f5 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    height: 50px;
+    padding: 10px 7px;
+    width: 180px;
+}
+
+.yzboxa01 {
+    height: 23px;
+    width: 180px;
+}
+.yzboxa01 .s1 {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    margin-right: 8px;
+    overflow: hidden;
+    width: 80px;
+}
+
+.yzboxa01 .s2 {
+    float: left;
+    height: 23px;
+    overflow: hidden;
+}
+
+.yzboxa01inp {
+    border: 1px solid #6dbfff;
+    color: #000;
+    float: left;
+    font-size: 12px;
+    height: 19px;
+    line-height: 19px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+    padding:1px 3px;
+}
+
+.yzboxa01but {
+    background: rgba(0, 0, 0, 0) url("../images/081402.gif") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+    width: 44px;
+}
+.yzboxa02 {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 8px;
+    width: 180px;
+}
+
+.yzboxa02 .s1 {
+    color: #0097ff;
+    float: left;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: 80px;
+}
+
+.yzboxa02 .s2 {
+    float: left;
+}
+.yzboxb {
+    background: rgba(0, 0, 0, 0) url("../images/081401.gif") no-repeat scroll center bottom;
+    font-size: 0;
+    height: 7px;
+    width: 196px;
+}
+</style>								
+						<div style="display:none;" id="div_captcha" class="yzbox2">
+                            <div class="yzboxa">
+                                <div class="yzboxa01">
+                                    <div class="s1">
+                                        <img style="cursor:pointer;" id="imgcode" src="../comm/captcha.jpg">
+                                    </div>
+                                    <div class="s2">
+                                        <input type="text" id="txt_captcha" class="yzboxa01inp" maxlength="4" value="">
+                                        <input type="button" id="btn_captcha" value="确认" class="yzboxa01but">
+                                    </div>
+                                </div>
+                                <div class="yzboxa02">
+                                    <div class="s1">
+                                        <a onclick="register.captcha_refresh();" href="javascript:void(0);">看不清?</a>
+                                    </div>
+                                    <div id="showWord" class="s2">请输入验证码</div>
+                                </div>
+                            </div>
+                            <div class="yzboxb"></div>
+                        </div>							
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								</div>
+							</li>
+							<li>
+								<label><span class="fontred">*</span>密码：</label>
+								<div class="fl">
+									<input id="pword" name="pword" maxlength="14" type="password" class="utext" tip="由6-14位字母、数字组成">
+									<div class="dis_box"><em></em><span></span></div>
+								</div>
+							</li>
+							<li>
+								<label><span class="fontred">*</span>再输一次密码：</label>
+								<div class="fl">
+									<input id="repassword" name="repassword" type="password" class="utext" tip="再输一次密码">
+									<div class="dis_box"><em></em><span></span></div>
+								</div>
+							</li>
+							<li>
+								<label></label>
+								<div class="fl">
+									<a href="javascript:void(0);" id="forget_button" class="orangeBtn">提 交</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            </form>
+		</div>
+	</div>
+	﻿<div class="footer">
+  <p><a href="../about/aboutus.html">关于房探</a> &nbsp; | &nbsp; <a href="../about/products.html">产品介绍</a> &nbsp; | &nbsp; <a href="../about/contacts.html">联系我们</a> &nbsp; | &nbsp; <a href="../about/statement.html">免责声明</a></p>
+  <p style="color:#74808b;">版权所有 www.15zufang.cn 浙ICP备11045364号-2</p>
+</div>
+
+<div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F79f75de0162fdd2c54dce979ce05f82a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		register.forget();
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+/* CSS Document */
+
+.mian_info{float:left; width:755px; _margin-left:-5px; background:#f3f1f1;}
+.fl{float:left;}
+.fr{float:right;}
+.mian_info .tj_icon{position:absolute; top:10px; left:10px;_left:0px;}
+.image{position:relative; overflow:hidden;}
+
+.rec_info{background:url(http://gz.fangtan007.com/themes/default/images/line_12.jpg) left top no-repeat; width:572px; }
+.rec_info h3{ font-weight:normal; font-size:26px; color:#000; margin:8px 0 8px 15px;}
+.rec_info_text{background:url(http://gz.fangtan007.com/themes/default/images/line_15_1.jpg) top left no-repeat;padding-top:10px; width:552px; height:75px; margin-left:20px;}
+.rec_info_text {font-size:14px; color:#6c6c6c;}
+.mian_info i, .h_intro  i{color:#f7565b; font-size:26px; font-style:normal;}
+.mian_info del{color:#939393; font-size:12px;}
+.rec_bottom{width:110px; margin:0 auto; overflow:hidden; margin-top:20px;}
+.rec_bottom a{display:block; width:30px; height:5px; background:#a0a0a0; float:left; zoom:1;}
+.rec_bottom a.on{background:#ffc000;}

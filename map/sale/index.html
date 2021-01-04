@@ -1,0 +1,1292 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="义务地图二手房，义务二手房小区地图">
+    <meta name="description" content="义务房探007地图找房频道，方便直观地找到义务各城区房源信息，地图查看义务小区楼盘周边学校,银行,医院等生活信息。">
+	<title>义务地图二手房_义务二手房小区地图–义务房探007网</title>	
+	<link type="text/css" rel="stylesheet" href="../../themes/default/css/map.css">
+</head>
+<script src="../../themes/default/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../themes/default/js/Chart.js"></script>
+<!--[if lt IE 9]>
+<script src="/themes/default/js/html5shiv.js?v=1609763789566"></script>
+<script src="/themes/default/js/respond.min.js?v=1609763789566"></script>
+<script src="/themes/default/js/excanvas.js?v=1609763789566"></script>
+<![endif]-->
+
+<body>
+<div id="header">
+	<div class="logo"><a href="../../index.html"><img src="../../themes/default/images/map/LOGO.png"></a></div>
+    <span class="city"><a href="../../index1.html"><span>义务</span><i class="down-icon-ss"></i></a></span>
+    
+    <div class="searchBar clearfix"><input name="buildname" id="buildname" class="searchText" type="text" placeholder="小区名称" onkeyup="onkeyword(this)" onclick="onkeyword(this)"><input id="searchBtn" class="searchBtn pointer" type="button">
+        <div class="search-result-box" style="display: none;"></div>
+    </div>
+    <ul>
+    	<li><a href="../../index.html">首页</a></li>
+        <li><a href="" class="on">二手房</a></li>
+        <li><a href="javascript:;">租房</a></li>
+        <li><a href="javascript:;">小区</a></li>
+    </ul>
+</div>
+
+<div id="panel" class="listStyle">
+	<div class="menubar">
+        <span class="sort"><span>最新</span><i class="sequence-icon top-gray"></i></span>
+        <ul id="sort_ul">
+        	<li field="" order=""><span>排序</span><i class="down-icon-lit"></i></li>
+        	<li field="lastModify" order="asc"><span>最新</span><i class="sequence-icon top-gray"></i></li>
+            <li field="price" order="asc"><span>价格</span><i class="sequence-icon top-gray"></i></li>
+            <li field="area" order="asc"><span>面积</span><i class="sequence-icon top-gray"></i></li>
+        </ul>
+        <span class="fr">找到<span id="totalCount">25631</span>套房源</span>
+    </div>
+    <div class="cityBox">
+    	<div>
+    		<img src="../../themes/default/images/map/city.gif"><p class="cityName" id="cityName">义务</p><p class="cityDistrict C999" id="regionCount">共16个区</p>
+    		<p class="cityPrice Cred"><em id="priceChart">1.487</em><span id="priceUnit">万</span></p><p class="cityCompare C999">环比 <span id="priceOr">-0.17% ↓</span></p>
+    	</div>
+	</div>
+    <div class="listBox">
+    	<ul id="list">
+    		<li onclick="javascript:window.open('/sale/detail/833284')">
+            	<a><img src="http://img.518fang.com/img4/518upload/201602/360/990/m_f984e9b742824bca868ac3c89b66d159.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">绿庭雅苑二期南岸春天 带装修 准现楼 多条公交地铁贯穿其中</a></p>
+           		<p class="info">南岸春天  120平米   3室2厅<span class="price"><em>80</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833285')">
+            	<a><img src="http://img.518fang.com/img4/518upload/201602/257/545/m_d16c718e3f3d4a8a80361a8ec8c791a6.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">南沙性价比最高的楼盘  时代长岛</a></p>
+           		<p class="info">时代长岛  89平米   2室2厅<span class="price"><em>75</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833286')">
+            	<a><img src="http://img.518fang.com/img2/518upload/201602/742/287/m_f74504d4c67b41c1aa0cda91272baecd.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">温馨里市桥地铁3号沿线 生活交通便利 双南向卧室 双阳台</a></p>
+           		<p class="info">温馨里  86平米   3室2厅<span class="price"><em>139</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833287')">
+            	<a><img src="http://img.518fang.com/img1/518upload/201602/393/070/m_bd691039aabf4f419f6f1b26151061bc.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">狮岭中国美林湖 3室2厅2卫 140㎡大气三房一个会呼吸的</a></p>
+           		<p class="info">中国美林湖  140平米   3室2厅<span class="price"><em>75</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833288')">
+            	<a><img src="http://img.518fang.com/img2/518upload/201602/605/099/m_149eb6d3bf75405faedb2e66af942f34.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">天誉半岛 望江楼王 带学位 低价放送</a></p>
+           		<p class="info">天誉半岛  350平米   3室2厅<span class="price"><em>1200</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833289')">
+            	<a><img src="http://img.518fang.com/img4/518upload/201602/048/399/m_5b33ed7eead14280878091627b1efa1d.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">(出售) 力达广场 双地铁东站旁 现楼出售即买即收租 不限购</a></p>
+           		<p class="info">力达广场  50平米   1室1厅<span class="price"><em>135</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833290')">
+            	<a><img src="http://img.518fang.com/img3/518upload/201602/994/217/m_c14dc53e5f1a49e9a825a6cd78f4e5e1.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">翡翠南湾全新一手6000元/方南沙新区投资自住皆可</a></p>
+           		<p class="info">翡翠蓝湾  107平米   3室2厅<span class="price"><em>70</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833291')">
+            	<a><img src="http://img.518fang.com/img1/518upload/201602/527/853/m_ebc1caac6a8046d0aa13fa3e298853da.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">景业荔都 117方3房2厅 风景优美的五星级生态康体会所</a></p>
+           		<p class="info">景业荔都花园  117平米   3室2厅<span class="price"><em>70</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833292')">
+            	<a><img src="http://img.518fang.com/img2/518upload/201602/057/096/m_7ddfadcff9fa42db87da82549b49dfe9.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">新世界 凯粤湾一手楼盘 现正热售 性价比高 一线望江</a></p>
+           		<p class="info">新世界凯粤湾  99平米   3室2厅<span class="price"><em>240</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+    		<li onclick="javascript:window.open('/sale/detail/833293')">
+            	<a><img src="http://img.518fang.com/img1/518upload/201602/517/804/m_6d7b4d0259bd4a208b7566b27a9553fb.jpg" onerror="this.src='/themes/default/images/house_none.png'"></a>
+            	<p class="title"><a href="##">时代云图 南沙金州双地铁 中心繁华地段 名校环绕 送精装</a></p>
+           		<p class="info">时代云图  104平米   4室2厅<span class="price"><em>120</em>万</span></p>
+            	<p class="fangTag">
+				</p>
+            </li>
+		</ul>
+		<div class="prompt">
+	    	<p class="f">哦，没有您要的房源</p>
+	        <p><span>请更换条件再试</span></p>
+	    </div>
+    </div>
+    <div class="pageBox">
+    	<a id="firstPage" href="##" class="pageButton" page="1">首页</a>
+    	<a id="prevPage" href="##" class="pageButton" page="1">上一页</a>
+    	<span class="pageNum">1/2564</span>
+    	<a id="nextPage" href="##" class="pageButton" page="2">下一页</a>
+	</div>
+</div>
+<div id="option">
+    <div id="oCircle" class="selectBox" value="商圈">
+    <span>商圈</span><i class="down-icon"></i>
+    	<ul class="popList vertical">
+            <li id="ocDistrict" class="district" style="display:block">
+                <ul>
+                    <li class="bx" id="noRegionLi">不限</li>
+                                        <li><span>天河</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440106" regionname="天河" x="113.368212" y="23.130355">不限</li>
+                            <li title="2" boardid="2" boardname="长湴" x="113.363555908203" y="23.177188873291">长湴</li>
+                            <li title="3" boardid="3" boardname="车陂" x="113.397338867188" y="23.1330814361572">车陂</li>
+                            <li title="4" boardid="4" boardname="东站" x="113.331329345703" y="23.1557216644287">东站</li>
+                            <li title="5" boardid="5" boardname="东圃" x="113.408843994141" y="23.1180419921875">东圃</li>
+                            <li title="6" boardid="6" boardname="东莞庄" x="113.343559265137" y="23.1595973968506">东莞庄</li>
+                            <li title="7" boardid="7" boardname="岗顶" x="113.347946166992" y="23.1382026672363">岗顶</li>
+                            <li title="8" boardid="8" boardname="华景新城" x="113.366325378418" y="23.1468353271484">华景新城</li>
+                            <li title="9" boardid="9" boardname="汇景新城" x="113.374397277832" y="23.1566944122314">汇景新城</li>
+                            <li title="10" boardid="10" boardname="龙洞" x="113.37247467041" y="23.2060241699219">龙洞</li>
+                            <li title="11" boardid="11" boardname="龙口西" x="113.342224121094" y="23.1458282470703">龙口西</li>
+                            <li title="12" boardid="12" boardname="龙口东" x="113.347267150879" y="23.1483459472656">龙口东</li>
+                            <li title="13" boardid="13" boardname="沙河" x="113.329544067383" y="23.1658878326416">沙河</li>
+                            <li title="14" boardid="14" boardname="沙太南" x="113.328460693359" y="23.1727962493896">沙太南</li>
+                            <li title="15" boardid="15" boardname="石牌桥" x="113.337249755859" y="23.1367416381836">石牌桥</li>
+                            <li title="16" boardid="16" boardname="上社" x="113.373146057129" y="23.1377964019775">上社</li>
+                            <li title="17" boardid="17" boardname="天河北" x="113.323509216309" y="23.1470737457275">天河北</li>
+                            <li title="18" boardid="18" boardname="天河公园" x="113.373489379883" y="23.1340427398682">天河公园</li>
+                            <li title="19" boardid="19" boardname="天河南" x="113.333923339844" y="23.1370315551758">天河南</li>
+                            <li title="20" boardid="20" boardname="体育中心" x="113.336090087891" y="23.1416454315186">体育中心</li>
+                            <li title="21" boardid="21" boardname="体育西" x="113.327529907227" y="23.1351585388184">体育西</li>
+                            <li title="22" boardid="22" boardname="天润路" x="113.34398651123" y="23.1490535736084">天润路</li>
+                            <li title="23" boardid="23" boardname="棠下" x="113.386047363281" y="23.1332378387451">棠下</li>
+                            <li title="24" boardid="24" boardname="天河客运站" x="113.350379943848" y="23.1764640808105">天河客运站</li>
+                            <li title="25" boardid="25" boardname="五山" x="113.363052368164" y="23.1632652282715">五山</li>
+                            <li title="26" boardid="26" boardname="五山路口" x="113.348640441895" y="23.1459407806396">五山路口</li>
+                            <li title="27" boardid="27" boardname="员村" x="113.363548278809" y="23.1193065643311">员村</li>
+                            <li title="28" boardid="28" boardname="粤垦" x="113.337348937988" y="23.1593551635742">粤垦</li>
+                            <li title="29" boardid="29" boardname="员村四横路" x="113.37670135498" y="23.1197700500488">员村四横路</li>
+                            <li title="30" boardid="30" boardname="员村二横路" x="113.371162414551" y="23.1190319061279">员村二横路</li>
+                            <li title="31" boardid="31" boardname="燕塘" x="113.333793640137" y="23.1658363342285">燕塘</li>
+                            <li title="32" boardid="32" boardname="珠江新城西" x="113.323593139648" y="23.1283149719238">珠江新城西</li>
+                            <li title="33" boardid="33" boardname="珠江新城中" x="113.337066650391" y="23.1268978118896">珠江新城中</li>
+                            <li title="34" boardid="34" boardname="珠江新城东" x="113.348747253418" y="23.1297798156738">珠江新城东</li>
+                            <li title="162" boardid="162" boardname="长湴" x="113.363555908203" y="23.177188873291">长湴</li>
+                            <li title="163" boardid="163" boardname="车陂" x="113.397338867188" y="23.1330814361572">车陂</li>
+                            <li title="164" boardid="164" boardname="东站" x="113.331329345703" y="23.1557216644287">东站</li>
+                            <li title="165" boardid="165" boardname="东圃" x="113.408843994141" y="23.1180419921875">东圃</li>
+                            <li title="166" boardid="166" boardname="东莞庄" x="113.343559265137" y="23.1595973968506">东莞庄</li>
+                            <li title="167" boardid="167" boardname="岗顶" x="113.347946166992" y="23.1382026672363">岗顶</li>
+                            <li title="168" boardid="168" boardname="华景新城" x="113.366325378418" y="23.1468353271484">华景新城</li>
+                            <li title="169" boardid="169" boardname="汇景新城" x="113.374397277832" y="23.1566944122314">汇景新城</li>
+                            <li title="170" boardid="170" boardname="龙洞" x="113.37247467041" y="23.2060241699219">龙洞</li>
+                            <li title="171" boardid="171" boardname="龙口西" x="113.342224121094" y="23.1458282470703">龙口西</li>
+                            <li title="172" boardid="172" boardname="龙口东" x="113.347267150879" y="23.1483459472656">龙口东</li>
+                            <li title="173" boardid="173" boardname="沙河" x="113.329544067383" y="23.1658878326416">沙河</li>
+                            <li title="174" boardid="174" boardname="沙太南" x="113.328460693359" y="23.1727962493896">沙太南</li>
+                            <li title="175" boardid="175" boardname="石牌桥" x="113.337249755859" y="23.1367416381836">石牌桥</li>
+                            <li title="176" boardid="176" boardname="上社" x="113.373146057129" y="23.1377964019775">上社</li>
+                            <li title="177" boardid="177" boardname="天河北" x="113.323509216309" y="23.1470737457275">天河北</li>
+                            <li title="178" boardid="178" boardname="天河公园" x="113.373489379883" y="23.1340427398682">天河公园</li>
+                            <li title="179" boardid="179" boardname="天河南" x="113.333923339844" y="23.1370315551758">天河南</li>
+                            <li title="180" boardid="180" boardname="体育中心" x="113.336090087891" y="23.1416454315186">体育中心</li>
+                            <li title="181" boardid="181" boardname="体育西" x="113.327529907227" y="23.1351585388184">体育西</li>
+                            <li title="182" boardid="182" boardname="天润路" x="113.34398651123" y="23.1490535736084">天润路</li>
+                            <li title="183" boardid="183" boardname="棠下" x="113.386047363281" y="23.1332378387451">棠下</li>
+                            <li title="184" boardid="184" boardname="天河客运站" x="113.350379943848" y="23.1764640808105">天河客运站</li>
+                            <li title="185" boardid="185" boardname="五山" x="113.363052368164" y="23.1632652282715">五山</li>
+                            <li title="186" boardid="186" boardname="五山路口" x="113.348640441895" y="23.1459407806396">五山路口</li>
+                            <li title="187" boardid="187" boardname="员村" x="113.363548278809" y="23.1193065643311">员村</li>
+                            <li title="188" boardid="188" boardname="粤垦" x="113.337348937988" y="23.1593551635742">粤垦</li>
+                            <li title="189" boardid="189" boardname="员村四横路" x="113.37670135498" y="23.1197700500488">员村四横路</li>
+                            <li title="190" boardid="190" boardname="员村二横路" x="113.371162414551" y="23.1190319061279">员村二横路</li>
+                            <li title="191" boardid="191" boardname="燕塘" x="113.333793640137" y="23.1658363342285">燕塘</li>
+                            <li title="192" boardid="192" boardname="珠江新城西" x="113.323593139648" y="23.1283149719238">珠江新城西</li>
+                            <li title="193" boardid="193" boardname="珠江新城中" x="113.337066650391" y="23.1268978118896">珠江新城中</li>
+                            <li title="194" boardid="194" boardname="珠江新城东" x="113.348747253418" y="23.1297798156738">珠江新城东</li>
+                            <li title="436" boardid="436" boardname="广园东" x="113.599540710449" y="23.1279315948486">广园东</li>
+                            <li title="437" boardid="437" boardname="后天河北" x="113.317161560059" y="23.1514759063721">后天河北</li>
+                            <li title="438" boardid="438" boardname="石牌" x="113.343650817871" y="23.1379680633545">石牌</li>
+                            <li title="439" boardid="439" boardname="天河" x="113.328262329102" y="23.1390571594238">天河</li>
+                            <li title="440" boardid="440" boardname="珠江新城" x="113.332527160645" y="23.1295433044434">珠江新城</li>
+                            <li title="441" boardid="441" boardname="植物园" x="113.372299194336" y="23.1924571990967">植物园</li>
+                            <li title="452" boardid="452" boardname="华利路" x="113.321901" y="23.123651">华利路</li>
+                            <li title="613" boardid="613" boardname="沙太北路" x="113.339744" y="23.186074">沙太北路</li>
+                            <li title="614" boardid="614" boardname="长福路" x="113.355127" y="23.171726">长福路</li>
+                            <li title="615" boardid="615" boardname="天寿路" x="113.339229" y="23.151873">天寿路</li>
+                            <li title="616" boardid="616" boardname="先烈东二横路" x="113.313937" y="23.15655">先烈东二横路</li>
+                            <li title="617" boardid="617" boardname="濂泉路" x="113.3127" y="23.165866">濂泉路</li>
+                            <li title="618" boardid="618" boardname="粤汉路" x="113.358429" y="23.15795">粤汉路</li>
+                            <li title="619" boardid="619" boardname="林和东路" x="113.335101" y="23.154826">林和东路</li>
+                            <li title="620" boardid="620" boardname="燕岭路" x="113.349585" y="23.175421">燕岭路</li>
+                            <li title="621" boardid="621" boardname="义务大道中" x="113.321577" y="23.144305">义务大道中</li>
+                            <li title="622" boardid="622" boardname="广园东路" x="113.309101" y="23.160691">广园东路</li>
+                            <li title="623" boardid="623" boardname="中山大道中" x="113.433081" y="23.118781">中山大道中</li>
+                            <li title="624" boardid="624" boardname="沾益直街" x="113.337098" y="23.153448">沾益直街</li>
+                            <li title="625" boardid="625" boardname="石鼓岭" x="113.325218" y="23.167311">石鼓岭</li>
+                            <li title="626" boardid="626" boardname="华夏路" x="113.328" y="23.119945">华夏路</li>
+                            <li title="627" boardid="627" boardname="天河东路" x="113.340246" y="23.141265">天河东路</li>
+                            <li title="628" boardid="628" boardname="五山路" x="113.358448" y="23.15812">五山路</li>
+                            <li title="629" boardid="629" boardname="中山大道西" x="113.39841" y="23.130921">中山大道西</li>
+                            <li title="630" boardid="630" boardname="科韵路" x="113.381485" y="23.130194">科韵路</li>
+                            <li title="631" boardid="631" boardname="义务大道北" x="113.354504" y="23.249314">义务大道北</li>
+                            <li title="632" boardid="632" boardname="东莞庄一横路" x="113.342175" y="23.156874">东莞庄一横路</li>
+                            <li title="633" boardid="633" boardname="河水大街" x="113.337528" y="23.178753">河水大街</li>
+                            <li title="634" boardid="634" boardname="棠德南路" x="113.387143" y="23.138675">棠德南路</li>
+                            <li title="635" boardid="635" boardname="黄埔大道中" x="113.372473" y="23.127922">黄埔大道中</li>
+                            <li title="636" boardid="636" boardname="祥元路" x="113.267129" y="23.159753">祥元路</li>
+                            <li title="637" boardid="637" boardname="黄埔大道西" x="113.331165" y="23.133339">黄埔大道西</li>
+                            <li title="638" boardid="638" boardname="龙岗东路" x="113.31562" y="23.155687">龙岗东路</li>
+                            <li title="639" boardid="639" boardname="沙太路" x="113.339621" y="23.185447">沙太路</li>
+                            <li title="640" boardid="640" boardname="荷光路" x="113.379362" y="23.138582">荷光路</li>
+                            <li title="641" boardid="641" boardname="天河路" x="113.320458" y="23.140018">天河路</li>
+                            <li title="642" boardid="642" boardname="瘦狗岭路" x="113.334262" y="23.157207">瘦狗岭路</li>
+                            <li title="643" boardid="643" boardname="兴华路" x="113.330245" y="23.163161">兴华路</li>
+                            <li title="644" boardid="644" boardname="保利心语" x="113.337007" y="23.127996">保利心语</li>
+                            <li title="645" boardid="645" boardname="华景路" x="113.366692" y="23.147254">华景路</li>
+                            <li title="646" boardid="646" boardname="海安路" x="113.345747" y="23.130127">海安路</li>
+                            <li title="647" boardid="647" boardname="金穗路" x="113.349136" y="23.127655">金穗路</li>
+                            <li title="648" boardid="648" boardname="银定塘" x="113.338306" y="23.166709">银定塘</li>
+                            <li title="649" boardid="649" boardname="燕塘社区" x="113.333606" y="23.168117">燕塘社区</li>
+                            <li title="650" boardid="650" boardname="建中路" x="113.378511" y="23.132462">建中路</li>
+                            <li title="651" boardid="651" boardname="程界子富新邨" x="113.368275" y="23.116434">程界子富新邨</li>
+                            <li title="652" boardid="652" boardname="新城花园" x="113.370123" y="23.116608">新城花园</li>
+                            <li title="653" boardid="653" boardname="怡景大街" x="113.361216" y="23.122267">怡景大街</li>
+                            <li title="654" boardid="654" boardname="天河东" x="113.339877" y="23.144224">天河东</li>
+                            <li title="655" boardid="655" boardname="紫荆街" x="113.333432" y="23.151146">紫荆街</li>
+                            <li title="656" boardid="656" boardname="广园快速路" x="113.502755" y="23.121361">广园快速路</li>
+                            <li title="657" boardid="657" boardname="花城大道" x="113.335926" y="23.124545">花城大道</li>
+                            <li title="658" boardid="658" boardname="程介坑" x="113.378403" y="23.126763">程介坑</li>
+                            <li title="659" boardid="659" boardname="侨怡一街" x="113.336628" y="23.145755">侨怡一街</li>
+                            <li title="660" boardid="660" boardname="水荫路" x="113.318594" y="23.144874">水荫路</li>
+                            <li title="661" boardid="661" boardname="环市东路" x="113.293481" y="23.143038">环市东路</li>
+                            <li title="662" boardid="662" boardname="冼村大厦" x="113.334449" y="23.12739">冼村大厦</li>
+                            <li title="663" boardid="663" boardname="青年路" x="113.536977" y="23.071259">青年路</li>
+                            <li title="664" boardid="664" boardname="长兴路" x="113.37027" y="23.173449">长兴路</li>
+                            <li title="665" boardid="665" boardname="岳洲路" x="113.359159" y="23.157975">岳洲路</li>
+                            <li title="666" boardid="666" boardname="茶山路" x="113.359934" y="23.154336">茶山路</li>
+                            <li title="667" boardid="667" boardname="六运三街" x="113.333562" y="23.135557">六运三街</li>
+                            <li title="668" boardid="668" boardname="华工北区" x="113.348498" y="23.169956">华工北区</li>
+                            <li title="669" boardid="669" boardname="华南理工大学" x="113.351579" y="23.157704">华南理工大学</li>
+                            <li title="670" boardid="670" boardname="建华路" x="113.378609" y="23.128113">建华路</li>
+                            <li title="671" boardid="671" boardname="龙口中路" x="113.348319" y="23.145356">龙口中路</li>
+                            <li title="672" boardid="672" boardname="华阳街" x="113.33601" y="23.142772">华阳街</li>
+                            <li title="673" boardid="673" boardname="林和" x="113.3329" y="23.153223">林和</li>
+                            <li title="674" boardid="674" boardname="花生寮" x="113.322646" y="23.15564">花生寮</li>
+                            <li title="675" boardid="675" boardname="新世界花园别墅" x="113.307798" y="23.118129">新世界花园别墅</li>
+                            <li title="676" boardid="676" boardname="大华二路" x="113.206379" y="23.405675">大华二路</li>
+                            <li title="677" boardid="677" boardname="冼村路" x="113.334653" y="23.128336">冼村路</li>
+                            <li title="678" boardid="678" boardname="林和中路" x="113.332288" y="23.147205">林和中路</li>
+                            <li title="679" boardid="679" boardname="林和西路" x="113.33036" y="23.147071">林和西路</li>
+                            <li title="680" boardid="680" boardname="体育东路" x="113.334572" y="23.134069">体育东路</li>
+                            <li title="681" boardid="681" boardname="燕都路" x="113.33366" y="23.164104">燕都路</li>
+                            <li title="682" boardid="682" boardname="富华中路" x="113.372811" y="22.953332">富华中路</li>
+                            <li title="683" boardid="683" boardname="海明路" x="113.346903" y="23.121631">海明路</li>
+                            <li title="684" boardid="684" boardname="凤凰阁" x="113.339122" y="23.146029">凤凰阁</li>
+                            <li title="685" boardid="685" boardname="马场路" x="113.350008" y="23.122504">马场路</li>
+                            <li title="686" boardid="686" boardname="棠石路" x="113.374597" y="23.128661">棠石路</li>
+                            <li title="687" boardid="687" boardname="元岗路" x="113.348703" y="23.181476">元岗路</li>
+                            <li title="688" boardid="688" boardname="侨苑小区" x="113.325134" y="23.145688">侨苑小区</li>
+                            <li title="689" boardid="689" boardname="中山大道北" x="114.711948" y="23.768709">中山大道北</li>
+                            <li title="690" boardid="690" boardname="省消防总队" x="113.349453" y="23.151745">省消防总队</li>
+                            <li title="691" boardid="691" boardname="金颖东一街" x="113.362553" y="23.151408">金颖东一街</li>
+                            <li title="692" boardid="692" boardname="银利街" x="113.329226" y="23.173217">银利街</li>
+                            <li title="693" boardid="693" boardname="沙和路" x="113.982845" y="22.931017">沙和路</li>
+                            <li title="694" boardid="694" boardname="水荫一横路" x="113.314552" y="23.150498">水荫一横路</li>
+                            <li title="695" boardid="695" boardname="天平架" x="113.327936" y="23.165211">天平架</li>
+                            <li title="696" boardid="696" boardname="龙岗路" x="113.316748" y="23.155088">龙岗路</li>
+                            <li title="697" boardid="697" boardname="先烈东路" x="113.314701" y="23.15469">先烈东路</li>
+                            <li title="698" boardid="698" boardname="天府路" x="113.368832" y="23.138926">天府路</li>
+                            <li title="699" boardid="699" boardname="棠东东路" x="113.396206" y="23.134007">棠东东路</li>
+                            <li title="700" boardid="700" boardname="黄村" x="113.413664" y="23.138521">黄村</li>
+                            <li title="701" boardid="701" boardname="同和路" x="113.335172" y="23.211995">同和路</li>
+                            <li title="702" boardid="702" boardname="猎德路" x="113.336654" y="23.119422">猎德路</li>
+                            <li title="703" boardid="703" boardname="义务大道南" x="113.322425" y="23.109566">义务大道南</li>
+                            <li title="704" boardid="704" boardname="伍仙桥" x="113.323803" y="23.171809">伍仙桥</li>
+                            <li title="705" boardid="705" boardname="黄埔大道东" x="113.42592" y="23.108647">黄埔大道东</li>
+                            <li title="706" boardid="706" boardname="工业大道北" x="113.260915" y="23.102815">工业大道北</li>
+                            <li title="716" boardid="716" boardname="天河直街" x="113.324632" y="23.143138">天河直街</li>
+                            <li title="963" boardid="963" boardname="广和路" x="113.322956" y="23.137663">广和路</li>
+                            <li title="990" boardid="990" boardname="东圃二马路" x="113.407351" y="23.11901">东圃二马路</li>
+                            <li title="991" boardid="991" boardname="平川路" x="113.352003" y="23.130194">平川路</li>
+                            <li title="992" boardid="992" boardname="东莞庄路" x="113.343047" y="23.160936">东莞庄路</li>
+                        </ul>
+                    </li>
+                    <li><span>海珠</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440105" regionname="海珠" x="113.323704" y="23.089122">不限</li>
+                            <li title="57" boardid="57" boardname="宝岗" x="113.269454956055" y="23.1063137054443">宝岗</li>
+                            <li title="58" boardid="58" boardname="滨江东" x="113.300598144531" y="23.1097469329834">滨江东</li>
+                            <li title="59" boardid="59" boardname="滨江西" x="113.267730712891" y="23.1144218444824">滨江西</li>
+                            <li title="60" boardid="60" boardname="滨江中" x="113.288696289063" y="23.1158199310303">滨江中</li>
+                            <li title="61" boardid="61" boardname="昌岗路" x="113.281272888184" y="23.0940856933594">昌岗路</li>
+                            <li title="63" boardid="63" boardname="东晓南" x="113.300491333008" y="23.0799083709717">东晓南</li>
+                            <li title="77" boardid="77" boardname="中大" x="113.30167388916" y="23.1028671264648">中大</li>
+                            <li title="222" boardid="222" boardname="赤岗" x="113.341567993164" y="23.1017723083496">赤岗</li>
+                            <li title="224" boardid="224" boardname="工业大道北" x="113.265228271484" y="23.0912532806396">工业大道北</li>
+                            <li title="225" boardid="225" boardname="工业大道南" x="113.294380187988" y="23.0700969696045">工业大道南</li>
+                            <li title="226" boardid="226" boardname="义务大道南" x="113.320976257324" y="23.0900764465332">义务大道南</li>
+                            <li title="227" boardid="227" boardname="江南大道" x="113.285446166992" y="23.0926418304443">江南大道</li>
+                            <li title="228" boardid="228" boardname="江南西" x="113.277374267578" y="23.098274230957">江南西</li>
+                            <li title="229" boardid="229" boardname="江燕路" x="113.285621643066" y="23.0848121643066">江燕路</li>
+                            <li title="230" boardid="230" boardname="客村" x="113.329147338867" y="23.1006832122803">客村</li>
+                            <li title="231" boardid="231" boardname="沥滘" x="113.321739196777" y="23.0649337768555">沥滘</li>
+                            <li title="232" boardid="232" boardname="南洲" x="113.317794799805" y="23.0699195861816">南洲</li>
+                            <li title="233" boardid="233" boardname="琶洲" x="113.378494262695" y="23.1043376922607">琶洲</li>
+                            <li title="234" boardid="234" boardname="前进路" x="113.282943725586" y="23.1055278778076">前进路</li>
+                            <li title="235" boardid="235" boardname="新港西" x="113.305557250977" y="23.0950756072998">新港西</li>
+                            <li title="236" boardid="236" boardname="下渡路" x="113.313987731934" y="23.1069641113281">下渡路</li>
+                            <li title="328" boardid="328" boardname="东晓" x="113.289306640625" y="23.092622756958">东晓</li>
+                            <li title="425" boardid="425" boardname="海珠" x="113.368911743164" y="23.1025104522705">海珠</li>
+                            <li title="426" boardid="426" boardname="珠江两岸" x="113.261703491211" y="23.1113243103027">珠江两岸</li>
+                            <li title="707" boardid="707" boardname="江湾路" x="113.281586" y="23.111963">江湾路</li>
+                            <li title="708" boardid="708" boardname="宝岗大道中" x="113.269556" y="23.10633">宝岗大道中</li>
+                            <li title="709" boardid="709" boardname="赤岗路" x="113.333904" y="23.101859">赤岗路</li>
+                            <li title="710" boardid="710" boardname="石榴岗路" x="113.343778" y="23.093349">石榴岗路</li>
+                            <li title="711" boardid="711" boardname="凤阳街" x="113.292118" y="23.08916">凤阳街</li>
+                            <li title="712" boardid="712" boardname="工业大道中" x="113.274933" y="23.084293">工业大道中</li>
+                            <li title="713" boardid="713" boardname="江海大道" x="113.339403" y="23.096843">江海大道</li>
+                            <li title="714" boardid="714" boardname="瑞康路" x="113.302032" y="23.089912">瑞康路</li>
+                            <li title="715" boardid="715" boardname="南泰路" x="113.270494" y="23.084206">南泰路</li>
+                            <li title="717" boardid="717" boardname="江南大道南" x="113.287278" y="23.087247">江南大道南</li>
+                            <li title="718" boardid="718" boardname="新港东路" x="113.395962" y="23.1037">新港东路</li>
+                            <li title="719" boardid="719" boardname="革新路" x="113.259718" y="23.100155">革新路</li>
+                            <li title="720" boardid="720" boardname="荔福路" x="113.270005" y="23.097117">荔福路</li>
+                            <li title="721" boardid="721" boardname="海联路" x="113.291201" y="23.108091">海联路</li>
+                            <li title="722" boardid="722" boardname="洛溪大桥" x="113.309618" y="23.048558">洛溪大桥</li>
+                            <li title="723" boardid="723" boardname="南华西路" x="113.260117" y="23.111162">南华西路</li>
+                            <li title="724" boardid="724" boardname="江南大道北" x="113.275331" y="23.114751">江南大道北</li>
+                            <li title="725" boardid="725" boardname="新港中路" x="113.335444" y="23.101958">新港中路</li>
+                            <li title="726" boardid="726" boardname="昌泰路" x="113.288367" y="23.097051">昌泰路</li>
+                            <li title="727" boardid="727" boardname="厚德路" x="113.256637" y="23.104821">厚德路</li>
+                            <li title="728" boardid="728" boardname="鹭江东约" x="113.318877" y="23.094109">鹭江东约</li>
+                            <li title="729" boardid="729" boardname="江海路" x="113.295755" y="23.10908">江海路</li>
+                            <li title="730" boardid="730" boardname="紫金大街" x="113.27567" y="23.101847">紫金大街</li>
+                            <li title="731" boardid="731" boardname="艺苑南路" x="113.329229" y="23.098944">艺苑南路</li>
+                            <li title="732" boardid="732" boardname="南箕路" x="113.276147" y="23.075155">南箕路</li>
+                            <li title="733" boardid="733" boardname="同庆路" x="113.271643" y="23.113413">同庆路</li>
+                            <li title="734" boardid="734" boardname="大江冲路" x="113.318454" y="23.101688">大江冲路</li>
+                            <li title="735" boardid="735" boardname="鹭江南约" x="113.315425" y="23.093743">鹭江南约</li>
+                            <li title="736" boardid="736" boardname="南田路" x="113.272195" y="23.105425">南田路</li>
+                            <li title="737" boardid="737" boardname="新港西路" x="113.30394" y="23.096989">新港西路</li>
+                            <li title="738" boardid="738" boardname="下泉塘" x="113.27893" y="23.086974">下泉塘</li>
+                            <li title="739" boardid="739" boardname="碧映路" x="113.333252" y="23.09457">碧映路</li>
+                            <li title="740" boardid="740" boardname="洪德路" x="113.259025" y="23.105573">洪德路</li>
+                            <li title="741" boardid="741" boardname="光汉直街" x="113.271616" y="23.10753">光汉直街</li>
+                            <li title="742" boardid="742" boardname="怡海路" x="113.296291" y="23.106001">怡海路</li>
+                            <li title="743" boardid="743" boardname="沙溪新一街" x="113.288998" y="23.079934">沙溪新一街</li>
+                            <li title="744" boardid="744" boardname="同福中路" x="113.262815" y="23.109317">同福中路</li>
+                            <li title="745" boardid="745" boardname="怡乐路" x="113.294982" y="23.102794">怡乐路</li>
+                            <li title="746" boardid="746" boardname="员村三横路" x="113.374433" y="23.127256">员村三横路</li>
+                            <li title="747" boardid="747" boardname="礼岗路" x="113.283126" y="23.092891">礼岗路</li>
+                            <li title="748" boardid="748" boardname="晓港湾" x="113.3005" y="23.075932">晓港湾</li>
+                            <li title="749" boardid="749" boardname="海印桥" x="113.294225" y="23.118408">海印桥</li>
+                            <li title="750" boardid="750" boardname="南华中路" x="113.266997" y="23.113322">南华中路</li>
+                            <li title="751" boardid="751" boardname="晓港" x="113.288385" y="23.099328">晓港</li>
+                            <li title="753" boardid="753" boardname="市桥街" x="113.32607" y="22.942579">市桥街</li>
+                            <li title="754" boardid="754" boardname="昌岗中路" x="113.278928" y="23.093448">昌岗中路</li>
+                            <li title="755" boardid="755" boardname="怡安路" x="113.281376" y="23.113754">怡安路</li>
+                            <li title="756" boardid="756" boardname="仲恺路" x="113.287182" y="23.111133">仲恺路</li>
+                            <li title="757" boardid="757" boardname="宝业路" x="113.267178" y="23.097292">宝业路</li>
+                            <li title="758" boardid="758" boardname="昌岗东" x="113.286135" y="23.098526">昌岗东</li>
+                            <li title="759" boardid="759" boardname="昌岗中" x="113.279637" y="23.093872">昌岗中</li>
+                            <li title="760" boardid="760" boardname="细岗东区" x="113.287807" y="23.094807">细岗东区</li>
+                            <li title="761" boardid="761" boardname="南村" x="113.388978" y="23.010085">南村</li>
+                            <li title="762" boardid="762" boardname="江南东路" x="113.274642" y="23.116799">江南东路</li>
+                            <li title="763" boardid="763" boardname="西华街" x="113.270344" y="23.096032">西华街</li>
+                            <li title="765" boardid="765" boardname="新港街" x="109.847701" y="20.560235">新港街</li>
+                            <li title="766" boardid="766" boardname="江怡路" x="113.301038" y="23.106251">江怡路</li>
+                            <li title="767" boardid="767" boardname="大江冲社区" x="113.318195" y="23.102867">大江冲社区</li>
+                            <li title="768" boardid="768" boardname="草芳社区" x="113.28118" y="23.115769">草芳社区</li>
+                            <li title="769" boardid="769" boardname="义务大道中" x="113.321757" y="23.130613">义务大道中</li>
+                            <li title="770" boardid="770" boardname="上渡路" x="113.314643" y="23.104693">上渡路</li>
+                            <li title="771" boardid="771" boardname="江南大道中" x="113.27825" y="23.108091">江南大道中</li>
+                            <li title="772" boardid="772" boardname="石岗路" x="113.282736" y="23.076467">石岗路</li>
+                            <li title="773" boardid="773" boardname="江南西路" x="113.276794" y="23.100953">江南西路</li>
+                            <li title="774" boardid="774" boardname="燕岗街" x="113.287693" y="23.08259">燕岗街</li>
+                            <li title="775" boardid="775" boardname="金紫里直街" x="113.294373" y="23.086687">金紫里直街</li>
+                            <li title="776" boardid="776" boardname="市二宫" x="113.276352" y="23.112216">市二宫</li>
+                            <li title="777" boardid="777" boardname="康大路" x="113.294892" y="23.106134">康大路</li>
+                            <li title="778" boardid="778" boardname="候王庙" x="113.284063" y="23.074444">候王庙</li>
+                            <li title="779" boardid="779" boardname="龙潭村" x="113.342091" y="23.084252">龙潭村</li>
+                            <li title="780" boardid="780" boardname="榕景路" x="113.262011" y="23.0912">榕景路</li>
+                            <li title="781" boardid="781" boardname="梅园西路" x="113.259837" y="23.099835">梅园西路</li>
+                            <li title="782" boardid="782" boardname="南边路" x="113.267415" y="23.088233">南边路</li>
+                            <li title="783" boardid="783" boardname="盈丰路" x="113.303345" y="23.075255">盈丰路</li>
+                            <li title="784" boardid="784" boardname="南华东路" x="113.274822" y="23.117032">南华东路</li>
+                            <li title="785" boardid="785" boardname="万寿路" x="113.29042" y="23.108249">万寿路</li>
+                            <li title="786" boardid="786" boardname="大石镇" x="113.314371" y="23.030549">大石镇</li>
+                            <li title="787" boardid="787" boardname="农讲所" x="113.281762" y="23.132922">农讲所</li>
+                        </ul>
+                    </li>
+                    <li><span>越秀</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440104" regionname="越秀" x="113.273218" y="23.135272">不限</li>
+                            <li title="98" boardid="98" boardname="北京路" x="113.275421142578" y="23.1273803710938">北京路</li>
+                            <li title="99" boardid="99" boardname="大沙头" x="113.292434692383" y="23.1215000152588">大沙头</li>
+                            <li title="100" boardid="100" boardname="东川路" x="113.292419433594" y="23.1296195983887">东川路</li>
+                            <li title="101" boardid="101" boardname="东风东" x="113.307678222656" y="23.13743019104">东风东</li>
+                            <li title="102" boardid="102" boardname="东山" x="113.303550720215" y="23.1284141540527">东山</li>
+                            <li title="103" boardid="103" boardname="二沙岛" x="113.311973571777" y="23.1147651672363">二沙岛</li>
+                            <li title="104" boardid="104" boardname="环市东" x="113.31241607666" y="23.1420860290527">环市东</li>
+                            <li title="105" boardid="105" boardname="海珠广场" x="113.273345947266" y="23.121072769165">海珠广场</li>
+                            <li title="106" boardid="106" boardname="黄花岗" x="113.302673339844" y="23.1446475982666">黄花岗</li>
+                            <li title="107" boardid="107" boardname="建设路" x="113.289443969727" y="23.1397457122803">建设路</li>
+                            <li title="108" boardid="108" boardname="解放北" x="113.267669677734" y="23.1345462799072">解放北</li>
+                            <li title="109" boardid="109" boardname="解放南" x="113.269439697266" y="23.1238098144531">解放南</li>
+                            <li title="110" boardid="110" boardname="农讲所" x="113.2822265625" y="23.1329574584961">农讲所</li>
+                            <li title="111" boardid="111" boardname="盘福路" x="113.266296386719" y="23.1411418914795">盘福路</li>
+                            <li title="112" boardid="112" boardname="水荫路" x="113.316436767578" y="23.15260887146">水荫路</li>
+                            <li title="113" boardid="113" boardname="淘金" x="113.294418334961" y="23.1433067321777">淘金</li>
+                            <li title="114" boardid="114" boardname="五羊新城" x="113.318367004395" y="23.1249351501465">五羊新城</li>
+                            <li title="115" boardid="115" boardname="小北" x="113.28441619873" y="23.1458339691162">小北</li>
+                            <li title="116" boardid="116" boardname="西门口" x="113.262283325195" y="23.1331577301025">西门口</li>
+                            <li title="117" boardid="117" boardname="杨箕" x="113.315216064453" y="23.133768081665">杨箕</li>
+                            <li title="258" boardid="258" boardname="北京路" x="113.275421142578" y="23.1273803710938">北京路</li>
+                            <li title="259" boardid="259" boardname="大沙头" x="113.292434692383" y="23.1215000152588">大沙头</li>
+                            <li title="260" boardid="260" boardname="东川路" x="113.292419433594" y="23.1296195983887">东川路</li>
+                            <li title="261" boardid="261" boardname="东风东" x="113.307678222656" y="23.13743019104">东风东</li>
+                            <li title="262" boardid="262" boardname="东山" x="113.303550720215" y="23.1284141540527">东山</li>
+                            <li title="263" boardid="263" boardname="二沙岛" x="113.311973571777" y="23.1147651672363">二沙岛</li>
+                            <li title="264" boardid="264" boardname="环市东" x="113.31241607666" y="23.1420860290527">环市东</li>
+                            <li title="265" boardid="265" boardname="海珠广场" x="113.273345947266" y="23.121072769165">海珠广场</li>
+                            <li title="266" boardid="266" boardname="黄花岗" x="113.302673339844" y="23.1446475982666">黄花岗</li>
+                            <li title="267" boardid="267" boardname="建设路" x="113.289443969727" y="23.1397457122803">建设路</li>
+                            <li title="268" boardid="268" boardname="解放北" x="113.267669677734" y="23.1345462799072">解放北</li>
+                            <li title="269" boardid="269" boardname="解放南" x="113.269439697266" y="23.1238098144531">解放南</li>
+                            <li title="270" boardid="270" boardname="农讲所" x="113.2822265625" y="23.1329574584961">农讲所</li>
+                            <li title="271" boardid="271" boardname="盘福路" x="113.266296386719" y="23.1411418914795">盘福路</li>
+                            <li title="272" boardid="272" boardname="水荫路" x="113.316436767578" y="23.15260887146">水荫路</li>
+                            <li title="273" boardid="273" boardname="淘金" x="113.294418334961" y="23.1433067321777">淘金</li>
+                            <li title="274" boardid="274" boardname="五羊新城" x="113.318367004395" y="23.1249351501465">五羊新城</li>
+                            <li title="275" boardid="275" boardname="小北" x="113.28441619873" y="23.1458339691162">小北</li>
+                            <li title="276" boardid="276" boardname="西门口" x="113.262283325195" y="23.1331577301025">西门口</li>
+                            <li title="277" boardid="277" boardname="杨箕" x="113.315216064453" y="23.133768081665">杨箕</li>
+                            <li title="324" boardid="324" boardname="麓景路" x="113.284515380859" y="23.1473255157471">麓景路</li>
+                            <li title="427" boardid="427" boardname="东风路" x="113.303565979004" y="23.1371479034424">东风路</li>
+                            <li title="428" boardid="428" boardname="环市路" x="113.312110900879" y="23.1411876678467">环市路</li>
+                            <li title="429" boardid="429" boardname="火车站" x="113.264099121094" y="23.1549777984619">火车站</li>
+                            <li title="430" boardid="430" boardname="先烈路" x="113.307769775391" y="23.1484775543213">先烈路</li>
+                            <li title="431" boardid="431" boardname="越秀" x="113.284912109375" y="23.1311569213867">越秀</li>
+                            <li title="448" boardid="448" boardname="均益路" x="113.297803" y="23.127742">均益路</li>
+                            <li title="449" boardid="449" boardname="新世界棕榈园" x="113.306925" y="23.115246">新世界棕榈园</li>
+                            <li title="764" boardid="764" boardname="明月一路" x="113.317029" y="23.120489">明月一路</li>
+                            <li title="788" boardid="788" boardname="中山一路水均岗" x="113.312641" y="23.133168">中山一路水均岗</li>
+                            <li title="789" boardid="789" boardname="海珠北路" x="113.264624" y="23.134901">海珠北路</li>
+                            <li title="790" boardid="790" boardname="东华西路" x="113.285987" y="23.128561">东华西路</li>
+                            <li title="791" boardid="791" boardname="中山三路" x="113.28857" y="23.133347">中山三路</li>
+                            <li title="792" boardid="792" boardname="陵园西路" x="113.289509" y="23.137103">陵园西路</li>
+                            <li title="793" boardid="793" boardname="启明一马路" x="113.29991" y="23.126783">启明一马路</li>
+                            <li title="794" boardid="794" boardname="沿江中路" x="113.275222" y="23.12056">沿江中路</li>
+                            <li title="795" boardid="795" boardname="应元路" x="113.273179" y="23.140891">应元路</li>
+                            <li title="796" boardid="796" boardname="东兴中街" x="113.319808" y="23.129409">东兴中街</li>
+                            <li title="797" boardid="797" boardname="龟岗" x="113.300316" y="23.127074">龟岗</li>
+                            <li title="798" boardid="798" boardname="文德路" x="113.277741" y="23.13073">文德路</li>
+                            <li title="799" boardid="799" boardname="新河浦路" x="113.297015" y="23.125877">新河浦路</li>
+                            <li title="800" boardid="800" boardname="人民路" x="113.260052" y="23.118623">人民路</li>
+                            <li title="801" boardid="801" boardname="黄华路" x="113.283535" y="23.143566">黄华路</li>
+                            <li title="802" boardid="802" boardname="童心路" x="113.28132" y="23.146333">童心路</li>
+                            <li title="803" boardid="803" boardname="中山六路" x="113.261218" y="23.1312">中山六路</li>
+                            <li title="804" boardid="804" boardname="恒福路" x="113.290032" y="23.149987">恒福路</li>
+                            <li title="805" boardid="805" boardname="东堤" x="113.283804" y="23.122084">东堤</li>
+                            <li title="806" boardid="806" boardname="沿江东" x="113.292293" y="23.119143">沿江东</li>
+                            <li title="807" boardid="807" boardname="下塘西" x="113.280904" y="23.152301">下塘西</li>
+                            <li title="808" boardid="808" boardname="沿江西路" x="113.263818" y="23.115608">沿江西路</li>
+                            <li title="809" boardid="809" boardname="东华东" x="113.297732" y="23.127248">东华东</li>
+                            <li title="810" boardid="810" boardname="保安前街" x="113.308646" y="23.126277">保安前街</li>
+                            <li title="811" boardid="811" boardname="执信南路" x="113.298145" y="23.136873">执信南路</li>
+                            <li title="812" boardid="812" boardname="朝天路" x="113.266762" y="23.12928">朝天路</li>
+                            <li title="813" boardid="813" boardname="泰康路" x="113.273711" y="23.123431">泰康路</li>
+                            <li title="814" boardid="814" boardname="农林下路" x="113.30335" y="23.140479">农林下路</li>
+                            <li title="815" boardid="815" boardname="光塔路" x="113.265711" y="23.128764">光塔路</li>
+                            <li title="816" boardid="816" boardname="仓前直街" x="113.27758" y="23.122924">仓前直街</li>
+                            <li title="817" boardid="817" boardname="八旗二马路" x="113.283234" y="23.122412">八旗二马路</li>
+                            <li title="818" boardid="818" boardname="合群二马路" x="113.302044" y="23.123555">合群二马路</li>
+                            <li title="819" boardid="819" boardname="海珠中路" x="113.263907" y="23.131162">海珠中路</li>
+                            <li title="820" boardid="820" boardname="水均南" x="111.950292" y="25.5826">水均南</li>
+                            <li title="821" boardid="821" boardname="长堤" x="113.266689" y="23.117169">长堤</li>
+                            <li title="822" boardid="822" boardname="农林路" x="114.018897" y="22.552435">农林路</li>
+                            <li title="823" boardid="823" boardname="荣华北" x="113.286433" y="23.132408">荣华北</li>
+                            <li title="824" boardid="824" boardname="寺右二马路" x="113.316516" y="23.125479">寺右二马路</li>
+                            <li title="825" boardid="825" boardname="北校场横路" x="113.419523" y="23.4653">北校场横路</li>
+                            <li title="826" boardid="826" boardname="惠福西路" x="113.26133" y="23.126846">惠福西路</li>
+                            <li title="827" boardid="827" boardname="义务大道中" x="113.321559" y="23.144189">义务大道中</li>
+                            <li title="828" boardid="828" boardname="永福路" x="113.308191" y="23.149368">永福路</li>
+                            <li title="829" boardid="829" boardname="芳村" x="113.242193" y="23.104298">芳村</li>
+                            <li title="830" boardid="830" boardname="东风西路" x="113.248257" y="23.14187">东风西路</li>
+                            <li title="831" boardid="831" boardname="东风中路" x="113.277365" y="23.137012">东风中路</li>
+                            <li title="832" boardid="832" boardname="广大路" x="113.273933" y="23.133571">广大路</li>
+                            <li title="833" boardid="833" boardname="东华南路" x="113.295149" y="23.127261">东华南路</li>
+                            <li title="834" boardid="834" boardname="仓边路" x="113.277856" y="23.137135">仓边路</li>
+                            <li title="835" boardid="835" boardname="站南路" x="113.260677" y="23.152231">站南路</li>
+                            <li title="836" boardid="836" boardname="流花" x="113.259851" y="23.148251">流花</li>
+                            <li title="837" boardid="837" boardname="光孝路" x="113.262402" y="23.131511">光孝路</li>
+                            <li title="838" boardid="838" boardname="诗书路" x="113.260984" y="23.125321">诗书路</li>
+                            <li title="839" boardid="839" boardname="观绿路" x="113.260986" y="23.124734">观绿路</li>
+                            <li title="840" boardid="840" boardname="洪桥街" x="113.276199" y="23.140213">洪桥街</li>
+                            <li title="841" boardid="841" boardname="六榕路" x="113.266918" y="23.132084">六榕路</li>
+                            <li title="842" boardid="842" boardname="德政南路" x="113.281758" y="23.12638">德政南路</li>
+                            <li title="843" boardid="843" boardname="共和西路" x="113.311195" y="23.131502">共和西路</li>
+                            <li title="844" boardid="844" boardname="挹翠路" x="113.284663" y="23.124415">挹翠路</li>
+                            <li title="845" boardid="845" boardname="湛塘路" x="113.282914" y="23.124485">湛塘路</li>
+                            <li title="846" boardid="846" boardname="东沙角路" x="113.285788" y="23.124382">东沙角路</li>
+                            <li title="847" boardid="847" boardname="越秀南路" x="113.283957" y="23.128354">越秀南路</li>
+                            <li title="848" boardid="848" boardname="东园路" x="113.283275" y="23.122155">东园路</li>
+                            <li title="849" boardid="849" boardname="惠福东路" x="113.275404" y="23.127731">惠福东路</li>
+                            <li title="850" boardid="850" boardname="达道路" x="113.308107" y="23.131361">达道路</li>
+                            <li title="851" boardid="851" boardname="山河后街" x="113.30499" y="23.124395">山河后街</li>
+                            <li title="852" boardid="852" boardname="中山二路" x="113.297266" y="23.131149">中山二路</li>
+                            <li title="853" boardid="853" boardname="培正路" x="113.303526" y="23.125051">培正路</li>
+                            <li title="854" boardid="854" boardname="东湖" x="113.295324" y="23.121312">东湖</li>
+                            <li title="855" boardid="855" boardname="一德路" x="113.263684" y="23.119106">一德路</li>
+                            <li title="856" boardid="856" boardname="共和大街" x="113.312507" y="23.130406">共和大街</li>
+                            <li title="857" boardid="857" boardname="西华路" x="113.256663" y="23.136579">西华路</li>
+                            <li title="858" boardid="858" boardname="北较场横路" x="113.28418" y="23.14433">北较场横路</li>
+                            <li title="859" boardid="859" boardname="天成路" x="113.261978" y="23.12004">天成路</li>
+                            <li title="860" boardid="860" boardname="署前路" x="113.301706" y="23.129787">署前路</li>
+                            <li title="861" boardid="861" boardname="庙前西街" x="113.300784" y="23.128116">庙前西街</li>
+                            <li title="862" boardid="862" boardname="白云路" x="113.291631" y="23.126073">白云路</li>
+                            <li title="863" boardid="863" boardname="东环路" x="113.363553" y="22.961905">东环路</li>
+                            <li title="864" boardid="864" boardname="芳草街" x="113.283387" y="23.133164">芳草街</li>
+                            <li title="865" boardid="865" boardname="海珠南路" x="113.262211" y="23.123206">海珠南路</li>
+                            <li title="866" boardid="866" boardname="烟墩路" x="113.304933" y="23.127082">烟墩路</li>
+                            <li title="867" boardid="867" boardname="大德路" x="113.260821" y="23.122438">大德路</li>
+                            <li title="868" boardid="868" boardname="新港西路" x="113.304479" y="23.097521">新港西路</li>
+                            <li title="869" boardid="869" boardname="先烈东路" x="113.315572" y="23.155994">先烈东路</li>
+                            <li title="870" boardid="870" boardname="青菜东街" x="113.294335" y="23.139062">青菜东街</li>
+                            <li title="871" boardid="871" boardname="海印苑小区" x="113.294405" y="23.126517">海印苑小区</li>
+                            <li title="872" boardid="872" boardname="五羊" x="113.320836" y="23.125782">五羊</li>
+                            <li title="873" boardid="873" boardname="三元里大道" x="113.26377" y="23.165215">三元里大道</li>
+                            <li title="874" boardid="874" boardname="公元前" x="113.270689" y="23.131647">公元前</li>
+                            <li title="875" boardid="875" boardname="净慧路" x="113.262568" y="23.134281">净慧路</li>
+                            <li title="876" boardid="876" boardname="先烈中路" x="113.311229" y="23.152151">先烈中路</li>
+                            <li title="877" boardid="877" boardname="先烈南路" x="113.299692" y="23.140737">先烈南路</li>
+                            <li title="878" boardid="878" boardname="站西路北街" x="113.257728" y="23.156425">站西路北街</li>
+                            <li title="879" boardid="879" boardname="中山八路" x="113.247892" y="23.131369">中山八路</li>
+                            <li title="880" boardid="880" boardname="义务大道南" x="113.322475" y="23.109213">义务大道南</li>
+                            <li title="881" boardid="881" boardname="较场西路" x="113.289756" y="23.132762">较场西路</li>
+                            <li title="882" boardid="882" boardname="万福路" x="113.283021" y="23.126808">万福路</li>
+                            <li title="883" boardid="883" boardname="人民中路" x="113.260378" y="23.129371">人民中路</li>
+                            <li title="884" boardid="884" boardname="豪贤路" x="113.279384" y="23.136317">豪贤路</li>
+                            <li title="885" boardid="885" boardname="环市西路" x="113.251574" y="23.14988">环市西路</li>
+                            <li title="886" boardid="886" boardname="永安横街" x="113.285879" y="23.126725">永安横街</li>
+                            <li title="887" boardid="887" boardname="丛桂路" x="113.244705" y="23.115196">丛桂路</li>
+                            <li title="965" boardid="965" boardname="广源西路" x="113.262423" y="23.1643">广源西路</li>
+                            <li title="966" boardid="966" boardname="文德东路" x="113.278799" y="23.127464">文德东路</li>
+                            <li title="993" boardid="993" boardname="珠光路" x="113.279605" y="23.124967">珠光路</li>
+                        </ul>
+                    </li>
+                    <li><span>东莞</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="4419" regionname="东莞" x="113.757656" y="23.024868">不限</li>
+                        </ul>
+                    </li>
+                    <li><span>白云</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440111" regionname="白云" x="113.279637" y="23.164238">不限</li>
+                            <li title="78" boardid="78" boardname="白云大道北" x="113.304847717285" y="23.2309761047363">白云大道北</li>
+                            <li title="79" boardid="79" boardname="白云大道南" x="113.285179138184" y="23.187126159668">白云大道南</li>
+                            <li title="80" boardid="80" boardname="广花路" x="113.226982116699" y="23.3731250762939">广花路</li>
+                            <li title="81" boardid="81" boardname="桂花岗" x="113.267127990723" y="23.1574192047119">桂花岗</li>
+                            <li title="82" boardid="82" boardname="广园路" x="113.26676940918" y="23.1664752960205">广园路</li>
+                            <li title="83" boardid="83" boardname="义务大道北" x="113.330558776855" y="23.1894760131836">义务大道北</li>
+                            <li title="84" boardid="84" boardname="黄石" x="113.271781921387" y="23.2100620269775">黄石</li>
+                            <li title="85" boardid="85" boardname="黄边" x="113.292724609375" y="23.2268447875977">黄边</li>
+                            <li title="86" boardid="86" boardname="机场路" x="113.266609191895" y="23.1882972717285">机场路</li>
+                            <li title="87" boardid="87" boardname="金沙洲" x="113.215553283691" y="23.1609134674072">金沙洲</li>
+                            <li title="88" boardid="88" boardname="江夏" x="113.288612365723" y="23.2177925109863">江夏</li>
+                            <li title="89" boardid="89" boardname="嘉禾望岗" x="113.297012329102" y="23.2456188201904">嘉禾望岗</li>
+                            <li title="90" boardid="90" boardname="京溪" x="113.335578918457" y="23.1878395080566">京溪</li>
+                            <li title="91" boardid="91" boardname="罗冲围" x="113.231735229492" y="23.1550674438477">罗冲围</li>
+                            <li title="92" boardid="92" boardname="南湖" x="113.333190917969" y="23.2220840454102">南湖</li>
+                            <li title="93" boardid="93" boardname="三元里" x="113.266410827637" y="23.1648368835449">三元里</li>
+                            <li title="94" boardid="94" boardname="石井" x="113.244552612305" y="23.21240234375">石井</li>
+                            <li title="95" boardid="95" boardname="同德围" x="113.248542785645" y="23.186164855957">同德围</li>
+                            <li title="96" boardid="96" boardname="同和" x="113.33228302002" y="23.2094841003418">同和</li>
+                            <li title="97" boardid="97" boardname="新市" x="113.265190124512" y="23.1935634613037">新市</li>
+                            <li title="238" boardid="238" boardname="白云大道北" x="113.304847717285" y="23.2309761047363">白云大道北</li>
+                            <li title="239" boardid="239" boardname="白云大道南" x="113.285179138184" y="23.187126159668">白云大道南</li>
+                            <li title="240" boardid="240" boardname="广花路" x="113.226982116699" y="23.3731250762939">广花路</li>
+                            <li title="241" boardid="241" boardname="桂花岗" x="113.267127990723" y="23.1574192047119">桂花岗</li>
+                            <li title="242" boardid="242" boardname="广园路" x="113.26676940918" y="23.1664752960205">广园路</li>
+                            <li title="243" boardid="243" boardname="义务大道北" x="113.330558776855" y="23.1894760131836">义务大道北</li>
+                            <li title="244" boardid="244" boardname="黄石" x="113.271781921387" y="23.2100620269775">黄石</li>
+                            <li title="245" boardid="245" boardname="黄边" x="113.292724609375" y="23.2268447875977">黄边</li>
+                            <li title="246" boardid="246" boardname="机场路" x="113.266609191895" y="23.1882972717285">机场路</li>
+                            <li title="247" boardid="247" boardname="金沙洲" x="113.215553283691" y="23.1609134674072">金沙洲</li>
+                            <li title="248" boardid="248" boardname="江夏" x="113.288612365723" y="23.2177925109863">江夏</li>
+                            <li title="249" boardid="249" boardname="嘉禾望岗" x="113.297012329102" y="23.2456188201904">嘉禾望岗</li>
+                            <li title="250" boardid="250" boardname="京溪" x="113.335578918457" y="23.1878395080566">京溪</li>
+                            <li title="251" boardid="251" boardname="罗冲围" x="113.231735229492" y="23.1550674438477">罗冲围</li>
+                            <li title="252" boardid="252" boardname="南湖" x="113.333190917969" y="23.2220840454102">南湖</li>
+                            <li title="253" boardid="253" boardname="三元里" x="113.266410827637" y="23.1648368835449">三元里</li>
+                            <li title="254" boardid="254" boardname="石井" x="113.244552612305" y="23.21240234375">石井</li>
+                            <li title="255" boardid="255" boardname="同德围" x="113.248542785645" y="23.186164855957">同德围</li>
+                            <li title="256" boardid="256" boardname="同和" x="113.33228302002" y="23.2094841003418">同和</li>
+                            <li title="257" boardid="257" boardname="新市" x="113.265190124512" y="23.1935634613037">新市</li>
+                            <li title="322" boardid="322" boardname="梅花园" x="113.324287414551" y="23.1848945617676">梅花园</li>
+                            <li title="329" boardid="329" boardname="广园新村" x="113.274444580078" y="23.1676750183105">广园新村</li>
+                            <li title="420" boardid="420" boardname="白云新城" x="113.267646789551" y="23.1894016265869">白云新城</li>
+                            <li title="421" boardid="421" boardname="白云大道" x="113.302452087402" y="23.2244281768799">白云大道</li>
+                            <li title="422" boardid="422" boardname="白云" x="113.27742767334" y="23.184455871582">白云</li>
+                            <li title="423" boardid="423" boardname="广园" x="113.274452209473" y="23.1685009002686">广园</li>
+                            <li title="541" boardid="541" boardname="怡兴新村" x="113.334393" y="23.196193">怡兴新村</li>
+                            <li title="542" boardid="542" boardname="麦华路" x="113.329636" y="23.189164">麦华路</li>
+                            <li title="543" boardid="543" boardname="齐富路" x="113.270357" y="23.200739">齐富路</li>
+                            <li title="544" boardid="544" boardname="西槎路" x="113.245159" y="23.186663">西槎路</li>
+                            <li title="545" boardid="545" boardname="云霄街" x="113.270999" y="23.189001">云霄街</li>
+                            <li title="546" boardid="546" boardname="大金钟路" x="113.282966" y="23.172607">大金钟路</li>
+                            <li title="547" boardid="547" boardname="白灰场北路" x="113.333704" y="23.193768">白灰场北路</li>
+                            <li title="548" boardid="548" boardname="岗贝路" x="113.259058" y="23.185316">岗贝路</li>
+                            <li title="549" boardid="549" boardname="心谊路" x="113.262509" y="23.178557">心谊路</li>
+                            <li title="550" boardid="550" boardname="松北" x="113.23007" y="23.163938">松北</li>
+                            <li title="551" boardid="551" boardname="下塘西路" x="113.276345" y="23.163939">下塘西路</li>
+                            <li title="552" boardid="552" boardname="云城东路" x="113.276005" y="23.181501">云城东路</li>
+                            <li title="553" boardid="553" boardname="广园中路" x="113.274898" y="23.164841">广园中路</li>
+                            <li title="554" boardid="554" boardname="北太路" x="113.349609" y="23.301447">北太路</li>
+                            <li title="555" boardid="555" boardname="西湾路" x="113.249154" y="23.150864">西湾路</li>
+                            <li title="556" boardid="556" boardname="沙太路" x="113.339603" y="23.18548">沙太路</li>
+                            <li title="557" boardid="557" boardname="增槎路" x="113.234471" y="23.149087">增槎路</li>
+                            <li title="558" boardid="558" boardname="远景路" x="113.26165" y="23.17869">远景路</li>
+                            <li title="559" boardid="559" boardname="金信路" x="113.28218" y="23.180763">金信路</li>
+                            <li title="560" boardid="560" boardname="同泰路" x="113.331158" y="23.209076">同泰路</li>
+                            <li title="561" boardid="561" boardname="106国道" x="113.296092" y="23.258648">106国道</li>
+                            <li title="562" boardid="562" boardname="云景路" x="113.337912" y="23.189824">云景路</li>
+                            <li title="563" boardid="563" boardname="风度小区" x="113.241993" y="23.207773">风度小区</li>
+                            <li title="564" boardid="564" boardname="磨刀西街" x="113.3111" y="23.228958">磨刀西街</li>
+                            <li title="565" boardid="565" boardname="沙贝大街" x="113.209962" y="23.15729">沙贝大街</li>
+                            <li title="566" boardid="566" boardname="鹤泰工业区" x="113.284063" y="23.222565">鹤泰工业区</li>
+                            <li title="567" boardid="567" boardname="乐嘉路" x="113.266799" y="23.174608">乐嘉路</li>
+                            <li title="568" boardid="568" boardname="石岗东街" x="113.260262" y="23.214175">石岗东街</li>
+                            <li title="569" boardid="569" boardname="汇景路" x="113.261042" y="23.174883">汇景路</li>
+                            <li title="570" boardid="570" boardname="龙归镇" x="113.307448" y="23.29497">龙归镇</li>
+                            <li title="571" boardid="571" boardname="白云堡大道" x="113.309836" y="23.231984">白云堡大道</li>
+                            <li title="572" boardid="572" boardname="新广从路" x="113.334186" y="23.285178">新广从路</li>
+                            <li title="573" boardid="573" boardname="广清路" x="113.229828" y="23.165625">广清路</li>
+                            <li title="574" boardid="574" boardname="荔富居" x="113.252216" y="23.156044">荔富居</li>
+                            <li title="575" boardid="575" boardname="濂泉路" x="113.312696" y="23.166867">濂泉路</li>
+                            <li title="576" boardid="576" boardname="景泰直街" x="113.276681" y="23.170975">景泰直街</li>
+                            <li title="577" boardid="577" boardname="飞鹅路" x="113.272971" y="23.15623">飞鹅路</li>
+                            <li title="578" boardid="578" boardname="黄埔东路" x="113.552843" y="23.107722">黄埔东路</li>
+                            <li title="579" boardid="579" boardname="翠岛居" x="113.226074" y="23.141422">翠岛居</li>
+                            <li title="580" boardid="580" boardname="前进东街" x="113.257441" y="23.166268">前进东街</li>
+                            <li title="581" boardid="581" boardname="同德" x="113.243569" y="23.177685">同德</li>
+                            <li title="582" boardid="582" boardname="紫荆苑" x="113.247859" y="23.183973">紫荆苑</li>
+                            <li title="583" boardid="583" boardname="禺东西路" x="113.328845" y="23.161696">禺东西路</li>
+                            <li title="584" boardid="584" boardname="松柏大街" x="113.271252" y="23.165634">松柏大街</li>
+                            <li title="585" boardid="585" boardname="丛云路" x="113.310026" y="23.226646">丛云路</li>
+                            <li title="586" boardid="586" boardname="水荫路" x="113.319574" y="23.146901">水荫路</li>
+                            <li title="587" boardid="587" boardname="广元西路" x="121.43995" y="31.201711">广元西路</li>
+                            <li title="588" boardid="588" boardname="百灵路" x="113.268203" y="23.13704">百灵路</li>
+                            <li title="589" boardid="589" boardname="景云路" x="113.283384" y="23.170887">景云路</li>
+                            <li title="590" boardid="590" boardname="华园路" x="113.26502" y="23.168358">华园路</li>
+                            <li title="591" boardid="591" boardname="神山镇" x="113.190514" y="23.326686">神山镇</li>
+                            <li title="592" boardid="592" boardname="兴泰里路" x="113.272221" y="23.169736">兴泰里路</li>
+                            <li title="593" boardid="593" boardname="松洲街" x="113.234792" y="23.189274">松洲街</li>
+                            <li title="594" boardid="594" boardname="田心路" x="113.350579" y="23.310489">田心路</li>
+                            <li title="595" boardid="595" boardname="棠下村" x="113.257917" y="23.179145">棠下村</li>
+                            <li title="596" boardid="596" boardname="云景花园" x="113.334403" y="23.191298">云景花园</li>
+                            <li title="597" boardid="597" boardname="高桥路" x="113.235177" y="23.14904">高桥路</li>
+                            <li title="598" boardid="598" boardname="棠安路" x="113.264433" y="23.191659">棠安路</li>
+                            <li title="599" boardid="599" boardname="新达路" x="113.26714" y="23.198721">新达路</li>
+                            <li title="600" boardid="600" boardname="柯子岭" x="113.281403" y="23.171408">柯子岭</li>
+                            <li title="601" boardid="601" boardname="德康路" x="113.257828" y="23.185525">德康路</li>
+                            <li title="602" boardid="602" boardname="北站路" x="113.25863" y="23.170625">北站路</li>
+                            <li title="603" boardid="603" boardname="麒麟路" x="113.34537" y="23.19197">麒麟路</li>
+                            <li title="604" boardid="604" boardname="走马岗路" x="113.262349" y="23.158469">走马岗路</li>
+                            <li title="605" boardid="605" boardname="政民路" x="113.274401" y="23.160189">政民路</li>
+                            <li title="606" boardid="606" boardname="白社中街" x="113.284198" y="23.212062">白社中街</li>
+                            <li title="607" boardid="607" boardname="人和镇" x="113.307731" y="23.335617">人和镇</li>
+                            <li title="608" boardid="608" boardname="梓元岗" x="113.266798" y="23.156397">梓元岗</li>
+                            <li title="609" boardid="609" boardname="瑶台大街" x="113.260778" y="23.163931">瑶台大街</li>
+                            <li title="610" boardid="610" boardname="上步村" x="113.241833" y="23.174051">上步村</li>
+                            <li title="611" boardid="611" boardname="广汕二路" x="113.429918" y="23.197351">广汕二路</li>
+                            <li title="612" boardid="612" boardname="先烈东路" x="113.312383" y="23.152638">先烈东路</li>
+                            <li title="987" boardid="987" boardname="石槎路" x="113.249367" y="23.202259">石槎路</li>
+                            <li title="988" boardid="988" boardname="石潭西路" x="113.237028" y="23.194349">石潭西路</li>
+                            <li title="989" boardid="989" boardname="松南路" x="113.228298" y="23.156343">松南路</li>
+                        </ul>
+                    </li>
+                    <li><span>荔湾</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440103" regionname="荔湾" x="113.250763" y="23.131739">不限</li>
+                            <li title="144" boardid="144" boardname="坑口" x="113.241569519043" y="23.0818634033203">坑口</li>
+                            <li title="149" boardid="149" boardname="中山八路" x="113.238531" y="23.131203">中山八路</li>
+                            <li title="297" boardid="297" boardname="陈家祠" x="113.253494262695" y="23.1316432952881">陈家祠</li>
+                            <li title="298" boardid="298" boardname="东风西" x="113.253486633301" y="23.1394958496094">东风西</li>
+                            <li title="299" boardid="299" boardname="芳村" x="113.241424560547" y="23.1056232452393">芳村</li>
+                            <li title="300" boardid="300" boardname="环市西" x="113.258331298828" y="23.1525268554688">环市西</li>
+                            <li title="301" boardid="301" boardname="黄沙" x="113.246520996094" y="23.1166286468506">黄沙</li>
+                            <li title="302" boardid="302" boardname="花地湾" x="113.240562438965" y="23.0928325653076">花地湾</li>
+                            <li title="303" boardid="303" boardname="窖口" x="113.214538574219" y="23.1208229064941">窖口</li>
+                            <li title="305" boardid="305" boardname="流花" x="113.256477355957" y="23.1446990966797">流花</li>
+                            <li title="306" boardid="306" boardname="南岸路" x="113.23900604248" y="23.1356143951416">南岸路</li>
+                            <li title="307" boardid="307" boardname="西关" x="113.246803283691" y="23.1242485046387">西关</li>
+                            <li title="308" boardid="308" boardname="西村" x="113.24845123291" y="23.148021697998">西村</li>
+                            <li title="325" boardid="325" boardname="黄岐" x="113.320014953613" y="23.02024269104">黄岐</li>
+                            <li title="326" boardid="326" boardname="桥中" x="113.225341796875" y="23.1323947906494">桥中</li>
+                            <li title="327" boardid="327" boardname="盐步" x="113.181777954102" y="23.0921688079834">盐步</li>
+                            <li title="432" boardid="432" boardname="大坦沙" x="113.22534942627" y="23.1395969390869">大坦沙</li>
+                            <li title="433" boardid="433" boardname="荔湾" x="113.255264282227" y="23.121166229248">荔湾</li>
+                            <li title="434" boardid="434" boardname="流花路" x="113.254653930664" y="23.1438884735107">流花路</li>
+                            <li title="435" boardid="435" boardname="上下九" x="113.252754211426" y="23.1196613311768">上下九</li>
+                            <li title="888" boardid="888" boardname="沙面" x="113.254805" y="23.113817">沙面</li>
+                            <li title="889" boardid="889" boardname="东教北路" x="113.236102" y="23.09703">东教北路</li>
+                            <li title="890" boardid="890" boardname="龙津" x="113.25701" y="23.127988">龙津</li>
+                            <li title="891" boardid="891" boardname="十三行小区" x="113.258288" y="23.116937">十三行小区</li>
+                            <li title="892" boardid="892" boardname="和平东" x="113.257651" y="23.117672">和平东</li>
+                            <li title="893" boardid="893" boardname="文昌" x="113.25089" y="23.12351">文昌</li>
+                            <li title="894" boardid="894" boardname="宝源北街" x="113.246857" y="23.125928">宝源北街</li>
+                            <li title="895" boardid="895" boardname="花地大道中" x="113.240734" y="23.087456">花地大道中</li>
+                            <li title="896" boardid="896" boardname="时代坊商城" x="113.259409" y="23.12014">时代坊商城</li>
+                            <li title="897" boardid="897" boardname="一德路" x="113.26672" y="23.119521">一德路</li>
+                            <li title="898" boardid="898" boardname="六二三路" x="113.253709" y="23.114431">六二三路</li>
+                            <li title="899" boardid="899" boardname="西华路" x="113.24865" y="23.140363">西华路</li>
+                            <li title="900" boardid="900" boardname="中山七路" x="113.255625" y="23.131602">中山七路</li>
+                            <li title="901" boardid="901" boardname="站西路" x="113.256391" y="23.154083">站西路</li>
+                            <li title="902" boardid="902" boardname="翠竹街" x="113.571734" y="34.822893">翠竹街</li>
+                            <li title="903" boardid="903" boardname="百花路" x="113.233549" y="23.099216">百花路</li>
+                            <li title="904" boardid="904" boardname="浣花西路" x="113.232373" y="23.089318">浣花西路</li>
+                            <li title="905" boardid="905" boardname="带河路" x="113.253253" y="23.127846">带河路</li>
+                            <li title="906" boardid="906" boardname="十二甫" x="113.246834" y="23.118561">十二甫</li>
+                            <li title="907" boardid="907" boardname="金花直街" x="113.256332" y="23.133866">金花直街</li>
+                            <li title="908" boardid="908" boardname="鹤洞路" x="113.251942" y="23.081493">鹤洞路</li>
+                            <li title="909" boardid="909" boardname="丹桂路" x="113.511339" y="22.836974">丹桂路</li>
+                            <li title="910" boardid="910" boardname="十八甫" x="113.252755" y="23.117959">十八甫</li>
+                            <li title="911" boardid="911" boardname="宝岗" x="113.271546" y="23.102453">宝岗</li>
+                            <li title="912" boardid="912" boardname="周门" x="113.246049" y="23.134514">周门</li>
+                            <li title="913" boardid="913" boardname="广中" x="113.275319" y="23.135868">广中</li>
+                            <li title="914" boardid="914" boardname="宝华路" x="113.248376" y="23.121828">宝华路</li>
+                            <li title="915" boardid="915" boardname="光复北路" x="113.259753" y="23.131968">光复北路</li>
+                            <li title="916" boardid="916" boardname="侨联大街" x="113.374486" y="22.9501">侨联大街</li>
+                            <li title="917" boardid="917" boardname="沿江中路" x="113.273272" y="23.119791">沿江中路</li>
+                            <li title="918" boardid="918" boardname="第十甫路" x="113.250188" y="23.119147">第十甫路</li>
+                            <li title="919" boardid="919" boardname="蓬莱路" x="113.243335" y="23.119048">蓬莱路</li>
+                            <li title="920" boardid="920" boardname="中市" x="113.243931" y="23.101875">中市</li>
+                            <li title="921" boardid="921" boardname="人民南路" x="113.259896" y="23.119019">人民南路</li>
+                            <li title="922" boardid="922" boardname="逢源路" x="113.245959" y="23.122537">逢源路</li>
+                            <li title="923" boardid="923" boardname="多宝路" x="113.243808" y="23.122533">多宝路</li>
+                            <li title="924" boardid="924" boardname="厚福大街" x="113.248444" y="23.128092">厚福大街</li>
+                            <li title="925" boardid="925" boardname="茶窖街" x="113.231947" y="23.093623">茶窖街</li>
+                            <li title="926" boardid="926" boardname="西增路" x="113.24597" y="23.149506">西增路</li>
+                            <li title="927" boardid="927" boardname="康王路" x="113.253649" y="23.123783">康王路</li>
+                            <li title="928" boardid="928" boardname="站前路" x="113.255027" y="23.147412">站前路</li>
+                            <li title="929" boardid="929" boardname="光复中路" x="113.258149" y="23.123177">光复中路</li>
+                            <li title="930" boardid="930" boardname="人民北路" x="113.263185" y="23.142589">人民北路</li>
+                            <li title="931" boardid="931" boardname="彩虹街" x="113.400284" y="22.520129">彩虹街</li>
+                            <li title="932" boardid="932" boardname="泮塘社区" x="113.240902" y="23.128694">泮塘社区</li>
+                            <li title="933" boardid="933" boardname="滨江西路" x="113.263157" y="23.113023">滨江西路</li>
+                            <li title="934" boardid="934" boardname="梯云东路" x="113.249802" y="23.115998">梯云东路</li>
+                            <li title="935" boardid="935" boardname="恩宁路" x="113.246542" y="23.119521">恩宁路</li>
+                            <li title="936" boardid="936" boardname="昌华苑" x="113.241661" y="23.122034">昌华苑</li>
+                            <li title="937" boardid="937" boardname="协和路" x="121.360048" y="31.233127">协和路</li>
+                            <li title="938" boardid="938" boardname="鱼栏大街" x="113.234201" y="23.124477">鱼栏大街</li>
+                            <li title="939" boardid="939" boardname="龙湾路" x="113.232896" y="23.108366">龙湾路</li>
+                            <li title="940" boardid="940" boardname="黄埔大道中" x="113.37082" y="23.12857">黄埔大道中</li>
+                            <li title="941" boardid="941" boardname="康王南路" x="113.255274" y="23.117116">康王南路</li>
+                            <li title="942" boardid="942" boardname="华贵路" x="113.248532" y="23.13004">华贵路</li>
+                            <li title="943" boardid="943" boardname="康王中路" x="113.253617" y="23.128569">康王中路</li>
+                            <li title="944" boardid="944" boardname="沙面北街" x="113.251911" y="23.113982">沙面北街</li>
+                            <li title="945" boardid="945" boardname="龟岗" x="113.300307" y="23.127082">龟岗</li>
+                            <li title="964" boardid="964" boardname="大同路" x="113.248022" y="23.117007">大同路</li>
+                            <li title="994" boardid="994" boardname="彭城路" x="113.244628" y="23.148271">彭城路</li>
+                            <li title="995" boardid="995" boardname="广佛一路" x="113.198793" y="23.118308">广佛一路</li>
+                        </ul>
+                    </li>
+                    <li><span>番禺</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440113" regionname="番禺" x="113.391114" y="22.943593">不限</li>
+                            <li title="35" boardid="35" boardname="大石" x="113.313911437988" y="23.0295658111572">大石</li>
+                            <li title="36" boardid="36" boardname="大学城" x="113.413024902344" y="23.0596961975098">大学城</li>
+                            <li title="37" boardid="37" boardname="义务雅居乐" x="113.367691040039" y="23.0167503356934">义务雅居乐</li>
+                            <li title="38" boardid="38" boardname="华南" x="113.386688232422" y="23.0094337463379">华南</li>
+                            <li title="39" boardid="39" boardname="华南碧桂园" x="113.35888671875" y="23.0001621246338">华南碧桂园</li>
+                            <li title="40" boardid="40" boardname="金山谷" x="113.349060058594" y="22.9811382293701">金山谷</li>
+                            <li title="41" boardid="41" boardname="洛溪" x="113.307479858398" y="23.0510559082031">洛溪</li>
+                            <li title="42" boardid="42" boardname="南浦" x="113.304069519043" y="23.0380764007568">南浦</li>
+                            <li title="43" boardid="43" boardname="祈福" x="113.341575622559" y="22.9769725799561">祈福</li>
+                            <li title="44" boardid="44" boardname="祈福新区" x="113.342506408691" y="22.9682350158691">祈福新区</li>
+                            <li title="45" boardid="45" boardname="祈福中区" x="113.328056335449" y="22.9667358398438">祈福中区</li>
+                            <li title="46" boardid="46" boardname="沙湾" x="113.352844238281" y="22.9131641387939">沙湾</li>
+                            <li title="47" boardid="47" boardname="石碁" x="113.450706481934" y="22.9617156982422">石碁</li>
+                            <li title="48" boardid="48" boardname="市桥北" x="113.372337341309" y="22.9563808441162">市桥北</li>
+                            <li title="49" boardid="49" boardname="市桥东" x="113.380554199219" y="22.9451446533203">市桥东</li>
+                            <li title="50" boardid="50" boardname="市桥南" x="113.369171142578" y="22.933521270752">市桥南</li>
+                            <li title="51" boardid="51" boardname="市桥西" x="113.35799407959" y="22.9373836517334">市桥西</li>
+                            <li title="52" boardid="52" boardname="顺德碧桂园" x="113.282531738281" y="22.9570636749268">顺德碧桂园</li>
+                            <li title="53" boardid="53" boardname="石楼" x="113.494270324707" y="22.9746570587158">石楼</li>
+                            <li title="54" boardid="54" boardname="星河湾" x="113.336975097656" y="23.0304641723633">星河湾</li>
+                            <li title="55" boardid="55" boardname="亚运城" x="113.490760803223" y="22.9491195678711">亚运城</li>
+                            <li title="56" boardid="56" boardname="钟村" x="113.322525024414" y="22.9825954437256">钟村</li>
+                            <li title="195" boardid="195" boardname="大石" x="113.313911437988" y="23.0295658111572">大石</li>
+                            <li title="196" boardid="196" boardname="大学城" x="113.413024902344" y="23.0596961975098">大学城</li>
+                            <li title="197" boardid="197" boardname="义务雅居乐" x="113.367691040039" y="23.0167503356934">义务雅居乐</li>
+                            <li title="198" boardid="198" boardname="华南" x="113.386688232422" y="23.0094337463379">华南</li>
+                            <li title="199" boardid="199" boardname="华南碧桂园" x="113.35888671875" y="23.0001621246338">华南碧桂园</li>
+                            <li title="200" boardid="200" boardname="金山谷" x="113.349060058594" y="22.9811382293701">金山谷</li>
+                            <li title="201" boardid="201" boardname="洛溪" x="113.307479858398" y="23.0510559082031">洛溪</li>
+                            <li title="202" boardid="202" boardname="南浦" x="113.304069519043" y="23.0380764007568">南浦</li>
+                            <li title="203" boardid="203" boardname="祈福" x="113.341575622559" y="22.9769725799561">祈福</li>
+                            <li title="204" boardid="204" boardname="祈福新区" x="113.342506408691" y="22.9682350158691">祈福新区</li>
+                            <li title="205" boardid="205" boardname="祈福中区" x="113.328056335449" y="22.9667358398438">祈福中区</li>
+                            <li title="206" boardid="206" boardname="沙湾" x="113.352844238281" y="22.9131641387939">沙湾</li>
+                            <li title="207" boardid="207" boardname="石碁" x="113.450706481934" y="22.9617156982422">石碁</li>
+                            <li title="208" boardid="208" boardname="市桥北" x="113.372337341309" y="22.9563808441162">市桥北</li>
+                            <li title="209" boardid="209" boardname="市桥东" x="113.380554199219" y="22.9451446533203">市桥东</li>
+                            <li title="210" boardid="210" boardname="市桥南" x="113.369171142578" y="22.933521270752">市桥南</li>
+                            <li title="211" boardid="211" boardname="市桥西" x="113.35799407959" y="22.9373836517334">市桥西</li>
+                            <li title="212" boardid="212" boardname="顺德碧桂园" x="113.282531738281" y="22.9570636749268">顺德碧桂园</li>
+                            <li title="213" boardid="213" boardname="石楼" x="113.494270324707" y="22.9746570587158">石楼</li>
+                            <li title="214" boardid="214" boardname="星河湾" x="113.336975097656" y="23.0304641723633">星河湾</li>
+                            <li title="215" boardid="215" boardname="亚运城" x="113.490760803223" y="22.9491195678711">亚运城</li>
+                            <li title="216" boardid="216" boardname="钟村" x="113.322525024414" y="22.9825954437256">钟村</li>
+                            <li title="409" boardid="409" boardname="番禺华南" x="113.347854614258" y="23.0191249847412">番禺华南</li>
+                            <li title="410" boardid="410" boardname="番禺市桥" x="113.367004394531" y="22.9481105804443">番禺市桥</li>
+                            <li title="411" boardid="411" boardname="番禺沙湾" x="113.348106384277" y="22.9089965820313">番禺沙湾</li>
+                            <li title="412" boardid="412" boardname="番禺" x="113.413024902344" y="23.0596961975098">番禺</li>
+                            <li title="413" boardid="413" boardname="洛溪新城" x="113.305931091309" y="23.048698425293">洛溪新城</li>
+                            <li title="414" boardid="414" boardname="南浦岛" x="113.306312561035" y="23.0405445098877">南浦岛</li>
+                            <li title="464" boardid="464" boardname="石基镇" x="113.443834" y="22.958848">石基镇</li>
+                            <li title="465" boardid="465" boardname="大岗镇" x="113.404908" y="22.811449">大岗镇</li>
+                            <li title="466" boardid="466" boardname="南村镇" x="113.38678" y="23.008975">南村镇</li>
+                            <li title="467" boardid="467" boardname="黄阁镇" x="113.522175" y="22.827881">黄阁镇</li>
+                            <li title="468" boardid="468" boardname="兴南大道" x="113.389585" y="23.016214">兴南大道</li>
+                            <li title="469" boardid="469" boardname="市桥" x="113.370072" y="22.955617">市桥</li>
+                            <li title="470" boardid="470" boardname="光明北路" x="113.359406" y="22.98246">光明北路</li>
+                            <li title="471" boardid="471" boardname="星座园" x="113.34943" y="23.033206">星座园</li>
+                            <li title="472" boardid="472" boardname="兴华二路" x="113.400535" y="22.94426">兴华二路</li>
+                            <li title="473" boardid="473" boardname="西城路" x="113.365019" y="22.939076">西城路</li>
+                            <li title="474" boardid="474" boardname="丽江花园" x="113.314954" y="23.044684">丽江花园</li>
+                            <li title="475" boardid="475" boardname="翠云山苑" x="113.384248" y="23.007574">翠云山苑</li>
+                            <li title="476" boardid="476" boardname="桥南街" x="113.390332" y="22.786317">桥南街</li>
+                            <li title="477" boardid="477" boardname="东环街" x="113.383146" y="22.969139">东环街</li>
+                            <li title="478" boardid="478" boardname="德胜路" x="113.380607" y="22.941236">德胜路</li>
+                            <li title="479" boardid="479" boardname="如意二马路" x="113.310884" y="23.047656">如意二马路</li>
+                            <li title="480" boardid="480" boardname="番禺广场" x="113.390791" y="22.940166">番禺广场</li>
+                            <li title="481" boardid="481" boardname="白沙堡大街" x="113.370958" y="22.959655">白沙堡大街</li>
+                            <li title="482" boardid="482" boardname="绿茵岛花园" x="113.33338" y="23.039213">绿茵岛花园</li>
+                            <li title="483" boardid="483" boardname="洛溪大桥" x="113.306725" y="23.052848">洛溪大桥</li>
+                            <li title="484" boardid="484" boardname="南国奥林匹克花园" x="113.329221" y="22.992541">南国奥林匹克花园</li>
+                            <li title="485" boardid="485" boardname="南大路" x="113.389208" y="23.018317">南大路</li>
+                            <li title="486" boardid="486" boardname="锦绣香江花园" x="113.348356" y="23.004783">锦绣香江花园</li>
+                            <li title="487" boardid="487" boardname="富华园" x="113.371019" y="22.952854">富华园</li>
+                            <li title="488" boardid="488" boardname="丹桂园" x="113.364703" y="22.953818">丹桂园</li>
+                            <li title="489" boardid="489" boardname="富华东路" x="113.374833" y="22.953556">富华东路</li>
+                            <li title="490" boardid="490" boardname="汉溪大道" x="113.315129" y="22.9921">汉溪大道</li>
+                            <li title="491" boardid="491" boardname="清河东路" x="113.392945" y="22.941951">清河东路</li>
+                            <li title="492" boardid="492" boardname="西湾路" x="113.249103" y="23.150863">西湾路</li>
+                            <li title="493" boardid="493" boardname="东兴苑" x="113.386174" y="22.935365">东兴苑</li>
+                            <li title="494" boardid="494" boardname="南沙" x="113.534281" y="22.808019">南沙</li>
+                            <li title="495" boardid="495" boardname="富华中路" x="113.370853" y="22.952674">富华中路</li>
+                            <li title="496" boardid="496" boardname="华荟南景苑" x="113.377261" y="22.932677">华荟南景苑</li>
+                            <li title="497" boardid="497" boardname="锦江山水华府" x="113.346243" y="22.997881">锦江山水华府</li>
+                            <li title="498" boardid="498" boardname="东涌镇" x="115.428286" y="22.799081">东涌镇</li>
+                            <li title="499" boardid="499" boardname="东环路" x="113.363688" y="22.962014">东环路</li>
+                            <li title="500" boardid="500" boardname="石岗城市花园" x="113.410091" y="22.947409">石岗城市花园</li>
+                            <li title="501" boardid="501" boardname="德丰园小区" x="113.384573" y="22.935107">德丰园小区</li>
+                            <li title="502" boardid="502" boardname="禺山西路" x="113.327659" y="22.942442">禺山西路</li>
+                            <li title="503" boardid="503" boardname="桥兴大道" x="113.372642" y="22.949118">桥兴大道</li>
+                            <li title="504" boardid="504" boardname="宾至路" x="113.325103" y="23.034324">宾至路</li>
+                            <li title="505" boardid="505" boardname="锦绣生态园翠屏园" x="113.31163" y="22.972221">锦绣生态园翠屏园</li>
+                            <li title="506" boardid="506" boardname="迎宾路" x="113.342472" y="23.022271">迎宾路</li>
+                            <li title="508" boardid="508" boardname="南郊村" x="113.374496" y="22.934133">南郊村</li>
+                            <li title="509" boardid="509" boardname="新江路" x="113.310557" y="23.040742">新江路</li>
+                            <li title="510" boardid="510" boardname="吉祥北街" x="113.305321" y="23.050113">吉祥北街</li>
+                            <li title="511" boardid="511" boardname="大北路" x="113.372861" y="22.948615">大北路</li>
+                            <li title="512" boardid="512" boardname="康裕苑" x="113.36165" y="22.949713">康裕苑</li>
+                            <li title="513" boardid="513" boardname="新光城市花园" x="113.36089" y="23.015823">新光城市花园</li>
+                            <li title="514" boardid="514" boardname="清河中路" x="113.375296" y="22.940274">清河中路</li>
+                            <li title="515" boardid="515" boardname="禺丰苑" x="113.360592" y="22.947238">禺丰苑</li>
+                            <li title="516" boardid="516" boardname="环城中路" x="113.377309" y="22.944471">环城中路</li>
+                            <li title="517" boardid="517" boardname="石楼莲港花园" x="113.495908" y="22.973635">石楼莲港花园</li>
+                            <li title="518" boardid="518" boardname="旺达楼" x="113.32239" y="23.023548">旺达楼</li>
+                            <li title="519" boardid="519" boardname="环城东路" x="113.377243" y="22.944126">环城东路</li>
+                            <li title="520" boardid="520" boardname="东沙路" x="113.383743" y="22.939305">东沙路</li>
+                            <li title="521" boardid="521" boardname="汇景大道" x="113.386631" y="22.925679">汇景大道</li>
+                            <li title="522" boardid="522" boardname="奥园西街" x="113.380036" y="22.937865">奥园西街</li>
+                            <li title="523" boardid="523" boardname="清河西路" x="113.370237" y="22.939617">清河西路</li>
+                            <li title="752" boardid="752" boardname="钟村镇" x="113.32363" y="22.983933">钟村镇</li>
+                            <li title="962" boardid="962" boardname="黄编村" x="113.381004" y="22.958274">黄编村</li>
+                            <li title="967" boardid="967" boardname="义务亚运城" x="113.481938" y="22.950518">义务亚运城</li>
+                            <li title="979" boardid="979" boardname="市莲路" x="113.485969" y="22.971177">市莲路</li>
+                            <li title="980" boardid="980" boardname="环岛路" x="113.259254" y="23.096004">环岛路</li>
+                            <li title="981" boardid="981" boardname="兴业路" x="113.401681" y="22.796558">兴业路</li>
+                            <li title="982" boardid="982" boardname="西涌大街" x="113.36787" y="22.939259">西涌大街</li>
+                            <li title="983" boardid="983" boardname="繁华路" x="113.366472" y="22.947933">繁华路</li>
+                            <li title="984" boardid="984" boardname="105国道" x="113.400165" y="23.374709">105国道</li>
+                            <li title="985" boardid="985" boardname="翠怡路" x="113.392944" y="22.958462">翠怡路</li>
+                        </ul>
+                    </li>
+                    <li><span>黄埔</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440112" regionname="黄埔" x="113.487754" y="23.187363">不限</li>
+                            <li title="150" boardid="150" boardname="大沙地" x="113.455490112305" y="23.1100673675537">大沙地</li>
+                            <li title="151" boardid="151" boardname="丰乐路" x="113.461601257324" y="23.108772277832">丰乐路</li>
+                            <li title="152" boardid="152" boardname="开发东区" x="113.536254882813" y="23.0687370300293">开发东区</li>
+                            <li title="153" boardid="153" boardname="开发西区" x="113.534591674805" y="23.0599250793457">开发西区</li>
+                            <li title="154" boardid="154" boardname="开创大道" x="113.508522033691" y="23.1784820556641">开创大道</li>
+                            <li title="155" boardid="155" boardname="萝岗" x="113.514465332031" y="23.1836795806885">萝岗</li>
+                            <li title="156" boardid="156" boardname="文冲" x="113.472282409668" y="23.1100330352783">文冲</li>
+                            <li title="310" boardid="310" boardname="大沙地" x="113.455490112305" y="23.1100673675537">大沙地</li>
+                            <li title="311" boardid="311" boardname="丰乐路" x="113.461601257324" y="23.108772277832">丰乐路</li>
+                            <li title="312" boardid="312" boardname="开发东区" x="113.536254882813" y="23.0687370300293">开发东区</li>
+                            <li title="313" boardid="313" boardname="开发西区" x="113.534591674805" y="23.0599250793457">开发西区</li>
+                            <li title="314" boardid="314" boardname="开创大道" x="113.508522033691" y="23.1784820556641">开创大道</li>
+                            <li title="315" boardid="315" boardname="萝岗" x="113.514465332031" y="23.1836795806885">萝岗</li>
+                            <li title="316" boardid="316" boardname="文冲" x="113.472282409668" y="23.1100330352783">文冲</li>
+                            <li title="443" boardid="443" boardname="黄埔" x="113.462799072266" y="23.1113719940186">黄埔</li>
+                            <li title="445" boardid="445" boardname="区府板块" x="113.390701293945" y="22.9412937164307">区府板块</li>
+                            <li title="446" boardid="446" boardname="知识城" x="113.497360229492" y="23.3990840911865">知识城</li>
+                            <li title="524" boardid="524" boardname="大沙东路" x="113.459993" y="23.112076">大沙东路</li>
+                            <li title="525" boardid="525" boardname="石化路" x="113.467738" y="23.153501">石化路</li>
+                            <li title="526" boardid="526" boardname="港湾路" x="113.453666" y="23.109317">港湾路</li>
+                            <li title="527" boardid="527" boardname="蟹山路" x="113.447679" y="23.105917">蟹山路</li>
+                            <li title="528" boardid="528" boardname="丰乐北路" x="113.462801" y="23.141679">丰乐北路</li>
+                            <li title="529" boardid="529" boardname="中山大道" x="113.399092" y="23.130824">中山大道</li>
+                            <li title="530" boardid="530" boardname="广新路" x="113.485945" y="23.100246">广新路</li>
+                            <li title="531" boardid="531" boardname="黄埔东路" x="113.551963" y="23.106625">黄埔东路</li>
+                            <li title="532" boardid="532" boardname="黄埔大道" x="113.330928" y="23.132707">黄埔大道</li>
+                            <li title="533" boardid="533" boardname="大沙北路" x="113.459872" y="23.115167">大沙北路</li>
+                            <li title="534" boardid="534" boardname="中天花园" x="113.560089" y="23.10974">中天花园</li>
+                            <li title="535" boardid="535" boardname="大沙镇 " x="113.460067" y="23.106591">大沙镇 </li>
+                            <li title="536" boardid="536" boardname="荔香路" x="113.450363" y="23.105777">荔香路</li>
+                            <li title="537" boardid="537" boardname="茅岗路" x="113.445784" y="23.12692">茅岗路</li>
+                            <li title="538" boardid="538" boardname="志诚大道" x="113.529823" y="23.067994">志诚大道</li>
+                            <li title="539" boardid="539" boardname="森林半岛" x="113.566999" y="23.141169">森林半岛</li>
+                            <li title="540" boardid="540" boardname="鱼珠新街" x="113.437936" y="23.103558">鱼珠新街</li>
+                            <li title="986" boardid="986" boardname="海员路" x="113.454775" y="23.101136">海员路</li>
+                        </ul>
+                    </li>
+                    <li><span>花都</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440114" regionname="花都" x="113.227409" y="23.409306">不限</li>
+                            <li title="120" boardid="120" boardname="旧区" x="113.23316192627" y="23.4045467376709">旧区</li>
+                            <li title="121" boardid="121" boardname="建设北" x="113.212600708008" y="23.4061012268066">建设北</li>
+                            <li title="122" boardid="122" boardname="镜湖大道" x="113.235626220703" y="23.3483047485352">镜湖大道</li>
+                            <li title="123" boardid="123" boardname="美林湖" x="113.041007995605" y="23.4483680725098">美林湖</li>
+                            <li title="124" boardid="124" boardname="狮岭" x="113.15892791748" y="23.4657421112061">狮岭</li>
+                            <li title="125" boardid="125" boardname="山前大道" x="113.227363586426" y="23.4719753265381">山前大道</li>
+                            <li title="126" boardid="126" boardname="铁路西" x="113.208793640137" y="23.3811435699463">铁路西</li>
+                            <li title="128" boardid="128" boardname="新区" x="113.221939086914" y="23.4017181396484">新区</li>
+                            <li title="280" boardid="280" boardname="旧区" x="113.23316192627" y="23.4045467376709">旧区</li>
+                            <li title="281" boardid="281" boardname="建设北" x="113.212600708008" y="23.4061012268066">建设北</li>
+                            <li title="282" boardid="282" boardname="镜湖大道" x="113.235626220703" y="23.3483047485352">镜湖大道</li>
+                            <li title="283" boardid="283" boardname="美林湖" x="113.041007995605" y="23.4483680725098">美林湖</li>
+                            <li title="284" boardid="284" boardname="狮岭" x="113.15892791748" y="23.4657421112061">狮岭</li>
+                            <li title="285" boardid="285" boardname="山前大道" x="113.227363586426" y="23.4719753265381">山前大道</li>
+                            <li title="286" boardid="286" boardname="铁路西" x="113.208793640137" y="23.3811435699463">铁路西</li>
+                            <li title="288" boardid="288" boardname="新区" x="113.221939086914" y="23.4017181396484">新区</li>
+                            <li title="416" boardid="416" boardname="花都" x="113.140159606934" y="23.3530521392822">花都</li>
+                            <li title="417" boardid="417" boardname="汽车城板块" x="113.419525146484" y="23.110523223877">汽车城板块</li>
+                            <li title="418" boardid="418" boardname="区府板块" x="113.390701293945" y="22.9412937164307">区府板块</li>
+                            <li title="419" boardid="419" boardname="新机场板块" x="113.308609008789" y="23.3736743927002">新机场板块</li>
+                            <li title="453" boardid="453" boardname="建设北路" x="113.221223" y="23.431355">建设北路</li>
+                            <li title="461" boardid="461" boardname="新华镇" x="110.340016" y="21.455486">新华镇</li>
+                            <li title="462" boardid="462" boardname="狮岭镇" x="113.158253" y="23.466954">狮岭镇</li>
+                            <li title="463" boardid="463" boardname="新华路" x="113.237064" y="23.390323">新华路</li>
+                            <li title="955" boardid="955" boardname="商业大道" x="113.212062" y="23.379626">商业大道</li>
+                            <li title="960" boardid="960" boardname="云山路" x="113.220724" y="23.389867">云山路</li>
+                            <li title="961" boardid="961" boardname="天贵路" x="113.228817" y="23.40284">天贵路</li>
+                            <li title="969" boardid="969" boardname="花城路口" x="113.222147" y="23.382093">花城路口</li>
+                            <li title="970" boardid="970" boardname="兰花路" x="113.234535" y="23.408756">兰花路</li>
+                            <li title="974" boardid="974" boardname="大华一路" x="113.208937" y="23.403769">大华一路</li>
+                            <li title="975" boardid="975" boardname="华南路" x="113.213591" y="23.375123">华南路</li>
+                            <li title="976" boardid="976" boardname="大华二路" x="113.20645" y="23.402861">大华二路</li>
+                            <li title="977" boardid="977" boardname="凤凰北路" x="113.240769" y="23.415002">凤凰北路</li>
+                            <li title="978" boardid="978" boardname="宝华路" x="113.21442" y="23.392489">宝华路</li>
+                        </ul>
+                    </li>
+                    <li><span>增城</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440183" regionname="增城" x="113.818208" y="23.266027">不限</li>
+                            <li title="129" boardid="129" boardname="凤凰城东" x="113.583236694336" y="23.1404132843018">凤凰城东</li>
+                            <li title="131" boardid="131" boardname="凤凰城" x="113.583305358887" y="23.1403217315674">凤凰城</li>
+                            <li title="132" boardid="132" boardname="广园东" x="113.599540710449" y="23.1279315948486">广园东</li>
+                            <li title="133" boardid="133" boardname="荔城大道北" x="113.827972412109" y="23.2986927032471">荔城大道北</li>
+                            <li title="134" boardid="134" boardname="荔城大道南" x="113.82373046875" y="23.2900638580322">荔城大道南</li>
+                            <li title="135" boardid="135" boardname="新塘南" x="113.619346618652" y="23.1224975585938">新塘南</li>
+                            <li title="136" boardid="136" boardname="新塘北" x="113.615333557129" y="23.1341800689697">新塘北</li>
+                            <li title="289" boardid="289" boardname="凤凰城东" x="113.583236694336" y="23.1404132843018">凤凰城东</li>
+                            <li title="291" boardid="291" boardname="凤凰城" x="113.583305358887" y="23.1403217315674">凤凰城</li>
+                            <li title="292" boardid="292" boardname="广园东" x="113.599540710449" y="23.1279315948486">广园东</li>
+                            <li title="293" boardid="293" boardname="荔城大道北" x="113.827972412109" y="23.2986927032471">荔城大道北</li>
+                            <li title="294" boardid="294" boardname="荔城大道南" x="113.82373046875" y="23.2900638580322">荔城大道南</li>
+                            <li title="295" boardid="295" boardname="新塘南" x="113.619346618652" y="23.1224975585938">新塘南</li>
+                            <li title="296" boardid="296" boardname="新塘北" x="113.615333557129" y="23.1341800689697">新塘北</li>
+                            <li title="330" boardid="330" boardname="荔城" x="113.837287902832" y="23.2999687194824">荔城</li>
+                            <li title="407" boardid="407" boardname="新塘" x="113.625267028809" y="23.1217823028564">新塘</li>
+                            <li title="408" boardid="408" boardname="增城" x="113.782875061035" y="23.5678825378418">增城</li>
+                            <li title="460" boardid="460" boardname="永和镇" x="113.600363" y="23.184218">永和镇</li>
+                            <li title="968" boardid="968" boardname="荔乡路" x="113.830814" y="23.291675">荔乡路</li>
+                            <li title="996" boardid="996" boardname="朱村" x="113.70679" y="23.278055">朱村</li>
+                        </ul>
+                    </li>
+                    <li><span>佛山</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="4406" regionname="佛山" x="113.126995" y="23.026643">不限</li>
+                        </ul>
+                    </li>
+                    <li><span>从化</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440184" regionname="从化" x="113.595712" y="23.556283">不限</li>
+                            <li title="335" boardid="335" boardname="从化" x="113.686549" y="23.682367">从化</li>
+                            <li title="957" boardid="957" boardname="河滨北路" x="113.61431" y="23.566219">河滨北路</li>
+                            <li title="958" boardid="958" boardname="建设路" x="113.596221" y="23.550348">建设路</li>
+                            <li title="959" boardid="959" boardname="新城西路" x="113.587308" y="23.559465">新城西路</li>
+                            <li title="972" boardid="972" boardname="街口" x="113.594926" y="23.55037">街口</li>
+                        </ul>
+                    </li>
+                    <li id="region_other_li" title="" regioncode="440199" regionname="其他" x="113.22007" y="23.086068"><span>其他</span>
+                    </li>
+                    <li><span>东山</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440102" regionname="东山" x="113.304547" y="23.130509">不限</li>
+                            <li title="946" boardid="946" boardname="龟岗二马路" x="113.300233" y="23.126808">龟岗二马路</li>
+                            <li title="947" boardid="947" boardname="东川" x="103.197057" y="26.088154">东川</li>
+                            <li title="948" boardid="948" boardname="东山口" x="113.30257" y="23.130547">东山口</li>
+                            <li title="949" boardid="949" boardname="福今路" x="113.308883" y="23.133941">福今路</li>
+                            <li title="950" boardid="950" boardname="北教场" x="102.703371" y="25.080391">北教场</li>
+                            <li title="951" boardid="951" boardname="中山二路" x="113.296997" y="23.131315">中山二路</li>
+                            <li title="952" boardid="952" boardname="东华南路" x="113.291214" y="23.124598">东华南路</li>
+                            <li title="953" boardid="953" boardname="江湾写字楼" x="113.284028" y="23.12181">江湾写字楼</li>
+                            <li title="954" boardid="954" boardname="东堤二马路" x="113.284295" y="23.122342">东堤二马路</li>
+                        </ul>
+                    </li>
+                    <li><span>南沙</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440115" regionname="南沙" x="113.531693" y="22.807752">不限</li>
+                            <li title="334" boardid="334" boardname="南沙" x="113.534065" y="22.805953">南沙</li>
+                            <li title="973" boardid="973" boardname="珠江中路" x="113.553285" y="22.709825">珠江中路</li>
+                            <li title="997" boardid="997" boardname="金洲" x="113.555028" y="22.805714">金洲</li>
+                        </ul>
+                    </li>
+                    <li><span>萝岗</span>
+                    	<ul class="boxList boardul" style="top:28px">
+                        	<li title="" regioncode="440116" regionname="萝岗" x="113.5093" y="23.182694">不限</li>
+                            <li title="331" boardid="331" boardname="开发东区" x="113.548333" y="23.121216">开发东区</li>
+                            <li title="332" boardid="332" boardname="开发西区" x="113.534316" y="23.067137">开发西区</li>
+                            <li title="333" boardid="333" boardname="萝岗" x="113.508941" y="23.182495">萝岗</li>
+                            <li title="971" boardid="971" boardname="青年路" x="113.53438" y="23.071256">青年路</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="ocMetro" class="district">
+                <ul>
+                <li class="bx">不限</li>
+                <li><span>地铁1号线</span>
+                	<ul class="boxList" name="yihaoxian">
+                        <li>全程</li>
+                        <li>打铁关站</li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+            <li id="ocSchool" class="district">
+                <ul><li>不限</li><li>幼儿园</li><li>小学</li><li>初中</li></ul>
+            </li>
+		</ul>
+    </div>
+    
+    <div id="oArea" class="selectBox" value="面积">
+    <span>面积</span><i class="down-icon"></i>
+    	<ul class="popList vertical areaul">
+    		<li title="">不限</li>
+    		<li title="a0,50">50㎡以下</li>
+    		<li title="a50,70">50-70㎡</li>
+    		<li title="a70,90">70-90㎡</li>
+    		<li title="a90,110">90-110㎡</li>
+    		<li title="a110,130">110-130㎡</li>
+    		<li title="a130,150">130-150㎡</li>
+    		<li title="a150,200">150-200㎡</li>
+    		<li title="a200,300">200-300㎡</li>
+    		<li title="a300">300㎡以上</li>
+		</ul>
+    </div>
+    
+    <div id="oType" class="selectBox" value="户型">
+   <span>户型</span><i class="down-icon"></i>
+    	<ul class="popList vertical roomCountul">
+    		<li title="">不限</li>
+    		<li title="1">1室</li>
+    		<li title="2">2室</li>
+    		<li title="3">3室</li>
+    		<li title="4">4室</li>
+    		<li title="5">5室及以上</li>
+		</ul>
+    </div>
+    
+    <div id="oMore" class="selectBox" value="更多">
+    <span>更多</span><i class="down-icon"></i>
+    	<div class="moreBox popList">
+            <form>
+                <select id="direction">
+                  <option value="">朝向</option>
+                  <option value="126">南北</option>
+                  <option value="66">东南</option>
+                  <option value="76">正东</option>
+                  <option value="77">正西</option>
+                  <option value="127">正南</option>
+                  <option value="128">正北</option>
+                  <option value="129">东西</option>
+                  <option value="130">西南</option>
+                  <option value="131">东北</option>
+                  <option value="132">西北</option>
+                  <option value="325">未知</option>
+                </select>
+                <select id="deck">
+                  <option value="">装修</option>
+		          <option value="122">中装</option>
+		          <option value="67">简装</option>
+		          <option value="120">毛坯</option>
+		          <option value="121">精装</option>
+		          <option value="458">豪装</option>
+		          <option value="389">其它装修</option>
+                </select>
+                <select id="birthYear">
+                  <option value="">房龄</option>
+                  <option value="2013,2015">2年以下</option>
+                  <option value="2010,2012">2-5年</option>
+                  <option value="2005,2009">5-10年</option>
+                  <option value="1000,2004">10年以上</option>
+                </select>
+                <input type="button" value="确定" id="moreBtn">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="map">
+	<div id="allmap" style="width:100%;height:100%"></div>
+	<div id="mapOption">
+        <div class="mapOptionBox" id="houseTagDiv">
+        	<span class="check on-off" tagname="学区房"><i class="check-icon"></i>学区房</span>
+        	<span class="check on-off" tagname="低价急售"><i class="check-icon"></i>低价急售</span>
+        	<span class="check on-off" tagname="南北通透"><i class="check-icon"></i>南北通透</span>
+        </div>
+        <div class="mapOptionBox nearby"><span>附近</span><i class="down-icon"></i>
+        	<ul class="popList">
+                <li key="education"><span>学校</span><i class="school-icon"></i></li>
+                <li key="hospital"><span>医院</span><i class="hospital-icon"></i></li>
+                <li key="bus"><span>公交</span><i class="traffic-icon"></i></li>
+                <li key="bank"><span>银行</span><i class="bank-icon"></i></li>
+                <li key="shop"><span>购物</span><i class="shopping-icon"></i></li>
+                <li key="eat"><span>美食</span><i class="cate-icon"></i></li>
+                <li key=""><span>无</span></li>
+        	</ul>
+        </div>
+        <div class="mapOptionBox on-off" id="ceju">测距</div>
+    </div>
+</div>
+
+<div id="panelToggle">
+	<i class="right-icon"></i>
+</div>
+
+</body>
+<script src="../../themes/default/js/map/map.js" type="text/javascript"></script>
+<script src="../../api-2.0_B69589c69c851a34b6c948f4.js" type="text/javascript"></script>
+<script src="../../themes/default/js/map/DistanceTool_min.js" type="text/javascript"></script>
+<script src="../../themes/default/js/map/myBMap.js" type="text/javascript"></script>
+<script src="../../themes/default/js/map/houseMap.js" type="text/javascript"></script>
+<script src="../../themes/default/js/map/map.append.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(function(){
+		house_type = 'sale';
+		var map_buildingId = "";
+		if(house_type == 'building') {
+			if(map_buildingId != '') {
+				var options={
+		            x:'',
+		            y:'',
+		        	cityName: '义务',
+		            dataUrl: '/map/map_api',
+		            defaultZoom: 17,
+		            mapBoxId: 'allmap'
+		        };
+		        _myMap = new myMap(options);
+		        _myMap.community.id = map_buildingId;
+		        _myMap.loadMap();
+			} else {
+				var options={
+		            x:'113.271173',
+		            y:'23.144725',
+		        	cityName: '义务',
+		            dataUrl: '/map/map_api',
+		            defaultZoom: zoomId,
+		            mapBoxId: 'allmap'
+		        };
+		        _myMap = new myMap(options);
+		        _myMap.loadMap();
+		        
+		        priceTrend();
+		        bindClick_hotBuilding();
+			}
+		} else {
+			var options={
+	            x:'113.271173',
+	            y:'23.144725',
+	        	cityName: '义务',
+	            dataUrl: '/map/map_api',
+	            defaultZoom: zoomId,
+	            mapBoxId: 'allmap'
+	        };
+	        _myMap = new myMap(options);
+	        _myMap.loadMap();
+		}
+	})
+	
+	
+	function bindClick_hotBuilding() {
+		$(".xiaoquList a").bind('click', function() {
+			if($(this).attr("x")!="" && $(this).attr("y")!="") {
+				_myMap.community.id = $(this).attr("id");
+				_myMap.community.x = $(this).attr("x");
+				_myMap.community.y = $(this).attr("y");
+				
+				_myMap.mapObj.setZoom(17);
+		    	_myMap.mapObj.clearOverlays(); 
+		    	_myMap.mapObj.panTo(new BMap.Point(_myMap.community.x, _myMap.community.y));
+		    	
+	        	resetAppendCondition();
+	            map_append_statu = "community";
+	            appendCondition.buildingId = $(this).attr("id");
+	        	searchMapAppend();
+			}
+		});
+	}
+	
+	function priceTrend()
+	{
+		var labels = new Array();
+		var show_data =new Array();
+		
+		var data = {
+			labels :labels,
+			datasets :[
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "#3399ff",
+				pointColor : "#3399ff",
+				pointStrokeColor : "#fff",
+				data : show_data
+			}]
+		}
+		var ctx = $("#price_trend").get(0).getContext("2d");
+		var myNewChart = new Chart(ctx);
+		
+		var options = {
+			bezierCurve: false,
+			tooltipTemplate: "<%if (label){%><%=label%> 均价：<%}%><%= value %>元/平米"
+		}
+					
+		myNewChart.Line(data,options);
+	}
+    
+</script>
+</html>

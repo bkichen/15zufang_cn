@@ -1,0 +1,99 @@
+body {font-family:Verdana, Arial, "Microsoft YaHei";font-size: 14px;padding:0px;margin:0px;line-height:22px;background:#ffffff;color:#000000;}
+input,button,select,textarea {font-family:Verdana, Arial, "Microsoft YaHei";font-size:14px;margin:0px;}
+h1,h2,h3,h4,h5,h6,form,ul,li,dl,dt,dd,img,p,i{ margin:0px; padding:0px;}
+ul,li,ol{list-style:none}
+* a{text-decoration:none;}
+
+.C999{ color:#999999 !important;}
+.C666{ color:#666666 !important;}
+.C000{ color:#000000 !important;}
+.fontS18{ font-size:18px !important;}
+.fontS20{ font-size:20px !important;}
+.fontS24{ font-size:24px !important;}
+.fontS30{ font-size:30px !important;}
+
+.mt10{margin-top:10px;}
+.mt20{margin-top: 20px;}
+
+
+.icon01 {width:29px;height:29px; display:inline-block; background-image:url(../img/login/lx.png); background-repeat:no-repeat;vertical-align: middle;}
+.icon01-qq {background-position:0px 0px; }
+.icon01-tel {background-position:-29px 0px; }
+.icon01-login {background-position:-58px 0px; }
+/**/
+.icon02 {width:100px;height:100px; display:inline-block; background-image:url(../img/login/inon02.png); background-repeat:no-repeat;vertical-align: middle;}
+.icon02-01 {background-position:-3px 0px; }
+.icon02-02 {background-position:-115px 0px; }
+.icon02-03 {background-position:-237px 0px; }
+.icon02-04 {background-position:-359px 0px; }
+.icon02-11 {background-position:-497px 0px; }
+.icon02-12 {background-position:-597px 0px; }
+.icon02-13 {background-position:-710px 0px; }
+.icon02-14 {background-position:-825px 0px; }
+.icon02-21 {background-position:-958px 0px; }
+.icon02-22 {background-position:-1076px 0px; width:120px;}
+.icon02-23 {background-position:-1218px 0px; }
+.icon02-24 {background-position:-1338px 0px; }
+
+
+
+
+/*****header***********/
+.header {width:100%;height:70px;background-color:rgba(255, 255, 255, 0.9); filter: progid:DXImageTransform.Microsoft.gradient(enabled="true",startColorstr="#99ffffff",endColorstr="#99ffffff"); position:fixed;_position:absolute;left:0px;top:0px; z-index:999; overflow:hidden;}
+.header dl {width:1200px; margin:0px auto;}
+.header dl dt {float:left;height:36px;padding-top:17px;}
+.header dl dd {float:right;font-size:20px;font-weight:bold;line-height:70px;color:#ff5500;_padding-top:18px;}
+.header dl dd a {margin-left:50px;color:#ff5500;}
+
+
+/*棣栧睆*/
+.main-a {width:100%;height:660px;margin-top:70px;*padding-top:140px; background-image:url(../img/login/bg1.jpg); background-position:center center; background-repeat:repeat-x; overflow:hidden;}
+.login-box {width:300px;height:390px;padding:20px 50px 0px 50px;background-color:#fff;-webkit-border-radius: 10px;border-radius: 10px;float:right; margin-top:190px; *margin-top:120px;_margin-top:5px;position:relative; box-shadow:1px 1px 5px rgba(0,0,0,0.3)}
+/**/
+.login-box dl.login-in {width:100%; display:block;color:#000;}
+.login-box dl.login-in dt {font-size:24px;height:60px;line-height:60px; text-align:center; color:#000}
+.login-box dl.login-in dd input.name,.login-box dl.login-in dd input.pass {width:260px;height:38px;line-height:38px;padding-left:40px;background-color:#ffffff;margin-bottom:25px;border:1px solid #ddd;font-size:16px; border-radius:3px; outline:none; color:#999}
+.login-box dl.login-in dd input.name {background-image:url(../themes/default/images/login.png); background-position:10px 12px; background-repeat:no-repeat;}
+.login-box dl.login-in dd input.pass {background-image:url(../themes/default/images/login.png); background-position:10px -75px; background-repeat:no-repeat;}
+.login-box dl.login-in dd input.btn {width:300px;height:40px;background:#ff5500;border:0px;color:#ffffff;font-size:16px;}
+.login-box .error {width:100%;height:30px;display:block;line-height:30px;text-align:center;font-size:16px;font-weight:bold; color:#000000; position:absolute;left:0px;top:285px;}
+.login-box .newacc {width:100%;height:30px;padding-top:60px;text-align:center;font-size:16px; overflow:hidden;}
+.login-box .newacc a{width:50%; display:inline-block; color:#000;}
+.login-box .newacc a:hover {font-weight:bold;}
+
+
+
+.main-b {width:100%;height:550px;background-color:#ffffff;}
+.main-b .text {padding-top:100px;text-align:center; line-height:30px;}
+.main-b ul {width:1000px;height:140px;margin:0px auto;margin-top:70px;}
+.main-b ul li {float:left;width:25%;height:140px;line-height:40px; display:inline-block; text-align:center;font-size:16px;}
+.main-b ul li i {/*background-color:#cccccc;*/}
+.main-c {color:#ffffff;background-color:#ffffff;background-image:url(../img/login/bg2.jpg); background-position:top center; background-repeat:repeat-x;}
+.main-c .text {padding-top:140px;}
+.main-d {height:520px;}
+.main-d .text {padding-top:120px;}
+
+
+/**/
+.footer {line-height:26px;border-top:1px solid #dddddd;padding:40px 0px;text-align:center;font-size:12px;}
+.footer a {color:#000000;}
+.footer a:hover {color:#ff6600;}
+.footer span {padding:0px 10px;color:#cccccc;}
+
+.qr-box{position:absolute;top:268px;width:166px;padding:25px 15px;background-color:#fff;text-align:center;}
+.qr-box{position:fixed;top: 274px;left: 50px;width:166px;padding:25px 15px;background-color:#fff;text-align:center;}
+.qr-box .down-btn{display:block;height:42px;border-radius:42px;background-color:#ff6600;text-align:left;color:#fff;}
+.qr-box .down-btn:hover{background-color:#e95d00;}
+.qr-box .down-btn i{display:inline-block;width:24px;height:28px;background-image:url(../img/login/app_icon.png);margin-top:6px;margin-left:18px;margin-right:12px;}
+.qr-box .down-btn .ios{background-position:0 0 ;}
+.qr-box .down-btn .android{background-position:-24px 0;}
+.qr-box .down-btn span{display:inline-block;height:28px;line-height:28px;margin-top:6px;vertical-align:top;}
+
+.txt-box{position:absolute;top:440px;left:220px;font-size:16.5px;color:#3f0000;}
+.txt-box p{margin-bottom:10px;}
+
+
+
+
+
+

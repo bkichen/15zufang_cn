@@ -1,0 +1,18 @@
+
+/* CSS Document */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, em, font, img, s, samp, small, strong, tt, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td,input { margin:0px; padding:0px; border:0px; font-size:100%; vertical-align:baseline;}
+body { line-height:150%;background:#fff;position:relative;font-family: SYHT,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif; orphans:#333;}
+ol, ul { list-style:none }
+
+/* `Text style defined
+-----------------------------------------------------------------------------------------------------*/
+body, a { text-decoration:none;}
+h1, h2, h3, h4, h5, h6, h7, em { font-weight:normal; font-style:normal;}
+
+/*
+	The following is defined color class.
+
+--------------------------------------------------------------------------------------------------*/
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both;}

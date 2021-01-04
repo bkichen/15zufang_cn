@@ -1,0 +1,1371 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="义务房价,义务房价走势,义务房价网">
+    <meta name="description" content="房探007义务房价频道-专业的义务房价网，提供2021年最新义务房价走势,房屋成交量走势信息。">
+    <title>义务房价_义务房价走势2021_义务房价网-义务房探007网</title>
+<link rel="stylesheet" href="../themes/default/css/common.css" type="text/css">
+<link href="../themes/default/css/liaotian.css" rel="stylesheet" type="text/css">
+<script src="../themes/default/js/jquery.min.js"></script>
+<script src="../themes/default/js/common.js" type="text/javascript"></script>
+<script src="../themes/default/js/liaotian.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?79f75de0162fdd2c54dce979ce05f82a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link href="../themes/default/css/fangjia.css" rel="stylesheet" type="text/css">
+    <script src="../themes/default/js/jquery-1.8.3.min.js"></script>
+    <script src="../themes/default/js/Chart.js"></script>
+    <!--[if lt IE 9]>
+	<script src="/themes/default/js/html5shiv.js?v=1609763789510"></script>
+	<script src="/themes/default/js/respond.min.js?v=1609763789510"></script>
+	<script src="/themes/default/js/excanvas.js?v=1609763789510"></script>
+	<![endif]-->
+    </head>
+    <body>
+
+
+<div class="header"> 
+	<div class="top">
+		<div class="web-width">
+        	<ul class="z">
+            	<li class="logo">
+   <a href="../index.html" title="房途网"><img src="../themes/default/images/logo.png" alt="义乌租房信息网"></a>
+</li>
+<li class="city" id="choiceCity" style="z-index:999;">
+    <a href="../index1.html">义务&nbsp;<i class="icon-right-small"></i></a>
+</li>
+                <li class="search">
+					<div class="search-top-box">
+						<div class="top-search-input"><input name="buildname" id="buildname" class="input top-search-input" type="text" placeholder="小区名称" onkeyup="onkeyword(this)" onfocus="onkeyword(this)" value=""><input name="searchBtn" id="searchBtn" class="search-bnt cursor" type="button">
+                        </div>
+                        
+                        <div class="search-result-box" style="display: none;">
+                        </div>
+					</div>
+        		</li>
+            </ul>                
+<ul class="y">
+	<li class="mya"> 
+	        <a href="../my/login.html" class="login"><span></span>登录</a>
+      <a href="../my/register.html" class="reg"><span></span>注册</a>
+      	<a href="../my/house.html" class="login"><span class="fang-icon"></span>我的房探</a>
+	</li>
+</ul>
+		</div>
+	</div>
+      
+<div class="title">
+	<div class="web-width"> 
+		<ul class="max-t z">
+           <li class="sy"><a href="../index.html" title="首页">首页</a></li>
+           <li class="esf"><a href="../sale/index.html" title="义务二手房">二手房</a></li>
+           <li class="czf"><a href="../rent/index.html" title="义务出租房">租房</a></li>
+           <li class="xq"><a href="../community/index.html" title="义务小区">小区</a></li>
+           <li class="cfj"><a href="" title="查房价" class="ol">查房价</a></li>
+           <li class="jjr"><a href="../broker/index.html" title="义务经纪人">经纪人</a></li>
+           <li class="dt"><a href="../map/sale/index.html" title="地图找房">地图找房</a></li>
+           <li><i class="dhline"></i></li>
+	  	   <li class="dt"><a href="../index2.html" title="个人房源">个人房源</a></li>
+           <li class="dt"><a href="../index2.html" title="群发房源">群发房源</a></li>
+		</ul>
+          
+		<div class="mini-t y">
+			<a href="##" class="header-app" style="display:none"><i class="header-icon"></i><span>APP下载</span></a>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	function onkeyword(searchVar){
+		var searchVal = $(searchVar).val();
+			if($.trim(searchVal) == "")
+			{
+			    $(".search-result-box").slideUp(50);
+				return;
+			}
+			$.ajax({
+			type : "post",
+			url : "/community/jsonBuilding?t=" + Math.random(),
+			data : "buildName="+searchVal,
+			success : function(data) {
+				var obj = eval('(' + data + ')');
+				keyword_handler(obj,searchVal);
+            },
+   			error: function(XMLHttpRequest, textStatus, errorThrown) {
+   			 }	
+		});
+   }
+   
+   function keyword_handler(data,searchVal)
+   {
+	   if(!data){
+		   return;
+	   }
+   		var inHtml = "";
+   		for(i=0;i<data.length;i++)
+   		{
+   			inHtml += '<a class="C000 cursor" title="'+data[i].buildingName+'"><span class="xqm">'+data[i].buildingName.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span><span class="adds C999">'+data[i].addr.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span></a>';
+   		}
+   		if(inHtml!="")
+   		{
+	   		$(".search-result-box").html(inHtml);
+	   	   $(".search-result-box a").click(function(){
+				var v = $(this).attr("title");
+				$("input.top-search-input").val(v);
+				$("input.top-search-input").addClass("C000");
+				$(".search-result-box").slideUp(50);
+			});
+	   		$(".search-result-box").slideDown(100);
+   		}
+   		else
+   		{
+   			$(".search-result-box").html("");
+   			$(".search-result-box").slideUp(50);
+   		}
+   }
+   
+</script>
+
+<div class="web-width-all" style="padding:0px 0px 5px 0px;">
+	<div class="web-width">
+    	<div class="chaqy clearfix" style="overflow:visible">
+        	<span class="fontS20 b z" style="width:180px; display:inline-block;">房价走势</span>
+			<span class="chaqy-a bb fontS14">
+				<a class="ol" href="">义务</a>
+                    <a href="javascript:;" name="65">天河</a>
+                    <a href="javascript:;" name="66">海珠</a>
+                    <a href="javascript:;" name="67">越秀</a>
+                    <a href="javascript:;" name="68">东莞</a>
+                    <a href="javascript:;" name="69">白云</a>
+                    <a href="javascript:;" name="70">荔湾</a>
+                    <a href="javascript:;" name="71">番禺</a>
+                    <a href="javascript:;" name="72">黄埔</a>
+                    <a href="javascript:;" name="73">花都</a>
+                    <a href="javascript:;" name="74">增城</a>
+                    <a href="javascript:;" name="75">佛山</a>
+                    <a href="javascript:;" name="76">从化</a>
+                    <a href="javascript:;" name="77">其他</a>
+                    <a href="javascript:;" name="176">东山</a>
+                    <a href="javascript:;" name="177">南沙</a>
+                    <a href="javascript:;" name="178">萝岗</a>
+			</span>
+				<div class="chaqyList qylist-65" style="display: none;">
+						<a href="javascript:;">长湴</a>
+						<a href="javascript:;">车陂</a>
+						<a href="javascript:;">东站</a>
+						<a href="javascript:;">东圃</a>
+						<a href="javascript:;">东莞庄</a>
+						<a href="javascript:;">岗顶</a>
+						<a href="javascript:;">华景新城</a>
+						<a href="javascript:;">汇景新城</a>
+						<a href="javascript:;">龙洞</a>
+						<a href="javascript:;">龙口西</a>
+						<a href="javascript:;">龙口东</a>
+						<a href="javascript:;">沙河</a>
+						<a href="javascript:;">沙太南</a>
+						<a href="javascript:;">石牌桥</a>
+						<a href="javascript:;">上社</a>
+						<a href="javascript:;">天河北</a>
+						<a href="javascript:;">天河公园</a>
+						<a href="javascript:;">天河南</a>
+						<a href="javascript:;">体育中心</a>
+						<a href="javascript:;">体育西</a>
+						<a href="javascript:;">天润路</a>
+						<a href="javascript:;">棠下</a>
+						<a href="javascript:;">天河客运站</a>
+						<a href="javascript:;">五山</a>
+						<a href="javascript:;">五山路口</a>
+						<a href="javascript:;">员村</a>
+						<a href="javascript:;">粤垦</a>
+						<a href="javascript:;">员村四横路</a>
+						<a href="javascript:;">员村二横路</a>
+						<a href="javascript:;">燕塘</a>
+						<a href="javascript:;">珠江新城西</a>
+						<a href="javascript:;">珠江新城中</a>
+						<a href="javascript:;">珠江新城东</a>
+						<a href="javascript:;">长湴</a>
+						<a href="javascript:;">车陂</a>
+						<a href="javascript:;">东站</a>
+						<a href="javascript:;">东圃</a>
+						<a href="javascript:;">东莞庄</a>
+						<a href="javascript:;">岗顶</a>
+						<a href="javascript:;">华景新城</a>
+						<a href="javascript:;">汇景新城</a>
+						<a href="javascript:;">龙洞</a>
+						<a href="javascript:;">龙口西</a>
+						<a href="javascript:;">龙口东</a>
+						<a href="javascript:;">沙河</a>
+						<a href="javascript:;">沙太南</a>
+						<a href="javascript:;">石牌桥</a>
+						<a href="javascript:;">上社</a>
+						<a href="javascript:;">天河北</a>
+						<a href="javascript:;">天河公园</a>
+						<a href="javascript:;">天河南</a>
+						<a href="javascript:;">体育中心</a>
+						<a href="javascript:;">体育西</a>
+						<a href="javascript:;">天润路</a>
+						<a href="javascript:;">棠下</a>
+						<a href="javascript:;">天河客运站</a>
+						<a href="javascript:;">五山</a>
+						<a href="javascript:;">五山路口</a>
+						<a href="javascript:;">员村</a>
+						<a href="javascript:;">粤垦</a>
+						<a href="javascript:;">员村四横路</a>
+						<a href="javascript:;">员村二横路</a>
+						<a href="javascript:;">燕塘</a>
+						<a href="javascript:;">珠江新城西</a>
+						<a href="javascript:;">珠江新城中</a>
+						<a href="javascript:;">珠江新城东</a>
+						<a href="javascript:;">广园东</a>
+						<a href="javascript:;">后天河北</a>
+						<a href="javascript:;">石牌</a>
+						<a href="javascript:;">天河</a>
+						<a href="javascript:;">珠江新城</a>
+						<a href="javascript:;">植物园</a>
+						<a href="javascript:;">华利路</a>
+						<a href="javascript:;">沙太北路</a>
+						<a href="javascript:;">长福路</a>
+						<a href="javascript:;">天寿路</a>
+						<a href="javascript:;">先烈东二横路</a>
+						<a href="javascript:;">濂泉路</a>
+						<a href="javascript:;">粤汉路</a>
+						<a href="javascript:;">林和东路</a>
+						<a href="javascript:;">燕岭路</a>
+						<a href="javascript:;">义务大道中</a>
+						<a href="javascript:;">广园东路</a>
+						<a href="javascript:;">中山大道中</a>
+						<a href="javascript:;">沾益直街</a>
+						<a href="javascript:;">石鼓岭</a>
+						<a href="javascript:;">华夏路</a>
+						<a href="javascript:;">天河东路</a>
+						<a href="javascript:;">五山路</a>
+						<a href="javascript:;">中山大道西</a>
+						<a href="javascript:;">科韵路</a>
+						<a href="javascript:;">义务大道北</a>
+						<a href="javascript:;">东莞庄一横路</a>
+						<a href="javascript:;">河水大街</a>
+						<a href="javascript:;">棠德南路</a>
+						<a href="javascript:;">黄埔大道中</a>
+						<a href="javascript:;">祥元路</a>
+						<a href="javascript:;">黄埔大道西</a>
+						<a href="javascript:;">龙岗东路</a>
+						<a href="javascript:;">沙太路</a>
+						<a href="javascript:;">荷光路</a>
+						<a href="javascript:;">天河路</a>
+						<a href="javascript:;">瘦狗岭路</a>
+						<a href="javascript:;">兴华路</a>
+						<a href="javascript:;">保利心语</a>
+						<a href="javascript:;">华景路</a>
+						<a href="javascript:;">海安路</a>
+						<a href="javascript:;">金穗路</a>
+						<a href="javascript:;">银定塘</a>
+						<a href="javascript:;">燕塘社区</a>
+						<a href="javascript:;">建中路</a>
+						<a href="javascript:;">程界子富新邨</a>
+						<a href="javascript:;">新城花园</a>
+						<a href="javascript:;">怡景大街</a>
+						<a href="javascript:;">天河东</a>
+						<a href="javascript:;">紫荆街</a>
+						<a href="javascript:;">广园快速路</a>
+						<a href="javascript:;">花城大道</a>
+						<a href="javascript:;">程介坑</a>
+						<a href="javascript:;">侨怡一街</a>
+						<a href="javascript:;">水荫路</a>
+						<a href="javascript:;">环市东路</a>
+						<a href="javascript:;">冼村大厦</a>
+						<a href="javascript:;">青年路</a>
+						<a href="javascript:;">长兴路</a>
+						<a href="javascript:;">岳洲路</a>
+						<a href="javascript:;">茶山路</a>
+						<a href="javascript:;">六运三街</a>
+						<a href="javascript:;">华工北区</a>
+						<a href="javascript:;">华南理工大学</a>
+						<a href="javascript:;">建华路</a>
+						<a href="javascript:;">龙口中路</a>
+						<a href="javascript:;">华阳街</a>
+						<a href="javascript:;">林和</a>
+						<a href="javascript:;">花生寮</a>
+						<a href="javascript:;">新世界花园别墅</a>
+						<a href="javascript:;">大华二路</a>
+						<a href="javascript:;">冼村路</a>
+						<a href="javascript:;">林和中路</a>
+						<a href="javascript:;">林和西路</a>
+						<a href="javascript:;">体育东路</a>
+						<a href="javascript:;">燕都路</a>
+						<a href="javascript:;">富华中路</a>
+						<a href="javascript:;">海明路</a>
+						<a href="javascript:;">凤凰阁</a>
+						<a href="javascript:;">马场路</a>
+						<a href="javascript:;">棠石路</a>
+						<a href="javascript:;">元岗路</a>
+						<a href="javascript:;">侨苑小区</a>
+						<a href="javascript:;">中山大道北</a>
+						<a href="javascript:;">省消防总队</a>
+						<a href="javascript:;">金颖东一街</a>
+						<a href="javascript:;">银利街</a>
+						<a href="javascript:;">沙和路</a>
+						<a href="javascript:;">水荫一横路</a>
+						<a href="javascript:;">天平架</a>
+						<a href="javascript:;">龙岗路</a>
+						<a href="javascript:;">先烈东路</a>
+						<a href="javascript:;">天府路</a>
+						<a href="javascript:;">棠东东路</a>
+						<a href="javascript:;">黄村</a>
+						<a href="javascript:;">同和路</a>
+						<a href="javascript:;">猎德路</a>
+						<a href="javascript:;">义务大道南</a>
+						<a href="javascript:;">伍仙桥</a>
+						<a href="javascript:;">黄埔大道东</a>
+						<a href="javascript:;">工业大道北</a>
+						<a href="javascript:;">天河直街</a>
+						<a href="javascript:;">广和路</a>
+						<a href="javascript:;">东圃二马路</a>
+						<a href="javascript:;">平川路</a>
+						<a href="javascript:;">东莞庄路</a>
+				</div>
+				<div class="chaqyList qylist-66" style="display: none;">
+						<a href="javascript:;">宝岗</a>
+						<a href="javascript:;">滨江东</a>
+						<a href="javascript:;">滨江西</a>
+						<a href="javascript:;">滨江中</a>
+						<a href="javascript:;">昌岗路</a>
+						<a href="javascript:;">东晓南</a>
+						<a href="javascript:;">中大</a>
+						<a href="javascript:;">赤岗</a>
+						<a href="javascript:;">工业大道北</a>
+						<a href="javascript:;">工业大道南</a>
+						<a href="javascript:;">义务大道南</a>
+						<a href="javascript:;">江南大道</a>
+						<a href="javascript:;">江南西</a>
+						<a href="javascript:;">江燕路</a>
+						<a href="javascript:;">客村</a>
+						<a href="javascript:;">沥滘</a>
+						<a href="javascript:;">南洲</a>
+						<a href="javascript:;">琶洲</a>
+						<a href="javascript:;">前进路</a>
+						<a href="javascript:;">新港西</a>
+						<a href="javascript:;">下渡路</a>
+						<a href="javascript:;">东晓</a>
+						<a href="javascript:;">海珠</a>
+						<a href="javascript:;">珠江两岸</a>
+						<a href="javascript:;">江湾路</a>
+						<a href="javascript:;">宝岗大道中</a>
+						<a href="javascript:;">赤岗路</a>
+						<a href="javascript:;">石榴岗路</a>
+						<a href="javascript:;">凤阳街</a>
+						<a href="javascript:;">工业大道中</a>
+						<a href="javascript:;">江海大道</a>
+						<a href="javascript:;">瑞康路</a>
+						<a href="javascript:;">南泰路</a>
+						<a href="javascript:;">江南大道南</a>
+						<a href="javascript:;">新港东路</a>
+						<a href="javascript:;">革新路</a>
+						<a href="javascript:;">荔福路</a>
+						<a href="javascript:;">海联路</a>
+						<a href="javascript:;">洛溪大桥</a>
+						<a href="javascript:;">南华西路</a>
+						<a href="javascript:;">江南大道北</a>
+						<a href="javascript:;">新港中路</a>
+						<a href="javascript:;">昌泰路</a>
+						<a href="javascript:;">厚德路</a>
+						<a href="javascript:;">鹭江东约</a>
+						<a href="javascript:;">江海路</a>
+						<a href="javascript:;">紫金大街</a>
+						<a href="javascript:;">艺苑南路</a>
+						<a href="javascript:;">南箕路</a>
+						<a href="javascript:;">同庆路</a>
+						<a href="javascript:;">大江冲路</a>
+						<a href="javascript:;">鹭江南约</a>
+						<a href="javascript:;">南田路</a>
+						<a href="javascript:;">新港西路</a>
+						<a href="javascript:;">下泉塘</a>
+						<a href="javascript:;">碧映路</a>
+						<a href="javascript:;">洪德路</a>
+						<a href="javascript:;">光汉直街</a>
+						<a href="javascript:;">怡海路</a>
+						<a href="javascript:;">沙溪新一街</a>
+						<a href="javascript:;">同福中路</a>
+						<a href="javascript:;">怡乐路</a>
+						<a href="javascript:;">员村三横路</a>
+						<a href="javascript:;">礼岗路</a>
+						<a href="javascript:;">晓港湾</a>
+						<a href="javascript:;">海印桥</a>
+						<a href="javascript:;">南华中路</a>
+						<a href="javascript:;">晓港</a>
+						<a href="javascript:;">市桥街</a>
+						<a href="javascript:;">昌岗中路</a>
+						<a href="javascript:;">怡安路</a>
+						<a href="javascript:;">仲恺路</a>
+						<a href="javascript:;">宝业路</a>
+						<a href="javascript:;">昌岗东</a>
+						<a href="javascript:;">昌岗中</a>
+						<a href="javascript:;">细岗东区</a>
+						<a href="javascript:;">南村</a>
+						<a href="javascript:;">江南东路</a>
+						<a href="javascript:;">西华街</a>
+						<a href="javascript:;">新港街</a>
+						<a href="javascript:;">江怡路</a>
+						<a href="javascript:;">大江冲社区</a>
+						<a href="javascript:;">草芳社区</a>
+						<a href="javascript:;">义务大道中</a>
+						<a href="javascript:;">上渡路</a>
+						<a href="javascript:;">江南大道中</a>
+						<a href="javascript:;">石岗路</a>
+						<a href="javascript:;">江南西路</a>
+						<a href="javascript:;">燕岗街</a>
+						<a href="javascript:;">金紫里直街</a>
+						<a href="javascript:;">市二宫</a>
+						<a href="javascript:;">康大路</a>
+						<a href="javascript:;">候王庙</a>
+						<a href="javascript:;">龙潭村</a>
+						<a href="javascript:;">榕景路</a>
+						<a href="javascript:;">梅园西路</a>
+						<a href="javascript:;">南边路</a>
+						<a href="javascript:;">盈丰路</a>
+						<a href="javascript:;">南华东路</a>
+						<a href="javascript:;">万寿路</a>
+						<a href="javascript:;">大石镇</a>
+						<a href="javascript:;">农讲所</a>
+				</div>
+				<div class="chaqyList qylist-67" style="display: none;">
+						<a href="javascript:;">北京路</a>
+						<a href="javascript:;">大沙头</a>
+						<a href="javascript:;">东川路</a>
+						<a href="javascript:;">东风东</a>
+						<a href="javascript:;">东山</a>
+						<a href="javascript:;">二沙岛</a>
+						<a href="javascript:;">环市东</a>
+						<a href="javascript:;">海珠广场</a>
+						<a href="javascript:;">黄花岗</a>
+						<a href="javascript:;">建设路</a>
+						<a href="javascript:;">解放北</a>
+						<a href="javascript:;">解放南</a>
+						<a href="javascript:;">农讲所</a>
+						<a href="javascript:;">盘福路</a>
+						<a href="javascript:;">水荫路</a>
+						<a href="javascript:;">淘金</a>
+						<a href="javascript:;">五羊新城</a>
+						<a href="javascript:;">小北</a>
+						<a href="javascript:;">西门口</a>
+						<a href="javascript:;">杨箕</a>
+						<a href="javascript:;">北京路</a>
+						<a href="javascript:;">大沙头</a>
+						<a href="javascript:;">东川路</a>
+						<a href="javascript:;">东风东</a>
+						<a href="javascript:;">东山</a>
+						<a href="javascript:;">二沙岛</a>
+						<a href="javascript:;">环市东</a>
+						<a href="javascript:;">海珠广场</a>
+						<a href="javascript:;">黄花岗</a>
+						<a href="javascript:;">建设路</a>
+						<a href="javascript:;">解放北</a>
+						<a href="javascript:;">解放南</a>
+						<a href="javascript:;">农讲所</a>
+						<a href="javascript:;">盘福路</a>
+						<a href="javascript:;">水荫路</a>
+						<a href="javascript:;">淘金</a>
+						<a href="javascript:;">五羊新城</a>
+						<a href="javascript:;">小北</a>
+						<a href="javascript:;">西门口</a>
+						<a href="javascript:;">杨箕</a>
+						<a href="javascript:;">麓景路</a>
+						<a href="javascript:;">东风路</a>
+						<a href="javascript:;">环市路</a>
+						<a href="javascript:;">火车站</a>
+						<a href="javascript:;">先烈路</a>
+						<a href="javascript:;">越秀</a>
+						<a href="javascript:;">均益路</a>
+						<a href="javascript:;">新世界棕榈园</a>
+						<a href="javascript:;">明月一路</a>
+						<a href="javascript:;">中山一路水均岗</a>
+						<a href="javascript:;">海珠北路</a>
+						<a href="javascript:;">东华西路</a>
+						<a href="javascript:;">中山三路</a>
+						<a href="javascript:;">陵园西路</a>
+						<a href="javascript:;">启明一马路</a>
+						<a href="javascript:;">沿江中路</a>
+						<a href="javascript:;">应元路</a>
+						<a href="javascript:;">东兴中街</a>
+						<a href="javascript:;">龟岗</a>
+						<a href="javascript:;">文德路</a>
+						<a href="javascript:;">新河浦路</a>
+						<a href="javascript:;">人民路</a>
+						<a href="javascript:;">黄华路</a>
+						<a href="javascript:;">童心路</a>
+						<a href="javascript:;">中山六路</a>
+						<a href="javascript:;">恒福路</a>
+						<a href="javascript:;">东堤</a>
+						<a href="javascript:;">沿江东</a>
+						<a href="javascript:;">下塘西</a>
+						<a href="javascript:;">沿江西路</a>
+						<a href="javascript:;">东华东</a>
+						<a href="javascript:;">保安前街</a>
+						<a href="javascript:;">执信南路</a>
+						<a href="javascript:;">朝天路</a>
+						<a href="javascript:;">泰康路</a>
+						<a href="javascript:;">农林下路</a>
+						<a href="javascript:;">光塔路</a>
+						<a href="javascript:;">仓前直街</a>
+						<a href="javascript:;">八旗二马路</a>
+						<a href="javascript:;">合群二马路</a>
+						<a href="javascript:;">海珠中路</a>
+						<a href="javascript:;">水均南</a>
+						<a href="javascript:;">长堤</a>
+						<a href="javascript:;">农林路</a>
+						<a href="javascript:;">荣华北</a>
+						<a href="javascript:;">寺右二马路</a>
+						<a href="javascript:;">北校场横路</a>
+						<a href="javascript:;">惠福西路</a>
+						<a href="javascript:;">义务大道中</a>
+						<a href="javascript:;">永福路</a>
+						<a href="javascript:;">芳村</a>
+						<a href="javascript:;">东风西路</a>
+						<a href="javascript:;">东风中路</a>
+						<a href="javascript:;">广大路</a>
+						<a href="javascript:;">东华南路</a>
+						<a href="javascript:;">仓边路</a>
+						<a href="javascript:;">站南路</a>
+						<a href="javascript:;">流花</a>
+						<a href="javascript:;">光孝路</a>
+						<a href="javascript:;">诗书路</a>
+						<a href="javascript:;">观绿路</a>
+						<a href="javascript:;">洪桥街</a>
+						<a href="javascript:;">六榕路</a>
+						<a href="javascript:;">德政南路</a>
+						<a href="javascript:;">共和西路</a>
+						<a href="javascript:;">挹翠路</a>
+						<a href="javascript:;">湛塘路</a>
+						<a href="javascript:;">东沙角路</a>
+						<a href="javascript:;">越秀南路</a>
+						<a href="javascript:;">东园路</a>
+						<a href="javascript:;">惠福东路</a>
+						<a href="javascript:;">达道路</a>
+						<a href="javascript:;">山河后街</a>
+						<a href="javascript:;">中山二路</a>
+						<a href="javascript:;">培正路</a>
+						<a href="javascript:;">东湖</a>
+						<a href="javascript:;">一德路</a>
+						<a href="javascript:;">共和大街</a>
+						<a href="javascript:;">西华路</a>
+						<a href="javascript:;">北较场横路</a>
+						<a href="javascript:;">天成路</a>
+						<a href="javascript:;">署前路</a>
+						<a href="javascript:;">庙前西街</a>
+						<a href="javascript:;">白云路</a>
+						<a href="javascript:;">东环路</a>
+						<a href="javascript:;">芳草街</a>
+						<a href="javascript:;">海珠南路</a>
+						<a href="javascript:;">烟墩路</a>
+						<a href="javascript:;">大德路</a>
+						<a href="javascript:;">新港西路</a>
+						<a href="javascript:;">先烈东路</a>
+						<a href="javascript:;">青菜东街</a>
+						<a href="javascript:;">海印苑小区</a>
+						<a href="javascript:;">五羊</a>
+						<a href="javascript:;">三元里大道</a>
+						<a href="javascript:;">公元前</a>
+						<a href="javascript:;">净慧路</a>
+						<a href="javascript:;">先烈中路</a>
+						<a href="javascript:;">先烈南路</a>
+						<a href="javascript:;">站西路北街</a>
+						<a href="javascript:;">中山八路</a>
+						<a href="javascript:;">义务大道南</a>
+						<a href="javascript:;">较场西路</a>
+						<a href="javascript:;">万福路</a>
+						<a href="javascript:;">人民中路</a>
+						<a href="javascript:;">豪贤路</a>
+						<a href="javascript:;">环市西路</a>
+						<a href="javascript:;">永安横街</a>
+						<a href="javascript:;">丛桂路</a>
+						<a href="javascript:;">广源西路</a>
+						<a href="javascript:;">文德东路</a>
+						<a href="javascript:;">珠光路</a>
+				</div>
+				<div class="chaqyList qylist-69" style="display: none;">
+						<a href="javascript:;">白云大道北</a>
+						<a href="javascript:;">白云大道南</a>
+						<a href="javascript:;">广花路</a>
+						<a href="javascript:;">桂花岗</a>
+						<a href="javascript:;">广园路</a>
+						<a href="javascript:;">义务大道北</a>
+						<a href="javascript:;">黄石</a>
+						<a href="javascript:;">黄边</a>
+						<a href="javascript:;">机场路</a>
+						<a href="javascript:;">金沙洲</a>
+						<a href="javascript:;">江夏</a>
+						<a href="javascript:;">嘉禾望岗</a>
+						<a href="javascript:;">京溪</a>
+						<a href="javascript:;">罗冲围</a>
+						<a href="javascript:;">南湖</a>
+						<a href="javascript:;">三元里</a>
+						<a href="javascript:;">石井</a>
+						<a href="javascript:;">同德围</a>
+						<a href="javascript:;">同和</a>
+						<a href="javascript:;">新市</a>
+						<a href="javascript:;">白云大道北</a>
+						<a href="javascript:;">白云大道南</a>
+						<a href="javascript:;">广花路</a>
+						<a href="javascript:;">桂花岗</a>
+						<a href="javascript:;">广园路</a>
+						<a href="javascript:;">义务大道北</a>
+						<a href="javascript:;">黄石</a>
+						<a href="javascript:;">黄边</a>
+						<a href="javascript:;">机场路</a>
+						<a href="javascript:;">金沙洲</a>
+						<a href="javascript:;">江夏</a>
+						<a href="javascript:;">嘉禾望岗</a>
+						<a href="javascript:;">京溪</a>
+						<a href="javascript:;">罗冲围</a>
+						<a href="javascript:;">南湖</a>
+						<a href="javascript:;">三元里</a>
+						<a href="javascript:;">石井</a>
+						<a href="javascript:;">同德围</a>
+						<a href="javascript:;">同和</a>
+						<a href="javascript:;">新市</a>
+						<a href="javascript:;">梅花园</a>
+						<a href="javascript:;">广园新村</a>
+						<a href="javascript:;">白云新城</a>
+						<a href="javascript:;">白云大道</a>
+						<a href="javascript:;">白云</a>
+						<a href="javascript:;">广园</a>
+						<a href="javascript:;">怡兴新村</a>
+						<a href="javascript:;">麦华路</a>
+						<a href="javascript:;">齐富路</a>
+						<a href="javascript:;">西槎路</a>
+						<a href="javascript:;">云霄街</a>
+						<a href="javascript:;">大金钟路</a>
+						<a href="javascript:;">白灰场北路</a>
+						<a href="javascript:;">岗贝路</a>
+						<a href="javascript:;">心谊路</a>
+						<a href="javascript:;">松北</a>
+						<a href="javascript:;">下塘西路</a>
+						<a href="javascript:;">云城东路</a>
+						<a href="javascript:;">广园中路</a>
+						<a href="javascript:;">北太路</a>
+						<a href="javascript:;">西湾路</a>
+						<a href="javascript:;">沙太路</a>
+						<a href="javascript:;">增槎路</a>
+						<a href="javascript:;">远景路</a>
+						<a href="javascript:;">金信路</a>
+						<a href="javascript:;">同泰路</a>
+						<a href="javascript:;">106国道</a>
+						<a href="javascript:;">云景路</a>
+						<a href="javascript:;">风度小区</a>
+						<a href="javascript:;">磨刀西街</a>
+						<a href="javascript:;">沙贝大街</a>
+						<a href="javascript:;">鹤泰工业区</a>
+						<a href="javascript:;">乐嘉路</a>
+						<a href="javascript:;">石岗东街</a>
+						<a href="javascript:;">汇景路</a>
+						<a href="javascript:;">龙归镇</a>
+						<a href="javascript:;">白云堡大道</a>
+						<a href="javascript:;">新广从路</a>
+						<a href="javascript:;">广清路</a>
+						<a href="javascript:;">荔富居</a>
+						<a href="javascript:;">濂泉路</a>
+						<a href="javascript:;">景泰直街</a>
+						<a href="javascript:;">飞鹅路</a>
+						<a href="javascript:;">黄埔东路</a>
+						<a href="javascript:;">翠岛居</a>
+						<a href="javascript:;">前进东街</a>
+						<a href="javascript:;">同德</a>
+						<a href="javascript:;">紫荆苑</a>
+						<a href="javascript:;">禺东西路</a>
+						<a href="javascript:;">松柏大街</a>
+						<a href="javascript:;">丛云路</a>
+						<a href="javascript:;">水荫路</a>
+						<a href="javascript:;">广元西路</a>
+						<a href="javascript:;">百灵路</a>
+						<a href="javascript:;">景云路</a>
+						<a href="javascript:;">华园路</a>
+						<a href="javascript:;">神山镇</a>
+						<a href="javascript:;">兴泰里路</a>
+						<a href="javascript:;">松洲街</a>
+						<a href="javascript:;">田心路</a>
+						<a href="javascript:;">棠下村</a>
+						<a href="javascript:;">云景花园</a>
+						<a href="javascript:;">高桥路</a>
+						<a href="javascript:;">棠安路</a>
+						<a href="javascript:;">新达路</a>
+						<a href="javascript:;">柯子岭</a>
+						<a href="javascript:;">德康路</a>
+						<a href="javascript:;">北站路</a>
+						<a href="javascript:;">麒麟路</a>
+						<a href="javascript:;">走马岗路</a>
+						<a href="javascript:;">政民路</a>
+						<a href="javascript:;">白社中街</a>
+						<a href="javascript:;">人和镇</a>
+						<a href="javascript:;">梓元岗</a>
+						<a href="javascript:;">瑶台大街</a>
+						<a href="javascript:;">上步村</a>
+						<a href="javascript:;">广汕二路</a>
+						<a href="javascript:;">先烈东路</a>
+						<a href="javascript:;">石槎路</a>
+						<a href="javascript:;">石潭西路</a>
+						<a href="javascript:;">松南路</a>
+				</div>
+				<div class="chaqyList qylist-70" style="display: none;">
+						<a href="javascript:;">坑口</a>
+						<a href="javascript:;">中山八路</a>
+						<a href="javascript:;">陈家祠</a>
+						<a href="javascript:;">东风西</a>
+						<a href="javascript:;">芳村</a>
+						<a href="javascript:;">环市西</a>
+						<a href="javascript:;">黄沙</a>
+						<a href="javascript:;">花地湾</a>
+						<a href="javascript:;">窖口</a>
+						<a href="javascript:;">流花</a>
+						<a href="javascript:;">南岸路</a>
+						<a href="javascript:;">西关</a>
+						<a href="javascript:;">西村</a>
+						<a href="javascript:;">黄岐</a>
+						<a href="javascript:;">桥中</a>
+						<a href="javascript:;">盐步</a>
+						<a href="javascript:;">大坦沙</a>
+						<a href="javascript:;">荔湾</a>
+						<a href="javascript:;">流花路</a>
+						<a href="javascript:;">上下九</a>
+						<a href="javascript:;">沙面</a>
+						<a href="javascript:;">东教北路</a>
+						<a href="javascript:;">龙津</a>
+						<a href="javascript:;">十三行小区</a>
+						<a href="javascript:;">和平东</a>
+						<a href="javascript:;">文昌</a>
+						<a href="javascript:;">宝源北街</a>
+						<a href="javascript:;">花地大道中</a>
+						<a href="javascript:;">时代坊商城</a>
+						<a href="javascript:;">一德路</a>
+						<a href="javascript:;">六二三路</a>
+						<a href="javascript:;">西华路</a>
+						<a href="javascript:;">中山七路</a>
+						<a href="javascript:;">站西路</a>
+						<a href="javascript:;">翠竹街</a>
+						<a href="javascript:;">百花路</a>
+						<a href="javascript:;">浣花西路</a>
+						<a href="javascript:;">带河路</a>
+						<a href="javascript:;">十二甫</a>
+						<a href="javascript:;">金花直街</a>
+						<a href="javascript:;">鹤洞路</a>
+						<a href="javascript:;">丹桂路</a>
+						<a href="javascript:;">十八甫</a>
+						<a href="javascript:;">宝岗</a>
+						<a href="javascript:;">周门</a>
+						<a href="javascript:;">广中</a>
+						<a href="javascript:;">宝华路</a>
+						<a href="javascript:;">光复北路</a>
+						<a href="javascript:;">侨联大街</a>
+						<a href="javascript:;">沿江中路</a>
+						<a href="javascript:;">第十甫路</a>
+						<a href="javascript:;">蓬莱路</a>
+						<a href="javascript:;">中市</a>
+						<a href="javascript:;">人民南路</a>
+						<a href="javascript:;">逢源路</a>
+						<a href="javascript:;">多宝路</a>
+						<a href="javascript:;">厚福大街</a>
+						<a href="javascript:;">茶窖街</a>
+						<a href="javascript:;">西增路</a>
+						<a href="javascript:;">康王路</a>
+						<a href="javascript:;">站前路</a>
+						<a href="javascript:;">光复中路</a>
+						<a href="javascript:;">人民北路</a>
+						<a href="javascript:;">彩虹街</a>
+						<a href="javascript:;">泮塘社区</a>
+						<a href="javascript:;">滨江西路</a>
+						<a href="javascript:;">梯云东路</a>
+						<a href="javascript:;">恩宁路</a>
+						<a href="javascript:;">昌华苑</a>
+						<a href="javascript:;">协和路</a>
+						<a href="javascript:;">鱼栏大街</a>
+						<a href="javascript:;">龙湾路</a>
+						<a href="javascript:;">黄埔大道中</a>
+						<a href="javascript:;">康王南路</a>
+						<a href="javascript:;">华贵路</a>
+						<a href="javascript:;">康王中路</a>
+						<a href="javascript:;">沙面北街</a>
+						<a href="javascript:;">龟岗</a>
+						<a href="javascript:;">大同路</a>
+						<a href="javascript:;">彭城路</a>
+						<a href="javascript:;">广佛一路</a>
+				</div>
+				<div class="chaqyList qylist-71" style="display: none;">
+						<a href="javascript:;">大石</a>
+						<a href="javascript:;">大学城</a>
+						<a href="javascript:;">义务雅居乐</a>
+						<a href="javascript:;">华南</a>
+						<a href="javascript:;">华南碧桂园</a>
+						<a href="javascript:;">金山谷</a>
+						<a href="javascript:;">洛溪</a>
+						<a href="javascript:;">南浦</a>
+						<a href="javascript:;">祈福</a>
+						<a href="javascript:;">祈福新区</a>
+						<a href="javascript:;">祈福中区</a>
+						<a href="javascript:;">沙湾</a>
+						<a href="javascript:;">石碁</a>
+						<a href="javascript:;">市桥北</a>
+						<a href="javascript:;">市桥东</a>
+						<a href="javascript:;">市桥南</a>
+						<a href="javascript:;">市桥西</a>
+						<a href="javascript:;">顺德碧桂园</a>
+						<a href="javascript:;">石楼</a>
+						<a href="javascript:;">星河湾</a>
+						<a href="javascript:;">亚运城</a>
+						<a href="javascript:;">钟村</a>
+						<a href="javascript:;">大石</a>
+						<a href="javascript:;">大学城</a>
+						<a href="javascript:;">义务雅居乐</a>
+						<a href="javascript:;">华南</a>
+						<a href="javascript:;">华南碧桂园</a>
+						<a href="javascript:;">金山谷</a>
+						<a href="javascript:;">洛溪</a>
+						<a href="javascript:;">南浦</a>
+						<a href="javascript:;">祈福</a>
+						<a href="javascript:;">祈福新区</a>
+						<a href="javascript:;">祈福中区</a>
+						<a href="javascript:;">沙湾</a>
+						<a href="javascript:;">石碁</a>
+						<a href="javascript:;">市桥北</a>
+						<a href="javascript:;">市桥东</a>
+						<a href="javascript:;">市桥南</a>
+						<a href="javascript:;">市桥西</a>
+						<a href="javascript:;">顺德碧桂园</a>
+						<a href="javascript:;">石楼</a>
+						<a href="javascript:;">星河湾</a>
+						<a href="javascript:;">亚运城</a>
+						<a href="javascript:;">钟村</a>
+						<a href="javascript:;">番禺华南</a>
+						<a href="javascript:;">番禺市桥</a>
+						<a href="javascript:;">番禺沙湾</a>
+						<a href="javascript:;">番禺</a>
+						<a href="javascript:;">洛溪新城</a>
+						<a href="javascript:;">南浦岛</a>
+						<a href="javascript:;">石基镇</a>
+						<a href="javascript:;">大岗镇</a>
+						<a href="javascript:;">南村镇</a>
+						<a href="javascript:;">黄阁镇</a>
+						<a href="javascript:;">兴南大道</a>
+						<a href="javascript:;">市桥</a>
+						<a href="javascript:;">光明北路</a>
+						<a href="javascript:;">星座园</a>
+						<a href="javascript:;">兴华二路</a>
+						<a href="javascript:;">西城路</a>
+						<a href="javascript:;">丽江花园</a>
+						<a href="javascript:;">翠云山苑</a>
+						<a href="javascript:;">桥南街</a>
+						<a href="javascript:;">东环街</a>
+						<a href="javascript:;">德胜路</a>
+						<a href="javascript:;">如意二马路</a>
+						<a href="javascript:;">番禺广场</a>
+						<a href="javascript:;">白沙堡大街</a>
+						<a href="javascript:;">绿茵岛花园</a>
+						<a href="javascript:;">洛溪大桥</a>
+						<a href="javascript:;">南国奥林匹克花园</a>
+						<a href="javascript:;">南大路</a>
+						<a href="javascript:;">锦绣香江花园</a>
+						<a href="javascript:;">富华园</a>
+						<a href="javascript:;">丹桂园</a>
+						<a href="javascript:;">富华东路</a>
+						<a href="javascript:;">汉溪大道</a>
+						<a href="javascript:;">清河东路</a>
+						<a href="javascript:;">西湾路</a>
+						<a href="javascript:;">东兴苑</a>
+						<a href="javascript:;">南沙</a>
+						<a href="javascript:;">富华中路</a>
+						<a href="javascript:;">华荟南景苑</a>
+						<a href="javascript:;">锦江山水华府</a>
+						<a href="javascript:;">东涌镇</a>
+						<a href="javascript:;">东环路</a>
+						<a href="javascript:;">石岗城市花园</a>
+						<a href="javascript:;">德丰园小区</a>
+						<a href="javascript:;">禺山西路</a>
+						<a href="javascript:;">桥兴大道</a>
+						<a href="javascript:;">宾至路</a>
+						<a href="javascript:;">锦绣生态园翠屏园</a>
+						<a href="javascript:;">迎宾路</a>
+						<a href="javascript:;">南郊村</a>
+						<a href="javascript:;">新江路</a>
+						<a href="javascript:;">吉祥北街</a>
+						<a href="javascript:;">大北路</a>
+						<a href="javascript:;">康裕苑</a>
+						<a href="javascript:;">新光城市花园</a>
+						<a href="javascript:;">清河中路</a>
+						<a href="javascript:;">禺丰苑</a>
+						<a href="javascript:;">环城中路</a>
+						<a href="javascript:;">石楼莲港花园</a>
+						<a href="javascript:;">旺达楼</a>
+						<a href="javascript:;">环城东路</a>
+						<a href="javascript:;">东沙路</a>
+						<a href="javascript:;">汇景大道</a>
+						<a href="javascript:;">奥园西街</a>
+						<a href="javascript:;">清河西路</a>
+						<a href="javascript:;">钟村镇</a>
+						<a href="javascript:;">黄编村</a>
+						<a href="javascript:;">义务亚运城</a>
+						<a href="javascript:;">市莲路</a>
+						<a href="javascript:;">环岛路</a>
+						<a href="javascript:;">兴业路</a>
+						<a href="javascript:;">西涌大街</a>
+						<a href="javascript:;">繁华路</a>
+						<a href="javascript:;">105国道</a>
+						<a href="javascript:;">翠怡路</a>
+				</div>
+				<div class="chaqyList qylist-72" style="display: none;">
+						<a href="javascript:;">大沙地</a>
+						<a href="javascript:;">丰乐路</a>
+						<a href="javascript:;">开发东区</a>
+						<a href="javascript:;">开发西区</a>
+						<a href="javascript:;">开创大道</a>
+						<a href="javascript:;">萝岗</a>
+						<a href="javascript:;">文冲</a>
+						<a href="javascript:;">大沙地</a>
+						<a href="javascript:;">丰乐路</a>
+						<a href="javascript:;">开发东区</a>
+						<a href="javascript:;">开发西区</a>
+						<a href="javascript:;">开创大道</a>
+						<a href="javascript:;">萝岗</a>
+						<a href="javascript:;">文冲</a>
+						<a href="javascript:;">黄埔</a>
+						<a href="javascript:;">区府板块</a>
+						<a href="javascript:;">知识城</a>
+						<a href="javascript:;">大沙东路</a>
+						<a href="javascript:;">石化路</a>
+						<a href="javascript:;">港湾路</a>
+						<a href="javascript:;">蟹山路</a>
+						<a href="javascript:;">丰乐北路</a>
+						<a href="javascript:;">中山大道</a>
+						<a href="javascript:;">广新路</a>
+						<a href="javascript:;">黄埔东路</a>
+						<a href="javascript:;">黄埔大道</a>
+						<a href="javascript:;">大沙北路</a>
+						<a href="javascript:;">中天花园</a>
+						<a href="javascript:;">大沙镇 </a>
+						<a href="javascript:;">荔香路</a>
+						<a href="javascript:;">茅岗路</a>
+						<a href="javascript:;">志诚大道</a>
+						<a href="javascript:;">森林半岛</a>
+						<a href="javascript:;">鱼珠新街</a>
+						<a href="javascript:;">海员路</a>
+				</div>
+				<div class="chaqyList qylist-73" style="display: none;">
+						<a href="javascript:;">旧区</a>
+						<a href="javascript:;">建设北</a>
+						<a href="javascript:;">镜湖大道</a>
+						<a href="javascript:;">美林湖</a>
+						<a href="javascript:;">狮岭</a>
+						<a href="javascript:;">山前大道</a>
+						<a href="javascript:;">铁路西</a>
+						<a href="javascript:;">新区</a>
+						<a href="javascript:;">旧区</a>
+						<a href="javascript:;">建设北</a>
+						<a href="javascript:;">镜湖大道</a>
+						<a href="javascript:;">美林湖</a>
+						<a href="javascript:;">狮岭</a>
+						<a href="javascript:;">山前大道</a>
+						<a href="javascript:;">铁路西</a>
+						<a href="javascript:;">新区</a>
+						<a href="javascript:;">花都</a>
+						<a href="javascript:;">汽车城板块</a>
+						<a href="javascript:;">区府板块</a>
+						<a href="javascript:;">新机场板块</a>
+						<a href="javascript:;">建设北路</a>
+						<a href="javascript:;">新华镇</a>
+						<a href="javascript:;">狮岭镇</a>
+						<a href="javascript:;">新华路</a>
+						<a href="javascript:;">商业大道</a>
+						<a href="javascript:;">云山路</a>
+						<a href="javascript:;">天贵路</a>
+						<a href="javascript:;">花城路口</a>
+						<a href="javascript:;">兰花路</a>
+						<a href="javascript:;">大华一路</a>
+						<a href="javascript:;">华南路</a>
+						<a href="javascript:;">大华二路</a>
+						<a href="javascript:;">凤凰北路</a>
+						<a href="javascript:;">宝华路</a>
+				</div>
+				<div class="chaqyList qylist-74" style="display: none;">
+						<a href="javascript:;">凤凰城东</a>
+						<a href="javascript:;">凤凰城</a>
+						<a href="javascript:;">广园东</a>
+						<a href="javascript:;">荔城大道北</a>
+						<a href="javascript:;">荔城大道南</a>
+						<a href="javascript:;">新塘南</a>
+						<a href="javascript:;">新塘北</a>
+						<a href="javascript:;">凤凰城东</a>
+						<a href="javascript:;">凤凰城</a>
+						<a href="javascript:;">广园东</a>
+						<a href="javascript:;">荔城大道北</a>
+						<a href="javascript:;">荔城大道南</a>
+						<a href="javascript:;">新塘南</a>
+						<a href="javascript:;">新塘北</a>
+						<a href="javascript:;">荔城</a>
+						<a href="javascript:;">新塘</a>
+						<a href="javascript:;">增城</a>
+						<a href="javascript:;">永和镇</a>
+						<a href="javascript:;">荔乡路</a>
+						<a href="javascript:;">朱村</a>
+				</div>
+				<div class="chaqyList qylist-76" style="display: none;">
+						<a href="javascript:;">从化</a>
+						<a href="javascript:;">河滨北路</a>
+						<a href="javascript:;">建设路</a>
+						<a href="javascript:;">新城西路</a>
+						<a href="javascript:;">街口</a>
+				</div>
+				<div class="chaqyList qylist-77" style="display: none;">
+						<a href="javascript:;">义务周边</a>
+				</div>
+				<div class="chaqyList qylist-176" style="display: none;">
+						<a href="javascript:;">龟岗二马路</a>
+						<a href="javascript:;">东川</a>
+						<a href="javascript:;">东山口</a>
+						<a href="javascript:;">福今路</a>
+						<a href="javascript:;">北教场</a>
+						<a href="javascript:;">中山二路</a>
+						<a href="javascript:;">东华南路</a>
+						<a href="javascript:;">江湾写字楼</a>
+						<a href="javascript:;">东堤二马路</a>
+				</div>
+				<div class="chaqyList qylist-177" style="display: none;">
+						<a href="javascript:;">南沙</a>
+						<a href="javascript:;">珠江中路</a>
+						<a href="javascript:;">金洲</a>
+				</div>
+				<div class="chaqyList qylist-178" style="display: none;">
+						<a href="javascript:;">开发东区</a>
+						<a href="javascript:;">开发西区</a>
+						<a href="javascript:;">萝岗</a>
+						<a href="javascript:;">青年路</a>
+				</div>
+			<div class="y">
+				<a href="javascript:;" class="add-fang-bnt" target="_blank">我要卖房</a>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="fang-all-box web-width clearfix">
+	<div class="left-box z">
+		<p class="Cred aprice mb5">
+			<span><em>14870</em>元/平米</span>
+			<span class="fall"><span>环比</span><i class="arrow-icon"></i>-0.17%</span>
+		</p>
+        <p class="fontS14 mb10">义务12月份挂牌均价</p>
+        <div class="mb10">
+        	<canvas id="myChart" width="740" height="262"></canvas>
+        	<script type="text/javascript" language="javascript">
+        	window.onload=function(){
+        		var label = new Array();
+        		var housetradePrices = new Array();
+        		
+					label.push("2020年1月");
+					housetradePrices.push("14068");
+					label.push("2月");
+					housetradePrices.push("11237");
+					label.push("3月");
+					housetradePrices.push("9348");
+					label.push("4月");
+					housetradePrices.push("10120");
+					label.push("5月");
+					housetradePrices.push("6051");
+					label.push("6月");
+					housetradePrices.push("9146");
+					label.push("7月");
+					housetradePrices.push("10951");
+					label.push("8月");
+					housetradePrices.push("13196");
+					label.push("9月");
+					housetradePrices.push("13357");
+					label.push("10月");
+					housetradePrices.push("14576");
+					label.push("11月");
+					housetradePrices.push("14131");
+					label.push("12月");
+					housetradePrices.push("14870");
+        		
+				var ctx = $("#myChart").get(0).getContext("2d");
+				var options = {
+					bezierCurve: false,
+			        tooltipTemplate: "<%if (label){%><%=label%>：<%}%><%= value %>元/平米"
+				}
+				var data = {
+					labels : label,
+					datasets : [
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							data : housetradePrices
+						}
+					]
+				}
+				var myNewChart = new Chart(ctx).Line(data,options);
+				}
+        	</script>
+        </div>
+        <div class="xiaoqu-list-box">
+        	<p class="heading"><span class="fontS20 b">义务热门小区</span><span class="y"><a href="../community/index.html" class="C000">更多小区</a></span></p>
+            <ul>
+            	<li>
+                    <dl>
+                        <dt>
+                        	<a href="javascript:;">
+                                <p class="fontS18 mb10">碧桂园豪园</p>
+                                <p>均价<span class="fontS14" title="11739元/平米">11739</span>元/平米</p>
+                                <p>环比 --</p>
+                                <p class="a60">更多房源..</p>
+                            </a>
+                        </dt>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img1/518upload/201712/562/083/m_504fda9d4a0b45ba88598011b684f4b7.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>138平米</span><span>4室2厅</span><span>4/11层</span></p>
+	                                <p class="Cred fontS14">230万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img1/518upload/201706/482/829/m_a7d15d6d947340378529c51b2d951068.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>172平米</span><span>4室2厅</span><span>1/3层</span></p>
+	                                <p class="Cred fontS14">300万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img4/518upload/201706/500/706/m_fceb47bff6f24b2389ad81a603fcac02.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>93平米</span><span>3室1厅</span><span>9/18层</span></p>
+	                                <p class="Cred fontS14">146万</p>
+	                            </a>
+	                        </dd>
+                    </dl>
+                </li>
+            	<li>
+                    <dl>
+                        <dt>
+                        	<a href="javascript:;">
+                                <p class="fontS18 mb10">晓港湾</p>
+                                <p>均价<span class="fontS14" title="16742元/平米">16742</span>元/平米</p>
+                                <p>环比 --</p>
+                                <p class="a60">更多房源..</p>
+                            </a>
+                        </dt>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img4/518upload/201805/713/992/m_fbc8f4af58ca4d9aa5a3ed462ecbb0e9.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>40平米</span><span>1室1厅</span><span>2/9层</span></p>
+	                                <p class="Cred fontS14">135万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img4/518upload/201805/080/194/m_64d9dd2bf4fa44eb84d5ed32d4515f9f.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>65平米</span><span>2室2厅</span><span>4/9层</span></p>
+	                                <p class="Cred fontS14">205万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img2/518upload/201801/246/625/m_f541e88a800946919ead405c9dba9420.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>38平米</span><span>2室1厅</span><span>7/9层</span></p>
+	                                <p class="Cred fontS14">120万</p>
+	                            </a>
+	                        </dd>
+                    </dl>
+                </li>
+            	<li>
+                    <dl>
+                        <dt>
+                        	<a href="javascript:;">
+                                <p class="fontS18 mb10">锦绣御景苑</p>
+                                <p>均价<span class="fontS14" title="8673元/平米">8673</span>元/平米</p>
+                                <p>环比 --</p>
+                                <p class="a60">更多房源..</p>
+                            </a>
+                        </dt>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="../img8/518upload/201905/337/482/m_b702bee5ada44371a4fc2d5c0750bc.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>110平米</span><span>3室2厅</span><span>13/32层</span></p>
+	                                <p class="Cred fontS14">158万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="../img6/518upload/202007/235/197/m_51d0615c687a4d9580a2ce1989ac86.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>120平米</span><span>3室2厅</span><span>10/32层</span></p>
+	                                <p class="Cred fontS14">152万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img1/518upload/201705/964/268/m_d12a69ed20674057b6f3321f2780ffed.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>95平米</span><span>3室2厅</span><span>3/6层</span></p>
+	                                <p class="Cred fontS14">155万</p>
+	                            </a>
+	                        </dd>
+                    </dl>
+                </li>
+            	<li>
+                    <dl>
+                        <dt>
+                        	<a href="javascript:;">
+                                <p class="fontS18 mb10">侨诚花园</p>
+                                <p>均价<span class="fontS14" title="17295元/平米">17295</span>元/平米</p>
+                                <p>环比 --</p>
+                                <p class="a60">更多房源..</p>
+                            </a>
+                        </dt>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img4/518upload/201805/495/962/m_6f8bd56e182e424cbc74fe5501504b64.JPG" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>69平米</span><span>2室2厅</span><span>4/9层</span></p>
+	                                <p class="Cred fontS14">228万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img3/518upload/201805/323/681/m_024ba0562ae04e40af460759e8865af1.JPG" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>40平米</span><span>1室1厅</span><span>7/9层</span></p>
+	                                <p class="Cred fontS14">150万</p>
+	                            </a>
+	                        </dd>
+	                        <dd>
+	                        	<a href="javascript:;">
+	                                <img src="http://img.518fang.com/img3/518upload/201606/335/787/m_54dadb2f511545429755eef5f5c05400.jpg" onerror="this.src='/themes/default/images/house_none.png'" style="width: 168px;height: 131px;">
+	                                <p class="xiaoqu-info"><span>85平米</span><span>3室2厅</span><span>5/9层</span></p>
+	                                <p class="Cred fontS14">235万</p>
+	                            </a>
+	                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="right-box y">
+    	<div class="tiaojian">
+        	<p><a href="../sale/index.html">义务专家二手房</a>/<a href="../rent/index.html" class="ml10">义务专家出租房</a></p>
+            <p>
+            			<a href="javascript:;">50-80万</a>
+            			<a href="javascript:;">80-100万</a>
+            			<a href="javascript:;">100-120万</a>
+            			<a href="javascript:;">120-150万</a>
+            			<a href="javascript:;">150-200万</a>
+            </p>
+            <p>
+            		<a href="javascript:;">50-70㎡</a>
+            		<a href="javascript:;">70-90㎡</a>
+            		<a href="javascript:;">90-110㎡</a>
+            		<a href="javascript:;">110-130㎡</a>
+            		<a href="javascript:;">130-150㎡</a>
+            </p>
+        </div>
+        <div class="module-g">
+        	<p class="fontS18 mb10">我的房子如何定价？ </p>
+            <p class="fontS18 mb10">我看中的这套房子价格合理吗？</p>
+            <p class="mb25">运用第三方大数据，精确评估房屋价格，买的放心，卖的合理...</p>
+            <div class="txt gujia-btn">
+                <a href="javascript:;"><span>房屋估价</span></a>
+			</div>
+            <p class="tools">
+            	<span><a href="javascript:;">房贷计算器</a></span>
+                <span><a href="javascript:;">购房评估</a></span>
+                <span><a href="javascript:;">提前还贷计算器</a></span>
+                <span><a href="javascript:;">中介费计算</a></span>
+            </p>
+        </div>
+        <div class="module-c chaxun com-bottom">
+            <p class="fontS16 b mb25">查询小区</p>
+            <dl>
+                <dt>区域：</dt>
+                <dd>
+                    <a href="javascript:;">天河</a>
+                    <a href="javascript:;">海珠</a>
+                    <a href="javascript:;">越秀</a>
+                    <a href="javascript:;">东莞</a>
+                    <a href="javascript:;">白云</a>
+                    <a href="javascript:;">荔湾</a>
+                    <a href="javascript:;">番禺</a>
+                    <a href="javascript:;">黄埔</a>
+                    <a href="javascript:;">花都</a>
+                    <a href="javascript:;">增城</a>
+                    <a href="javascript:;">佛山</a>
+                    <a href="javascript:;">从化</a>
+                    <a href="javascript:;">其他</a>
+                    <a href="javascript:;">东山</a>
+                    <a href="javascript:;">南沙</a>
+                    <a href="javascript:;">萝岗</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>年代：</dt>
+                <dd>
+                    <a href="javascript:;">1995年前</a>
+                    <a href="javascript:;">1995年-2000年</a>
+                    <a href="javascript:;">2000年-2005年</a>
+                    <a href="javascript:;">2005年-2010年</a>
+                    <a href="javascript:;">2010年后</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>均价：</dt>
+                <dd>
+	            		<a href="javascript:;">8000以下</a>
+	            		<a href="javascript:;">8000-12000</a>
+	            		<a href="javascript:;">12000-15000</a>
+	            		<a href="javascript:;">15000-20000</a>
+	            		<a href="javascript:;">20000-25000</a>
+	            		<a href="javascript:;">25000-30000</a>
+	            		<a href="javascript:;">30000以上</a>
+                </dd>
+            </dl>
+    	</div>
+        <div class="module-c ranking com-bottom">
+        	<p class="fontS16 b mb25">小区涨价榜</p>
+            <ul>
+            	<li>无数据</li>
+            </ul>
+        </div>
+        <div class="module-c ranking">
+        	<p class="fontS16 b mb25">小区跌价榜</p>
+            <ul>
+            	<li>无数据</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</div>
+
+<div class="append_box">
+</div>
+<a class="gotop cursor" onclick="GoTop()" title="回到顶部"></a>
+	<div class="footer web-width">
+	<div class="footer-menu">
+		<div class="link"> <a href="../about/aboutus.html" target="_blank" class="gray" rel="nofollow">关于房探</a><span>|</span><a href="../about/statement.html" target="_blank" class="gray" rel="nofollow">免责声明</a><span>|</span><a href="../my/app-down.html" target="_blank" class="red" rel="nofollow">用户帮助</a><span>|</span><a href="javascript:;" target="_blank" class="gray" rel="nofollow">购房工具</a><span>|</span><a href="../about/contacts.html" target="_blank" class="gray" rel="nofollow">联系我们</a>
+        </div>
+		<div> 客服热线： <span class="Cred"> 153-7240-7267 </span> <span class="C666">(周一至周五09:00-18:00)</span> <span class="ml10"> 客服QQ：<a class="Cred" href="javascript:;" title="在线客服" rel="nofollow"> 2529213742</a> </span>
+        </div>
+		<div> 版权所有 <a href="../index1.html" class="C000" title="义乌租房信息网">www.15zufang.cn</a> <a href="javascript:;" target="_blank" class="ml10 C000"></a>
+        </div>
+		<div class="falu" style="display:none;"> <a class="text-y C666">常年法律顾问<br>
+			高洪剑</a> <a><img src="../themes/default/images/home_143.png" alt="图标"></a>
+      	</div>
+	</div>
+</div>
+<div style="display:none">
+	<script src="../stat-2433734_2433734.js" language="JavaScript"></script>
+</div><script>
+$("#searchBtn").click(function() {
+	 	var bname=encodeURI($("#buildname").val());
+		window.location.href = '/community/kw'+bname;
+	});
+</script>
+</body>
+</html>

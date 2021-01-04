@@ -1,0 +1,117 @@
+
+body{font-family:Verdana,Arial,"Microsoft YaHei";font-size:12px;padding:0;margin:0;line-height:20px;background:#fff;color:#000}
+* a{color:#000;text-decoration:none}
+* a:hover{color:#c00;text-decoration:underline}
+input,button,select,textarea{font-family:Verdana,Arial,"Microsoft YaHei";font-size:12px;margin:0}
+h1,h2,h3,h4,h5,h6,form,ul,li,dl,dt,dd,img,p,i{margin:0;padding:0}
+.Arial{font-family:Arial}
+select{padding:3px 5px}
+ul,li,ol{list-style:none}
+ol{margin:0;padding:0}
+hr{display:block;clear:both}
+img,a img{border:none}
+.z{float:left;display:inline}
+.y{float:right;zoom:1;display:inline}
+.text-y{text-align:right}
+.text-c{text-align:center}
+label{cursor:pointer}
+.cursor{cursor:pointer}
+.b{font-weight:bold}
+.bb{font-weight:100 !important}
+.yunj{text-decoration:line-through}
+.pl10{padding-left:10px !important}
+.mr5{margin-right:5px !important}
+.mr10{margin-right:10px !important}
+.mr15{margin-right:15px !important}
+.mr20{margin-right:20px !important}
+.mr25{margin-right:25px !important}
+.mr30{margin-right:30px !important}
+.mr35{margin-right:35px !important}
+.mr40{margin-right:40px !important}
+.mr60{margin-right:60px !important}
+.ml5{margin-left:5px !important}
+.ml10{margin-left:10px !important}
+.ml15{margin-left:15px !important}
+.ml20{margin-left:20px !important}
+.ml25{margin-left:25px !important}
+.ml30{margin-left:30px !important}
+.ml35{margin-left:35px !important}
+.ml60{margin-left:60px !important}
+.mb5{margin-bottom:5px !important}
+.mb10{margin-bottom:10px !important}
+.mb12{margin-bottom:12px !important}
+.mb15{margin-bottom:15px !important}
+.mb20{margin-bottom:20px !important}
+.mb25{margin-bottom:25px !important}
+.mb30{margin-bottom:30px !important}
+.mb35{margin-bottom:35px !important}
+.mb45{margin-bottom:45px !important}
+.mt5{margin-top:5px !important}
+.mt10{margin-top:10px !important}
+.mt12{margin-top:12px !important}
+.mt15{margin-top:15px !important}
+.mt20{margin-top:20px !important}
+.mt25{margin-top:25px !important}
+.mt30{margin-top:30px !important}
+.mt60{margin-top:60px !important}
+.mh32{margin-top:16px;margin-bottom:16px !important}
+.clear{clear:both}
+.fontS12{font-size:12px !important}
+.fontS14{font-size:14px !important}
+.fontS16{font-size:16px !important}
+.fontS18{font-size:18px !important}
+.fontS20{font-size:20px !important;padding-bottom:1px}
+.fontS24{font-size:24px !important;padding-bottom:1px}
+.fontS30{font-size:30px !important;padding-bottom:1px}
+.Cccc{color:#ccc !important}
+.Cddd{color:#ddd !important}
+.C999{color:#999 !important}
+.C666{color:#666 !important}
+.C333{color:#333 !important}
+.C000{color:#000 !important}
+.Cblue{color:#39f !important}
+.Cgreen{color:#00aa82 !important}
+.Cred{color:#c00 !important}
+.web-width{width:1200px;margin:0 auto}
+.clearfix:after{content:'';display:table;clear:both}
+.clearfix{*zoom:1}
+.header{height:640px;background-color:#eee;background-image:url(images/app/header_bg.jpg);background-position:center;font-size:0}
+.header .header-d{width:1120px;height:640px;background-image:url(images/app/header_d.png);background-position:center;margin:0 auto;color:#fff;border-top:1px solid transparent}
+.header .header-d .app-download img{display:inline-block;*zoom:1;*display:inline;background-color:#fff;padding:13px;margin-right:40px}
+.header .header-d .app-download div{display:inline-block;*zoom:1;*display:inline;height:141px;vertical-align:top}
+.header .header-d .app-download div a{display:inline-block;width:168px;height:48px;line-height:48px;font-size:18.66px;border:1px solid #fff;color:#fff;text-decoration:none;border-radius:2px}
+.header .header-d .app-download div a span{vertical-align:15px}
+.header .header-d .app-download div a:hover{ background-color:#fff; color:#00aa82;}
+.header .header-d .app-download div a:hover .Android-icon{ background-position:-43px 0;}
+.header .header-d .app-download div a:hover .iPhone-icon{ background-position:-43px -36px}
+.main{background-color:#f9f9f9;font-size:0;padding-bottom:120px}
+.main .module{height:530px}
+.main .module .web-width{position:relative;height:530px}
+.main .module .web-width .txt p{font-size:18.66px;color:#333;margin-bottom:15px}
+.main .module .web-width .txt .title{font-size:40px;color:#00aa82;margin-bottom:28px}
+.main .module.module-1 .bg{position:absolute;left:-324px;bottom:0;width:890px;height:350px;background-image:url(images/app/bg_01.png)}
+.main .module.module-1 .txt{margin-top:240px}
+.main .module.module-2 .bg{position:absolute;right:-155px;bottom:0;width:666px;height:355px;background-image:url(images/app/bg_02.png)}
+.main .module.module-2 .txt{margin-top:255px}
+.main .module.module-3 .bg{position:absolute;left:-145px;bottom:0;width:949px;height:329px;background-image:url(images/app/bg_03.png)}
+.main .module.module-3 .txt{margin-top:288px}
+.main .module.module-4 .bg{position:absolute;right:-110px;bottom:0;width:666px;height:378px;background-image:url(images/app/bg_04.png)}
+.main .module.module-4 .txt{margin-top:250px}
+.main .module.module-5 .bg{position:absolute;left:-40px;bottom:0;width:666px;height:378px;background-image:url(images/app/bg_05.png)}
+.main .module.module-5 .txt{margin-top:250px}
+.Android-icon{display:inline-block;width:43px;height:36px;background-image:url(images/app/app_icon.png);background-position:0 0}
+.iPhone-icon{display:inline-block;width:43px;height:36px;background-image:url(images/app/app_icon.png);background-position:0 -36px}
+
+
+/*底部*/
+.footer {display:block;text-align:center; padding-top:20px; overflow:hidden;}
+
+/**/
+.footer .footer-menu {width:100%;display:block;line-height:18px;padding:20px 0px; overflow:hidden;}
+.footer .footer-menu div {padding:5px 0px;}
+.footer .footer-menu .link span {padding:0px 10px;color:#cccccc;}
+.footer .footer-menu .link a {color:#000000;}
+
+.footer .footer-menu div.falu a {padding:0px 8px;display:inline-block; vertical-align:middle;}
+.footer .footer-menu div.falu a:hover {text-decoration:none;}
+.footer .footer-menu .link a{color:#333}

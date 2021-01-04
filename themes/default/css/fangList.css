@@ -1,0 +1,332 @@
+
+/* CSS Document */
+
+/*个人房源入口按钮*/
+a.individual-fang {height:25px;line-height:25px; display:inline-block;padding-left:16px;background:url(../images/icon11.png) 0px 7px no-repeat;color:#666666; overflow:hidden;}
+/*发布房源按钮*/
+a.add-fang-bnt {height:25px;line-height:25px;line-height:27px\9; display:inline-block;padding:0px 20px 0px 37px;background:#ff6600 url(../images/icon12.png) 17px 6px no-repeat;color:#ffffff;-webkit-border-radius: 3px;border-radius: 3px; overflow:hidden;}
+a.add-fang-bnt:hover {background-color:#e95d00;text-decoration:none;color:#ffffff !important;}
+
+
+/*房源列表小标题 上下排序图标*/
+i.sequence-icon {width:7px;height:12px;display: inline-block;background-image:url(../images/icon04.png);background-repeat:no-repeat;vertical-align: -2px;/**/}
+i.top-blue {background-position:-21px 0px;}
+i.top-gray {background-position:-14px 0px;}
+i.bottom-blue {background-position:-7px 0px;}
+i.bottom-gray {background-position:0px 0px;}
+
+/*房源推荐小图标*/
+i.fang-ad-icon-0{ display:inline-block;width:13px;height:13px; background-image:url(../images/icon-2.png); background-position:-5px -557px; vertical-align:-3px; }
+i.fang-ad-icon-1{ display:inline-block;width:14px;height:13px; background-image:url(../images/icon-2.png); background-position:-5px -572px; vertical-align:-2px; }
+i.fang-ad-icon-2{ display:inline-block;width:13px;height:13px; background-image:url(../images/icon-2.png); background-position:-5px -588px; vertical-align:-3px; }
+i.fang-ad-icon-3{ display:inline-block;width:14px;height:12px; background-image:url(../images/icon-2.png); background-position:-5px -603px; vertical-align:-2px; }
+
+
+
+
+
+/******条件筛选*/
+.s-tab {height:35px;background:url(../images/d.png) left bottom repeat-x;border-left:1px solid #dddddd;position:relative;}
+.s-tab ul.title-tab {}
+.s-tab ul.title-tab li {float:left;height:33px;line-height:33px;*line-height:15px;_line-height:33px;display:inline-block;border-bottom:1px solid #dddddd;border-top:1px solid #dddddd;border-right:1px solid #dddddd;background:#ffffff;padding:0px 20px;font-size:14px;*height:25px;*padding-top:8px;}
+.s-tab ul.title-tab li.ol {border-bottom:1px solid #ffffff;}
+.s-tab ul.title-tab li a {color:#333333;}
+.s-tab ul.title-tab li a:hover {color:#ff6600;}
+.s-tab ul.title-tab li.ol a{color:#000;font-weight:bold;}
+.s-tab ul.title-tab li i {width:15px;height:16px;display:inline-block;background-image:url(../images/icon03.png);background-repeat:no-repeat;vertical-align: -4px;margin-right:3px;*vertical-align: 0px;}
+.s-tab ul.title-tab li i.qy {background-position:-1px -1px;}
+.s-tab ul.title-tab li i.dt {background-position:-21px -1px;}
+.s-tab ul.title-tab li i.xq {background-position:-41px -1px;}
+.s-tab ul.title-tab li i.map {background-position:-60px -1px;}
+.s-tab ul.title-tab li i.gj {background-position:-77px -1px;}
+.s-tab ul.title-tab li i.xf {background-position:-173px -2px;}
+.s-tab ul.title-tab li i.lp {background-position:-192px -1px;}
+/**/
+.s-tab div.y {position:absolute;top:-3px;right:0px;}
+.s-tab div.y a {margin-left:30px;}
+
+/*条件*/
+.s-tiaojian {padding:10px 20px 20px 20px;background:#ffffff;border-bottom:1px solid #dddddd;border-left:1px solid #dddddd;border-right:1px solid #dddddd; position:relative;z-index:9999}
+.s-tiaojian dl {width:100%;min-height:20px;display:block;margin:10px 0px;padding:0px;overflow:hidden;}
+.s-tiaojian dl dt {width:4%;float:left;color:#999999;}
+.s-tiaojian dl dd {width:96%;float:left;}
+.s-tiaojian dl dd a {display:inline-block;margin-right:15px; cursor:pointer;color:#000000;}
+.s-tiaojian dl dd a.ol {color:#ff6600;}
+.s-tiaojian dl dd a:hover {color:#ff6600;}
+.s-tiaojian dl dd.jiax {border-bottom:1px solid #eeeeee;padding-bottom:5px;}
+.s-tiaojian dl.stab{border-top:1px solid #eeeeee;padding-top:20px; overflow:visible}
+
+.s-tiaojian dl dd option.ol{color:#ff6600;}
+/*出租房 公交查询 专用*/
+.s-tiaojian dl.gongj-box-t dd.gongjiao-box {}
+.s-tiaojian dl.gongj-box-t dd input.input {width:350px;height:22px;*line-height:22px;line-height:22px\9;background:#f5f5f5;}
+.s-tiaojian dl.gongj-box-t dd input.input_sub {height:24px;*line-height:24px;background:#aaaaaa;vertical-align:middle;}
+.s-tiaojian dl.gongj-box-t dd.gongjiao-box .gongjiao-result {width:350px;border:1px solid #aaaaaa;background:#ffffff;position:absolute;left:46px;left:47px\9;*left:54px;top:23px;*top:24px; z-index:999; display:none;}
+.s-tiaojian dl.gongj-box-t dd.gongjiao-box .gongjiao-result a {width:100%;height:30px;line-height:30px;display:block; text-indent:10px;}
+.s-tiaojian dl.gongj-box-t dd.gongjiao-box .gongjiao-result a:hover {background:#eeeeee; text-decoration:none;}
+/*自定义搜索*/
+span.diy-search {color:#666666;}
+span.diy-search input.inp {height:18px;border:1px solid #dddddd;background:#ffffff;padding:0px;}
+span.diy-search input.bnt {height:20px;border:0px;background:#dddddd;padding:0px 10px;color:#666666;line-height:20px;}
+/*更多筛选*/
+.s-tiaojian dl dd span.shaix label {padding-right:20px;}
+.s-tiaojian dl dd span.shaix label input {vertical-align: middle;margin-right:3px;}
+a.other-fang-go {position:absolute;right:20px;bottom:20px;*bottom:55px;}
+
+
+
+/******房源列表*/
+.fang-all-box {display:block; overflow:hidden;/**/}
+.fang-all-box .fang-list-box {width:920px; /*margin-top:10px;*/}
+.fang-all-box .fang-list-box .fang-list-title {height:37px;line-height:37px;padding-top:3px;border-bottom:1px solid #dddddd;}
+.fang-all-box .fang-list-box .fang-list-title a:hover {text-decoration:none; cursor:pointer;}
+/**/
+.fang-all-box .fang-list-box ul.fang-list {}
+.fang-all-box .fang-list-box ul.fang-list li {height:120px;padding:20px 10px;border-bottom:1px solid #dddddd; position:relative; cursor:pointer  /*overflow:hidden;*/}
+.fang-all-box .fang-list-box ul.fang-list li .slt {width:160px;height:120px;position:relative;}
+.fang-all-box .fang-list-box ul.fang-list li .slt img {width:160px;height:120px;}
+.fang-all-box .fang-list-box ul.fang-list li .slt a span, .fang-all-box .fang-list-box ul.fang-list li .jlt a span {position:absolute; display:inline-block;padding:0px 4px;background-color:rgba(255, 102, 0, 0.5); filter: progid:DXImageTransform.Microsoft.gradient(enabled="true",startColorstr="#88ff6600",endColorstr="#88ff6600");left:5px;bottom:5px;color:#ffffff;line-height:18px;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info {}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .title {line-height:25px;font-size:18px;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .title a {color:#000000;}
+.fang-all-box .fang-list-box ul.fang-list li.over_back .title a{color:#ff6600;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .title a.hover {color:#ff6600;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .title,.fang-all-box .fang-list-box ul.fang-list li .fang-info .adds {margin-bottom:12px;margin-bottom:11px\9;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .qita {margin-bottom:10px;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .mun {margin-bottom:10px;}
+.fang-all-box .fang-list-box ul.fang-list li .fang-info .adds a:hover{color:#ff6600 !important;}
+
+.fang-all-box .fang-list-box ul.fang-list li div.title a.textEclip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:inline-block;
+    white-space: nowrap;
+    max-width: 580px;
+}
+.fang-all-box .fang-list-box ul.fang-list li div.title a.textEclip:hover{color:#ff6600;}
+/*价格*/
+.fang-all-box .fang-list-box ul.fang-list li .jiage {position:absolute;top:68px;left:720px;}
+.fang-all-box .fang-list-box ul.fang-list li .duibi-f {position:absolute;top:23px;right:20px; display:none;}
+.fang-all-box .fang-list-box ul.fang-list li .duibi-f label input {vertical-align: middle;}
+
+.fang-all-box .fang-list-box .fang-list-tab{
+  height: 35px;
+  margin-top:25px;
+  background: url(../images/d3.png) left bottom repeat-x;
+  border-left: 1px solid #dddddd;
+  position: relative;
+}
+.fang-all-box .fang-list-box .fang-list-tab li{
+	  float: left;
+  height: 33px;
+  line-height: 33px;
+  display: inline-block;
+  border-bottom: 1px solid #FF6600;
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  background: #ffffff;
+  padding: 0px 20px;
+  font-size: 14px;
+}
+.fang-all-box .fang-list-box .fang-list-tab li a{
+  color: #333333;
+  display: block;
+}
+.fang-all-box .fang-list-box .fang-list-tab li.on{
+	border: 1px solid #FF6600;
+  border-bottom: 1px solid #FFFFFF;
+}
+.fang-all-box .fang-list-box .fang-list-tab span{
+}
+	
+
+
+/*周边公交数（出租房列表）*/
+.fang-tag a.busNum {padding-left:8px; position:relative; }
+.fang-tag a.busNum i {width:18px;height:11px;display: inline-block;background-image:url(../images/icon03.png);background-repeat:no-repeat;background-position:-127px -3px;vertical-align: middle;}
+.fang-tag a.busNum div.bus-list { z-index:9999;max-height:500px; _height:1%; width:500px; min-height:36px;border:1px solid #99ccff; overflow-y:auto; background-color:#ffffff;color:#000000;padding:5px 8px; position:absolute;left:0px;top:21px; z-index:999; display:none;}
+.fang-tag a.busNum div.bus-list span {margin-right:10px; display:inline-block;}
+.fang-list-box .adds span{display:inline-block;*zoom:1;*display:inline !important; *top:0px !important}
+.bus-list{_top:19px !important} /*修改*/
+.bus-list .C999{width:80px !important;display:block;} /*修改*/
+
+/*推广(二手房列表)*/
+ul.tuiguang-fang {width:100%;height:120px;padding:20px 0px;display:block;background:#ffffff;position:relative;border-bottom:1px solid #dddddd;}
+ul.tuiguang-fang li {float:left;}
+ul.tuiguang-fang li.ti {width:190px;}
+ul.tuiguang-fang li.ti span {width:100px;height:60px;line-height:60px;padding-right:10px;margin:30px 0px 0px 30px;display:inline-block;background: url(http://gz.fangtan007.com/themes/default/images/tg.png) 0px 0px no-repeat; text-align:center;}
+ul.tuiguang-fang li.tu {width:180px;}
+ul.tuiguang-fang li.tu img {width:160px;height:120px;}
+ul.tuiguang-fang li.cm .cm1{line-height:25px;}
+ul.tuiguang-fang li.cm .cm1,ul.tuiguang-fang li.cm .cm2{padding-bottom:15px;}
+ul.tuiguang-fang .jia {*width:180px;position:absolute;top:68px;left:720px;}
+
+/*小区专家房源*/
+.xqzjfy-fang {width:100%;padding:15px 0px 20px 0px!important; background:#f8f5de!important;overflow:hidden; height:auto!important}
+.xqzjfy-fang h5 {height:30px;padding:0px 20px;margin:0px; overflow:hidden;}
+.xqzjfy-fang h5 span.rm a{width:8px;height:8px;background:#cccccc; display:inline-block;margin-left:10px;-webkit-border-radius: 8px;border-radius: 8px;}
+.xqzjfy-fang h5 span.rm a.ol {background:#ffcc99;}
+.xqzjfy-fang li.za {width:280px;height:130px;float:left;margin-left:20px;overflow:hidden;}
+.xqzjfy-fang li.za div.vtr {width:106px;}
+.xqzjfy-fang li.za div.inf {padding-left:15px;line-height:18px;}
+.xqzjfy-fang li.za div.inf div {padding-bottom:11px;}
+.xqzjfy-fang div.za {width:280px;height:130px;float:left;margin-left:20px;overflow:hidden;}
+.xqzjfy-fang div.za div.vtr {width:106px;}
+.xqzjfy-fang div.za div.vtr img{height:130px;}
+.xqzjfy-fang div.za div.inf {padding-left:15px;line-height:18px;}
+.xqzjfy-fang div.za div.inf div {padding-bottom:11px;}
+
+
+/*SEO*/
+.seo {width:100%;display:block;color:#666666;border-top:1px solid #eeeeee;padding-top:15px;margin:10px 0px;overflow:hidden;}
+.seo a {color:#666666;margin-right:10px;}
+
+
+
+/*右侧*/
+.fang-all-box .right-box {width:250px;padding-top:20px;}
+
+/*浏览记录 样式 公用，在 common.css 里*/
+/*买房工具*/
+.module-c ul.tool {padding:15px 15px 5px 15px;}
+.module-c ul.tool li {width:100%;display:block;padding-bottom:10px;color:#666666;}
+.module-c ul.tool li input {width:99%;}
+.module-c ul.tool li select {width:99%;padding:6px;}
+
+/*走势图 MIN*/
+.module-z {border:1px solid #dddddd; display:block;background:#eeeeee;padding:0px;margin-bottom:20px;}
+.module-z h3 {height:40px;line-height:40px; display:block;font-size:14px;padding:0px 15px;font-weight:100;}
+.module-z .tushi {height:25px;text-align:center;padding-bottom:15px;}
+.module-z .tushi span {margin:0px 6px;}
+.module-b{ margin-bottom:20px;}
+
+
+
+
+/*对比房源弹层*/
+.duibi-fang {padding:0px;}
+.duibi-fang ul.db {width:900px;min-height:122px;float:left;padding-top:20px;display:block;position:relative;background: url(../images/db1234.png) 0px 20px no-repeat;}
+.duibi-fang ul.db li {float:left;width:160px;height:120px;margin-right:20px;position:relative;border:1px solid #ffffff;}
+.duibi-fang ul.db li img {width:160px;height:120px;}
+.duibi-fang ul.db li div {width:100%;height:35px;line-height:16px;background-color:rgba(255, 255, 255, 0.8);filter: progid:DXImageTransform.Microsoft.gradient(enabled="true",startColorstr="#99ffffff",endColorstr="#99ffffff");display:block;padding-top:5px;position:absolute;bottom:0px;left:0px; }
+.duibi-fang ul.db li div span {width:100%;display:block;text-indent:5px;}
+.duibi-fang ul.db li a.x {width:18px;height:18px; display:inline-block;background: url(../images/close.png) -18px 0px no-repeat;position:absolute;top:-5px;right:-5px;}
+.duibi-fang a.db-bnt {width:100px;height:35px;line-height:35px; display:inline-block; text-align:center;font-size:14px;background:#3399ff;color:#ffffff;position:absolute;top:60px;right:20px;}
+.duibi-fang a.db-bnt:hover {background:#2089f2; text-decoration:none;}
+.duibi-fang a.x {width:26px;height:26px;background: url(../images/close.png) 0px -18px no-repeat;cursor: pointer; display:inline-block;position:absolute;top:20px;right:20px;}
+.duibi-fang a.x:hover {background: url(../images/close.png) -26px -18px no-repeat;}
+
+/*广告*/
+.advert {
+  border: 1px solid #dedede;
+  margin-bottom: 10px;
+}
+.advert img{ width:248px;  height:250px;}
+
+/*****对比*****/
+.houseCompareOver { padding:0px 10px;}
+.houseCompareOver .icon-close{ display:none; background:url(http://gz.fangtan007.com/Contents/images/icon-close.png) no-repeat; position:absolute; right:-5px; top:-5px; width:18px; height:18px; z-index:999; cursor:pointer;}
+.houseCompareOver ul{ width:100%; overflow:hidden; _height:1%;_zoom:-1;}
+.houseCompareOver ul li{ float:left; margin:10px 5px; position:relative;}
+.houseCompareOver ul li .preview{ color:#ccc;width:100px; height:67px;line-height:67px;border:#d5d5d5 1px solid;padding:3px; text-align:center; font-size:45px;}
+.houseCompareOver ul li .preview img{width:100px;  height:67px; }
+.houseCompareOver ul li .title{color:#ccc; text-align:center; padding:5px 0px;width:106px; height:25px;}
+.houseCompareOver ul li .houseTitle{ color:#000000;}
+.houseCompareOver ul .operate{ margin-top:10px;}
+.houseCompareOver ul .operate div{text-align:center; }
+.houseCompareOver ul li .title div{ text-align:center; cursor:default;width:106px; }
+.houseCompareOver ul li .btnDisable{background:url(http://gz.fangtan007.com/Contents/images/compare_03.jpg) no-repeat;border:0px;line-height:30px; height:30px;width:85px; color:#4e4e4e; display:block; margin-bottom:10px; cursor:pointer;}
+.houseCompareOver ul li .btnEnable{background:url(http://gz.fangtan007.com/Contents/images/compare_09.jpg) no-repeat; border:0px;cursor:pointer;line-height:30px; height:30px;width:85px;color:#4e4e4e; display:block;margin-bottom:10px;cursor:pointer;}
+
+/**/
+.fang-ad-box{padding:20px 20px 20px 20px;border:1px solid #ffcc99;background:#f8f5de;}
+.fang-ad-box p em{font-size:14px;font-weight:bold;font-style:normal;margin:0 3px;}
+.fang-ad-box .fang-ad-info{color:#ccc;margin:11px -10px;}
+.fang-ad-box .fang-ad-info span{margin:0 8px;}
+.fang-ad-box .fang-ad-ex{margin-left:180px;}
+.fang-ad-box .fang-ad-ex a.avtr {width:60px;height:50px; display:inline-block; overflow:hidden;}
+.fang-ad-box .fang-ad-ex a.avtr img {width:50px;}
+.fang-ad-box .fang-ad-ex-info{position:relative;top:-7px;}
+.fang-ad-box a{color:#000;}
+.fang-ad-box a:hover{color:#ff6600 !important;}
+
+.price-box{padding:19px 14px;}
+.price-box span{ margin-right:18px;}
+.price-box em{ font-size:28px; font-style:normal;}
+.price-box .arrow-icon{ margin-top:5px;}
+
+
+
+.selectBox{
+	display:inline-block; 
+	*display:inline;	/*IE6/7兼容*/
+	*zoom:1;			/*IE6/7兼容*/
+	width:120px;
+	height:28px;
+	position:relative;
+	line-height:28px;
+	border:1px solid #ccc;
+	margin-right:10px;
+	margin-top:-10px;
+	padding-left:8px;
+	background:#fff;
+	z-index:999999999999999;
+	cursor:pointer;
+}
+.selectBox img{
+	float:right;
+}
+.selectBox a{
+	color:#000;
+	text-decoration:none;
+}
+
+.popList{
+	display:none;
+	position:absolute;
+	z-index:999999999999999;
+	color:#000;
+	left:-1px;
+	top:29px;
+	background:#fff;
+}
+.popList li:hover{
+	cursor:pointer;
+	background:#f5f5f5;
+}
+
+.vertical li{
+	border:1px solid #ccc;
+	border-top:none;
+	border-bottom:1px solid #eee;
+	width:120px;
+	height:28px;
+	line-height:28px;
+	padding-left:8px;
+	background:white;
+	z-index:999999999999999;
+}
+.vertical li:last-Child,.vertical>li>ul>li:last-Child{
+	border-bottom:1px solid #ccc;
+}
+
+.vertical li a{
+	display:block;
+	width:120px;
+	height:28px;
+	color:#000;
+	text-decoration:none;
+	_width:105px;
+}
+.down-icon {
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/map/icon01.png) 0px 0px no-repeat;
+    vertical-align: middle;
+}
+.selectBox i {
+    position:absolute;
+	top:11px;
+	right:11px;
+}

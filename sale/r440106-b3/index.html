@@ -1,0 +1,1150 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        	        <meta name="keywords" content="义务天河车陂二手房信息,天河车陂二手房买卖">
+	        <meta name="description" content="义务房探007二手房频道-专业的义务二手房网，提供最新最全的义务天河车陂二手房信息。">
+        	<title>义务天河车陂二手房信息_天河车陂二手房买卖-义务房探007网</title>
+<link rel="stylesheet" href="../../themes/default/css/common.css" type="text/css">
+<link href="../../themes/default/css/liaotian.css" rel="stylesheet" type="text/css">
+<script src="../../themes/default/js/jquery.min.js"></script>
+<script src="../../themes/default/js/common.js" type="text/javascript"></script>
+<script src="../../themes/default/js/liaotian.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?79f75de0162fdd2c54dce979ce05f82a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    	<link href="../../themes/default/css/fangList.css" rel="stylesheet" type="text/css">
+        <link href="../../themes/default/css/esStyle.css" rel="stylesheet" type="text/css">
+        <script src="../../themes/default/js/jcookie.js"></script>
+        <script src="../../themes/default/js/Chart.js"></script>
+		<!--[if lt IE 9]>
+		<script src="/themes/default/js/html5shiv.js?v=1609763789813"></script>
+		<script src="/themes/default/js/respond.min.js?v=1609763789813"></script>
+		<script src="/themes/default/js/excanvas.js?v=1609763789813"></script>
+		<![endif]-->
+        <script>
+	    function toUrl(curSelect)
+	    {
+	    	location.href=$(curSelect).val();
+	    }
+	    
+    </script>
+    </head>
+
+<body>
+
+
+<div class="header"> 
+	<div class="top">
+		<div class="web-width">
+        	<ul class="z">
+            	<li class="logo">
+   <a href="../../index.html" title="房途网"><img src="../../themes/default/images/logo.png" alt="义乌租房信息网"></a>
+</li>
+<li class="city" id="choiceCity" style="z-index:999;">
+    <a href="../../index1.html">义务&nbsp;<i class="icon-right-small"></i></a>
+</li>
+                <li class="search">
+					<div class="search-top-box">
+						<div class="top-search-input"><input name="buildname" id="buildname" class="input top-search-input" type="text" placeholder="小区名称" onkeyup="onkeyword(this)" onfocus="onkeyword(this)" value=""><input name="searchBtn" id="searchBtn" class="search-bnt cursor" type="button">
+                        </div>
+                        
+                        <div class="search-result-box" style="display: none;">
+                        </div>
+					</div>
+        		</li>
+            </ul>                
+<ul class="y">
+	<li class="mya"> 
+	        <a href="../../my/login.html" class="login"><span></span>登录</a>
+      <a href="../../my/register.html" class="reg"><span></span>注册</a>
+      	<a href="../../my/house.html" class="login"><span class="fang-icon"></span>我的房探</a>
+	</li>
+</ul>
+		</div>
+	</div>
+      
+<div class="title">
+	<div class="web-width"> 
+		<ul class="max-t z">
+           <li class="sy"><a href="../../index.html" title="首页">首页</a></li>
+           <li class="esf"><a href="../index.html" title="义务二手房" class="ol">二手房</a></li>
+           <li class="czf"><a href="../../rent/index.html" title="义务出租房">租房</a></li>
+           <li class="xq"><a href="../../community/index.html" title="义务小区">小区</a></li>
+           <li class="cfj"><a href="../../market/index.html" title="查房价">查房价</a></li>
+           <li class="jjr"><a href="../../broker/index.html" title="义务经纪人">经纪人</a></li>
+           <li class="dt"><a href="../../map/sale/index.html" title="地图找房">地图找房</a></li>
+           <li><i class="dhline"></i></li>
+	  	   <li class="dt"><a href="../../index2.html" title="个人房源">个人房源</a></li>
+           <li class="dt"><a href="../../index2.html" title="群发房源">群发房源</a></li>
+		</ul>
+          
+		<div class="mini-t y">
+			<a href="##" class="header-app" style="display:none"><i class="header-icon"></i><span>APP下载</span></a>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	function onkeyword(searchVar){
+		var searchVal = $(searchVar).val();
+			if($.trim(searchVal) == "")
+			{
+			    $(".search-result-box").slideUp(50);
+				return;
+			}
+			$.ajax({
+			type : "post",
+			url : "/community/jsonBuilding?t=" + Math.random(),
+			data : "buildName="+searchVal,
+			success : function(data) {
+				var obj = eval('(' + data + ')');
+				keyword_handler(obj,searchVal);
+            },
+   			error: function(XMLHttpRequest, textStatus, errorThrown) {
+   			 }	
+		});
+   }
+   
+   function keyword_handler(data,searchVal)
+   {
+	   if(!data){
+		   return;
+	   }
+   		var inHtml = "";
+   		for(i=0;i<data.length;i++)
+   		{
+   			inHtml += '<a class="C000 cursor" title="'+data[i].buildingName+'"><span class="xqm">'+data[i].buildingName.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span><span class="adds C999">'+data[i].addr.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span></a>';
+   		}
+   		if(inHtml!="")
+   		{
+	   		$(".search-result-box").html(inHtml);
+	   	   $(".search-result-box a").click(function(){
+				var v = $(this).attr("title");
+				$("input.top-search-input").val(v);
+				$("input.top-search-input").addClass("C000");
+				$(".search-result-box").slideUp(50);
+			});
+	   		$(".search-result-box").slideDown(100);
+   		}
+   		else
+   		{
+   			$(".search-result-box").html("");
+   			$(".search-result-box").slideUp(50);
+   		}
+   }
+   
+</script>
+
+<div class="web-width-all" style="padding:15px 0px 5px 0px;">
+  <div class="web-width">
+    <div class="s-tab">
+      <ul class="title-tab z">
+        <li class="q ol"><a class="cursor"><i class="qy"></i>区域找房</a></li>
+        <li><a href="../../map/sale/index.html"><i class="map"></i>地图找房</a></li>
+      </ul>
+      <div class="y"><a href="javascript:;" class="add-fang-bnt" target="_blank">发布房源</a></div>
+    </div>
+    <div class="s-tiaojian" style="position:relative;">
+      <div class="quyun-box">
+      <dl class="quyun-box-t">
+        <dt>区域</dt>
+        <dd>
+			<a href="javascript:;">不限</a>
+  			<a href="../r440106/index.html" class="ol">天河</a>
+  			<a href="../r440105/index.html">海珠</a>
+  			<a href="../r440104/index.html">越秀</a>
+  			<a href="../r4419/index.html">东莞</a>
+  			<a href="../r440111/index.html">白云</a>
+  			<a href="../r440103/index.html">荔湾</a>
+  			<a href="../r440113/index.html">番禺</a>
+  			<a href="../r440112/index.html">黄埔</a>
+  			<a href="javascript:;">花都</a>
+  			<a href="javascript:;">增城</a>
+  			<a href="javascript:;">佛山</a>
+  			<a href="javascript:;">从化</a>
+  			<a href="javascript:;">其他</a>
+  			<a href="javascript:;">东山</a>
+  			<a href="javascript:;">南沙</a>
+  			<a href="javascript:;">萝岗</a>
+    		
+        </dd>
+      </dl>
+      <dl class="quyun-box-more">
+        <dt>&nbsp;</dt>
+        <dd class="jiax">
+    		<a href="../r440106/index.html">不限</a>
+    			<a href="../r440106-b2/index.html">长湴</a>
+    			<a href="" class="ol">车陂</a>
+    			<a href="../r440106-b4/index.html">东站</a>
+    			<a href="javascript:;">东圃</a>
+    			<a href="javascript:;">东莞庄</a>
+    			<a href="javascript:;">岗顶</a>
+    			<a href="javascript:;">华景新城</a>
+    			<a href="javascript:;">汇景新城</a>
+    			<a href="javascript:;">龙洞</a>
+    			<a href="javascript:;">龙口西</a>
+    			<a href="javascript:;">龙口东</a>
+    			<a href="javascript:;">沙河</a>
+    			<a href="javascript:;">沙太南</a>
+    			<a href="javascript:;">石牌桥</a>
+    			<a href="javascript:;">上社</a>
+    			<a href="javascript:;">天河北</a>
+    			<a href="javascript:;">天河公园</a>
+    			<a href="javascript:;">天河南</a>
+    			<a href="javascript:;">体育中心</a>
+    			<a href="javascript:;">体育西</a>
+    			<a href="javascript:;">天润路</a>
+    			<a href="javascript:;">棠下</a>
+    			<a href="javascript:;">天河客运站</a>
+    			<a href="javascript:;">五山</a>
+    			<a href="javascript:;">五山路口</a>
+    			<a href="javascript:;">员村</a>
+    			<a href="javascript:;">粤垦</a>
+    			<a href="javascript:;">员村四横路</a>
+    			<a href="javascript:;">员村二横路</a>
+    			<a href="javascript:;">燕塘</a>
+    			<a href="javascript:;">珠江新城西</a>
+    			<a href="javascript:;">珠江新城中</a>
+    			<a href="javascript:;">珠江新城东</a>
+    			<a href="javascript:;">长湴</a>
+    			<a href="javascript:;">车陂</a>
+    			<a href="javascript:;">东站</a>
+    			<a href="javascript:;">东圃</a>
+    			<a href="javascript:;">东莞庄</a>
+    			<a href="javascript:;">岗顶</a>
+    			<a href="javascript:;">华景新城</a>
+    			<a href="javascript:;">汇景新城</a>
+    			<a href="javascript:;">龙洞</a>
+    			<a href="javascript:;">龙口西</a>
+    			<a href="javascript:;">龙口东</a>
+    			<a href="javascript:;">沙河</a>
+    			<a href="javascript:;">沙太南</a>
+    			<a href="javascript:;">石牌桥</a>
+    			<a href="javascript:;">上社</a>
+    			<a href="javascript:;">天河北</a>
+    			<a href="javascript:;">天河公园</a>
+    			<a href="javascript:;">天河南</a>
+    			<a href="javascript:;">体育中心</a>
+    			<a href="javascript:;">体育西</a>
+    			<a href="javascript:;">天润路</a>
+    			<a href="javascript:;">棠下</a>
+    			<a href="javascript:;">天河客运站</a>
+    			<a href="javascript:;">五山</a>
+    			<a href="javascript:;">五山路口</a>
+    			<a href="javascript:;">员村</a>
+    			<a href="javascript:;">粤垦</a>
+    			<a href="javascript:;">员村四横路</a>
+    			<a href="javascript:;">员村二横路</a>
+    			<a href="javascript:;">燕塘</a>
+    			<a href="javascript:;">珠江新城西</a>
+    			<a href="javascript:;">珠江新城中</a>
+    			<a href="javascript:;">珠江新城东</a>
+    			<a href="javascript:;">广园东</a>
+    			<a href="javascript:;">后天河北</a>
+    			<a href="javascript:;">石牌</a>
+    			<a href="javascript:;">天河</a>
+    			<a href="javascript:;">珠江新城</a>
+    			<a href="javascript:;">植物园</a>
+    			<a href="javascript:;">华利路</a>
+    			<a href="javascript:;">沙太北路</a>
+    			<a href="javascript:;">长福路</a>
+    			<a href="javascript:;">天寿路</a>
+    			<a href="javascript:;">先烈东二横路</a>
+    			<a href="javascript:;">濂泉路</a>
+    			<a href="javascript:;">粤汉路</a>
+    			<a href="javascript:;">林和东路</a>
+    			<a href="javascript:;">燕岭路</a>
+    			<a href="javascript:;">义务大道中</a>
+    			<a href="javascript:;">广园东路</a>
+    			<a href="javascript:;">中山大道中</a>
+    			<a href="javascript:;">沾益直街</a>
+    			<a href="javascript:;">石鼓岭</a>
+    			<a href="javascript:;">华夏路</a>
+    			<a href="javascript:;">天河东路</a>
+    			<a href="javascript:;">五山路</a>
+    			<a href="javascript:;">中山大道西</a>
+    			<a href="javascript:;">科韵路</a>
+    			<a href="javascript:;">义务大道北</a>
+    			<a href="javascript:;">东莞庄一横路</a>
+    			<a href="javascript:;">河水大街</a>
+    			<a href="javascript:;">棠德南路</a>
+    			<a href="javascript:;">黄埔大道中</a>
+    			<a href="javascript:;">祥元路</a>
+    			<a href="javascript:;">黄埔大道西</a>
+    			<a href="javascript:;">龙岗东路</a>
+    			<a href="javascript:;">沙太路</a>
+    			<a href="javascript:;">荷光路</a>
+    			<a href="javascript:;">天河路</a>
+    			<a href="javascript:;">瘦狗岭路</a>
+    			<a href="javascript:;">兴华路</a>
+    			<a href="javascript:;">保利心语</a>
+    			<a href="javascript:;">华景路</a>
+    			<a href="javascript:;">海安路</a>
+    			<a href="javascript:;">金穗路</a>
+    			<a href="javascript:;">银定塘</a>
+    			<a href="javascript:;">燕塘社区</a>
+    			<a href="javascript:;">建中路</a>
+    			<a href="javascript:;">程界子富新邨</a>
+    			<a href="javascript:;">新城花园</a>
+    			<a href="javascript:;">怡景大街</a>
+    			<a href="javascript:;">天河东</a>
+    			<a href="javascript:;">紫荆街</a>
+    			<a href="javascript:;">广园快速路</a>
+    			<a href="javascript:;">花城大道</a>
+    			<a href="javascript:;">程介坑</a>
+    			<a href="javascript:;">侨怡一街</a>
+    			<a href="javascript:;">水荫路</a>
+    			<a href="javascript:;">环市东路</a>
+    			<a href="javascript:;">冼村大厦</a>
+    			<a href="javascript:;">青年路</a>
+    			<a href="javascript:;">长兴路</a>
+    			<a href="javascript:;">岳洲路</a>
+    			<a href="javascript:;">茶山路</a>
+    			<a href="javascript:;">六运三街</a>
+    			<a href="javascript:;">华工北区</a>
+    			<a href="javascript:;">华南理工大学</a>
+    			<a href="javascript:;">建华路</a>
+    			<a href="javascript:;">龙口中路</a>
+    			<a href="javascript:;">华阳街</a>
+    			<a href="javascript:;">林和</a>
+    			<a href="javascript:;">花生寮</a>
+    			<a href="javascript:;">新世界花园别墅</a>
+    			<a href="javascript:;">大华二路</a>
+    			<a href="javascript:;">冼村路</a>
+    			<a href="javascript:;">林和中路</a>
+    			<a href="javascript:;">林和西路</a>
+    			<a href="javascript:;">体育东路</a>
+    			<a href="javascript:;">燕都路</a>
+    			<a href="javascript:;">富华中路</a>
+    			<a href="javascript:;">海明路</a>
+    			<a href="javascript:;">凤凰阁</a>
+    			<a href="javascript:;">马场路</a>
+    			<a href="javascript:;">棠石路</a>
+    			<a href="javascript:;">元岗路</a>
+    			<a href="javascript:;">侨苑小区</a>
+    			<a href="javascript:;">中山大道北</a>
+    			<a href="javascript:;">省消防总队</a>
+    			<a href="javascript:;">金颖东一街</a>
+    			<a href="javascript:;">银利街</a>
+    			<a href="javascript:;">沙和路</a>
+    			<a href="javascript:;">水荫一横路</a>
+    			<a href="javascript:;">天平架</a>
+    			<a href="javascript:;">龙岗路</a>
+    			<a href="javascript:;">先烈东路</a>
+    			<a href="javascript:;">天府路</a>
+    			<a href="javascript:;">棠东东路</a>
+    			<a href="javascript:;">黄村</a>
+    			<a href="javascript:;">同和路</a>
+    			<a href="javascript:;">猎德路</a>
+    			<a href="javascript:;">义务大道南</a>
+    			<a href="javascript:;">伍仙桥</a>
+    			<a href="javascript:;">黄埔大道东</a>
+    			<a href="javascript:;">工业大道北</a>
+    			<a href="javascript:;">天河直街</a>
+    			<a href="javascript:;">广和路</a>
+    			<a href="javascript:;">东圃二马路</a>
+    			<a href="javascript:;">平川路</a>
+    			<a href="javascript:;">东莞庄路</a>
+      </dd></dl>
+      </div>
+                                             
+      <dl>
+        <dt>价格</dt>
+        <dd>
+        <a href="" class="ol"> 不限</a>
+		          		<a href="javascript:;">50万以下</a>
+		          		<a href="javascript:;">50-80万</a>
+		          		<a href="javascript:;">80-100万</a>
+		          		<a href="javascript:;">100-120万</a>
+		          		<a href="javascript:;">120-150万</a>
+		          		<a href="javascript:;">150-200万</a>
+		          		<a href="javascript:;">200-300万</a>
+		          		<a href="javascript:;">300万以上</a>
+		          	<span class="diy-search"><input id="lprice" name="lprice" type="text" maxlength="4" size="4" value="" class="inp"> - <input id="uprice" name="uprice" type="text" maxlength="4" size="4" value="" class="inp"> 万  <input name="" class="bnt" type="button" value="确定" id="search_price"></span>
+        </dd>
+      </dl>
+      <dl>
+        <dt>面积</dt>
+        <dd><a href="" class="ol"> 不限</a>
+		          		<a href="javascript:;">50㎡以下</a>
+
+		          		<a href="javascript:;">50-70㎡</a>
+
+		          		<a href="javascript:;">70-90㎡</a>
+
+		          		<a href="javascript:;">90-110㎡</a>
+
+		          		<a href="javascript:;">110-130㎡</a>
+
+		          		<a href="javascript:;">130-150㎡</a>
+
+		          		<a href="javascript:;">150-200㎡</a>
+
+		          		<a href="javascript:;">200-300㎡</a>
+
+		          		<a href="javascript:;">300㎡以上</a>
+		          	<span class="diy-search"><input id="larea" name="larea" type="text" maxlength="4" size="4" value="" class="inp"> - <input id="uarea" name="uarea" type="text" maxlength="4" size="4" value="" class="inp"> ㎡ <input name="" class="bnt" type="button" value="确定" id="search_area"></span></dd>
+      </dl>
+      <dl>
+        <dt>户型</dt>
+        <dd>
+                <span><a href="" class="ol"> 不限</a></span>
+	    		
+	          	<span><a href="javascript:;" title="1室二手房">1室</a>
+	          	<span><a href="javascript:;" title="2室二手房">2室</a>
+	          	<span><a href="javascript:;" title="3室二手房">3室</a>
+	          	<span><a href="javascript:;" title="4室二手房">4室</a>
+	          	<span><a href="javascript:;" title="5室及以上二手房">5室及以上</a>
+        </span></span></span></span></span></dd>
+      </dl>
+      <dl class="stab" style="border-top:1px solid #eeeeee;padding-top:15px;">
+        <dt>筛选</dt>
+        <dd>
+        
+        <div id="oType" class="selectBox" value="房屋类型">
+           <span id="houseKind_show">房屋类型</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical houseKind_ul" style="display: none;">
+                  <li><a href="javascript:;">全部</a></li>
+	                      
+		          	 <li><a href="javascript:;">公寓(小区房)</a></li>
+		          	 <li><a href="javascript:;">排屋</a></li>
+		          	 <li><a href="javascript:;">别墅</a></li>
+		          	 <li><a href="javascript:;">写字楼</a></li>
+		          	 <li><a href="javascript:;">商铺</a></li>
+		          	 <li><a href="javascript:;">农居房</a></li>
+		          	 <li><a href="javascript:;">单身公寓</a></li>
+		          	 <li><a href="javascript:;">其他</a></li>
+		      </ul>
+		  </div>
+         
+         <div id="oType" class="selectBox" value="装修情况">
+           <span id="deck_show">装修情况</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical deck_ul" style="display: none;">
+                  <li><a href="javascript:;">全部</a></li>
+		          	 <li><a href="javascript:;">中装</a></li>
+		          	 <li><a href="javascript:;">简装</a></li>
+		          	 <li><a href="javascript:;">毛坯</a></li>
+		          	 <li><a href="javascript:;">精装</a></li>
+		          	 <li><a href="javascript:;">豪装</a></li>
+		          	 <li><a href="javascript:;">其它装修</a></li>
+		      </ul>
+		  </div>
+		  
+        <div id="oType" class="selectBox" value="朝向">
+           <span id="direction_show">朝向</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical direction_ul" style="display: none;">
+                  <li><a href="javascript:;">全部</a></li>
+		          	 <li><a href="javascript:;">南北</a></li>
+		          	 <li><a href="javascript:;">东南</a></li>
+		          	 <li><a href="javascript:;">正东</a></li>
+		          	 <li><a href="javascript:;">正西</a></li>
+		          	 <li><a href="javascript:;">正南</a></li>
+		          	 <li><a href="javascript:;">正北</a></li>
+		          	 <li><a href="javascript:;">东西</a></li>
+		          	 <li><a href="javascript:;">西南</a></li>
+		          	 <li><a href="javascript:;">东北</a></li>
+		          	 <li><a href="javascript:;">西北</a></li>
+		          	 <li><a href="javascript:;">未知</a></li>
+		      </ul>
+		  </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="fang-all-box web-width">
+
+    <div class="fang-list-box z">
+        <div class="fang-list-title C999" style="">
+            <span class="z">排序： 
+    			<a class="C000" rel="nofollow" href="javascript:;">最新</a> 
+                <a class="ml10 C999 cursor" href="javascript:;">价格</a>
+                <a class="ml10 cursor C999" href="javascript:;">面积</a>
+            </span>
+            <span class="y">共找到 9 套义务二手房</span>
+        </div>
+        
+        <ul class="fang-list">
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title=" 东南 位置好 格局棒 现在空置 随时入住">
+                                <img rel="nofollow" alt=" 东南 位置好 格局棒 现在空置 随时入住" src="http://img.518fang.com/img3/518upload/201705/655/626/m_44585ccaecff406688f93615060e865c.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>10</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    东南 位置好 格局棒 现在空置 随时入住
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>63㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">6/9层</span>
+                                <span class="ml20">精装</span>
+                                <span class="ml20">1999年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="棠德花苑" class="C000">棠德花苑</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    天河车陂棠德南路
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">放心房</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">两房朝南</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">低价急售</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">170</span> 万元
+                            </div>
+                            <div>26984元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">龚琴</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="清远佛冈奥园广场 全新精装公寓 仅需25万一套 一手免佣">
+                                <img rel="nofollow" alt="清远佛冈奥园广场 全新精装公寓 仅需25万一套 一手免佣" src="http://img.518fang.com/img1/518upload/201704/446/495/m_3841c87a049d4d78912c1fb815233976.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>3</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   清远佛冈奥园广场 全新精装公寓 仅需25万一套 一手免佣
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>46㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">6/21层</span>
+                                <span class="ml20">豪装</span>
+                                <span class="ml20">2017年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="旭景家园" class="C000">旭景家园</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    中山大道车陂段北侧
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">单身公寓</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">温馨婚房</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">25</span> 万元
+                            </div>
+                            <div>5435元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">卓成效</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="美东花园稀缺优质房源85万元公寓(小区房)">
+                                <img rel="nofollow" alt="美东花园稀缺优质房源85万元公寓(小区房)" src="http://img.518fang.com/img3/518upload/201703/071/774/m_8b205ff3e81b4b53885f6e735691dfa2.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>6</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   美东花园稀缺优质房源85万元公寓(小区房)
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>85㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">5/12层</span>
+                                <span class="ml20">精装</span>
+                                <span class="ml20">2003年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="美东花园" class="C000">美东花园</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    天河区车陂路美东花园 5号地铁（车陂南站）
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">低价急售</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">商住两用</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">学校周边
+</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">85</span> 万元
+                            </div>
+                            <div>10000元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">杨伟锋</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="天朗明居 采光通风好 保养好">
+                                <img rel="nofollow" alt="天朗明居 采光通风好 保养好" src="http://img.518fang.com/img4/518upload/201612/249/845/m_e9ff68b9a096442fb45258aebd2e26d3.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>5</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   天朗明居 采光通风好 保养好
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>39㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">11/18层</span>
+                                <span class="ml20">其它装修</span>
+                                <span class="ml20">2001年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力天朗明居" class="C000">富力天朗明居</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    天河区中山大道与广氮路交界处，车陂花圈旁
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">精装修</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">小区中心位置</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">温馨婚房</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">150</span> 万元
+                            </div>
+                            <div>38158元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">钟志康</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="旭景家园大三房 安静望花园">
+                                <img rel="nofollow" alt="旭景家园大三房 安静望花园" src="http://img.518fang.com/img2/518upload/201612/352/075/m_3eb43cd2d458450fbc22156b5d6e00d4.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>9</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   旭景家园大三房 安静望花园
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>82㎡</span>
+                                <span class="ml20">3室2厅</span>
+                                <span class="ml20">5/15层</span>
+                                <span class="ml20">其它装修</span>
+                                <span class="ml20">2002年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="旭景家园" class="C000">旭景家园</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    中山大道车陂段北侧
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">精装修</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">小区中心位置</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">客厅带阳台</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">265</span> 万元
+                            </div>
+                            <div>32227元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">钟志康</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="棠德花园 低楼层一房一厅 采光好">
+                                <img rel="nofollow" alt="棠德花园 低楼层一房一厅 采光好" src="http://img.518fang.com/img4/518upload/201612/283/619/m_13cc15dbcfd1462d94800ca8e60a5452.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>4</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   棠德花园 低楼层一房一厅 采光好
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>43㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">5/10层</span>
+                                <span class="ml20">其它装修</span>
+                                <span class="ml20">1997年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="棠德花苑" class="C000">棠德花苑</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    天河车陂棠德南路
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">98</span> 万元
+                            </div>
+                            <div>22967元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">钟志康</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="南向，南向，南向。两房急售，随时可看房。">
+                                <img rel="nofollow" alt="南向，南向，南向。两房急售，随时可看房。" src="http://img.518fang.com/img2/518upload/201612/195/632/m_5940ab8704ab4f81bb8a329442581371.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>11</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   南向，南向，南向。两房急售，随时可看房。
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>60㎡</span>
+                                <span class="ml20">2室1厅</span>
+                                <span class="ml20">2/18层</span>
+                                <span class="ml20">精装</span>
+                                <span class="ml20">2001年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力天朗明居" class="C000">富力天朗明居</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    天河区中山大道与广氮路交界处，车陂花圈旁
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">两房朝南</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">220</span> 万元
+                            </div>
+                            <div>36667元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">小吴</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="业主是朋友，方便看房议价，电梯两房，南向望江，天成居">
+                                <img rel="nofollow" alt="业主是朋友，方便看房议价，电梯两房，南向望江，天成居" src="http://img.518fang.com/img3/518upload/201612/326/020/m_98b6257af56f403e927d75b6bd15313f.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>10</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   业主是朋友，方便看房议价，电梯两房，南向望江，天成居
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>58㎡</span>
+                                <span class="ml20">2室1厅</span>
+                                <span class="ml20">9/15层</span>
+                                <span class="ml20">中装</span>
+                                <span class="ml20">2000年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="天成居" class="C000">天成居</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄埔大道东2至8号
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">商住两用</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">产证满五年</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">低价急售</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">173</span> 万元
+                            </div>
+                            <div>29573元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">小吴</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li style="background-color: rgb(255, 255, 255);" class="list_item">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" target="_blank" title="旭景家园 中层三房 厅直出阳台 户型周正实用">
+                                <img rel="nofollow" alt="旭景家园 中层三房 厅直出阳台 户型周正实用" src="http://img.518fang.com/img1/518upload/201611/467/914/m_37af785d3dbf4fdd959359570f5b679c.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>10</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                   旭景家园 中层三房 厅直出阳台 户型周正实用
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>83㎡</span>
+                                <span class="ml20">3室2厅</span>
+                                <span class="ml20">12/12层</span>
+                                <span class="ml20">精装</span>
+                                <span class="ml20">2001年建造</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="旭景家园" class="C000">旭景家园</a>
+<a class="ml20 C000" href="../r440106/index.html">天河</a><span>-</span><a href="" class="C000">车陂</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    中山大道车陂段北侧
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                <span class="fontS30">230</span> 万元
+                            </div>
+                            <div>27711元/㎡</div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">小吴</a>
+                                 <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+        </ul>
+        
+<div class="page">
+				<a href="javascript:;" class="nono">首页</a>
+					<a href="javascript:void(0);" class="ol">1</a>
+					<a href="javascript:;" class="nono">下一页</a>
+</div>
+    </div>
+    <div class="right-box y">
+
+<div class="module-c">
+    <h3>我浏览过的房源</h3>
+    <ul class="f-list" id="TradeData">
+    </ul>
+    <h3><a href="javascript:clear_hisHouse();" style="font-size:12px">清除浏览历史>></a></h3>
+</div>
+
+
+
+<div class="module-c price-box">
+	<p class="Cred"><span><em class="fontS18">36145元/平米</em></span><span class=""><i class="arrow-icon"></i>  -- </span></p>
+	
+    <p class="C666 mb10"><span>车陂 挂牌均价</span></p>
+    <div><canvas id="price_trend" width="235"></canvas></div>    
+</div>
+
+<div class="module-b clearfix">
+	<input type="button" class="tool-button mb10 cursor" value="房屋价格评估" onclick="window.open('/market/evaluation/')" style='width:100%'>
+	<input type="button" class="tool-button mr10 cursor z" value="房贷工具" onclick="window.open('/market/tools/')">
+    <input type="button" class="tool-button cursor y" value="中介费计算" onclick="window.open('/market/tools_zjf/')">
+</div>
+
+
+
+
+<div><div id="Cooperation">
+</div>
+<script src="http://cp.edushi.com/Js/Cooperation.js?type=1&h=520&w=250" type="text/javascript"></script></div>        
+                  
+           
+</div>
+ 
+</div>
+
+
+<div class="append_box">
+</div>
+<a class="gotop cursor" onclick="GoTop()" title="回到顶部"></a>
+	<div class="footer web-width">
+	<div class="footer-menu">
+		<div class="link"> <a href="../../about/aboutus.html" target="_blank" class="gray" rel="nofollow">关于房探</a><span>|</span><a href="../../about/statement.html" target="_blank" class="gray" rel="nofollow">免责声明</a><span>|</span><a href="../../my/app-down.html" target="_blank" class="red" rel="nofollow">用户帮助</a><span>|</span><a href="javascript:;" target="_blank" class="gray" rel="nofollow">购房工具</a><span>|</span><a href="../../about/contacts.html" target="_blank" class="gray" rel="nofollow">联系我们</a>
+        </div>
+		<div> 客服热线： <span class="Cred"> 153-7240-7267 </span> <span class="C666">(周一至周五09:00-18:00)</span> <span class="ml10"> 客服QQ：<a class="Cred" href="javascript:;" title="在线客服" rel="nofollow"> 2529213742</a> </span>
+        </div>
+		<div> 版权所有 <a href="../../index1.html" class="C000" title="义乌租房信息网">www.15zufang.cn</a> <a href="javascript:;" target="_blank" class="ml10 C000"></a>
+        </div>
+		<div class="falu" style="display:none;"> <a class="text-y C666">常年法律顾问<br>
+			高洪剑</a> <a><img src="../../themes/default/images/home_143.png" alt="图标"></a>
+      	</div>
+	</div>
+</div>
+<div style="display:none">
+	<script src="../../stat-2433734_2433734.js" language="JavaScript"></script>
+</div><script>
+
+$(function(){
+	showHis();
+})
+
+window.onload=function()
+{
+		priceTrend();
+}
+
+function priceTrend()
+{
+	var labels = new Array();
+	var show_data =new Array();
+	
+		labels.push("7月");
+		show_data.push("0");
+		labels.push("8月");
+		show_data.push("0");
+		labels.push("9月");
+		show_data.push("0");
+		labels.push("10月");
+		show_data.push("36145");
+		labels.push("11月");
+		show_data.push("36145");
+		labels.push("12月");
+		show_data.push("36145");
+	var data = {
+		labels :labels,
+		datasets :[
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "#3399ff",
+			pointColor : "#3399ff",
+			pointStrokeColor : "#fff",
+			data : show_data
+		}]
+	}
+	var ctx = $("#price_trend").get(0).getContext("2d");
+	var myNewChart = new Chart(ctx);
+	
+	var options = {
+		bezierCurve: false,
+		tooltipTemplate: "<%if (label){%><%=label%> 均价：<%}%><%= value %>元/平米"
+	}
+				
+	myNewChart.Line(data,options);
+}
+
+function g_IsInt(s)
+{
+	if(s==null) return false;
+	 var reg=/^[1-9]\d*$/;
+	 if(!reg.test(s)) return false;
+	 else return true;
+}
+	$("#search_price").click(function() {
+		var lprice = $("#lprice").val();
+		if( !g_IsInt(lprice) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#lprice").val('');
+			$("#lprice").focus();
+			return ;
+		}
+		var uprice = $("#uprice").val();
+		if( !g_IsInt(uprice) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uprice").val('');
+			$("#uprice").focus();
+			return ;
+		}
+		if( parseInt(lprice) >= parseInt(uprice)  ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uprice").val('');
+			$("#uprice").focus();
+			return ;
+		}
+		var u = '/sale/r440106-b3';
+		if( u == '/sale/'){
+			u = u + 'j' + lprice + ',' + uprice + '/';
+		}else{
+			u = u + '-j' + lprice + ',' + uprice + '/';
+		}
+		window.location.href = u;
+	})
+	$("#search_area").click(function() {
+		var larea = $("#larea").val();
+		if( !g_IsInt(larea) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#larea").val('');
+			$("#larea").focus();
+			return ;
+		}
+		var uarea = $("#uarea").val();
+		if( !g_IsInt(uarea) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uarea").val('');
+			$("#uarea").focus();
+			return ;
+		}
+		if( parseInt(larea) >= parseInt(uarea)  ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uarea").val('');
+			$("#uarea").focus();
+			return ;
+		}
+		var u = '/sale/r440106-b3';
+		if( u == '/sale/'){
+			u = u + 'a' + larea + ',' + uarea + '/';
+		}else{
+			u = u + '-a' + larea + ',' + uarea + '/';
+		}
+		window.location.href = u;
+	})
+	
+	 $("#searchBtn").click(function() {
+		window.location.href = '/sale/kw'+encodeURI($("#buildname").val());
+	})
+	
+	function showHis()
+	{
+		var newtemp = eval('(' + $.cookie("sale_hisHouse") + ')');
+		var newtemp_ = "";
+		var currentNum = 0;
+		if(newtemp){
+		for(var n=newtemp.length-1;n>-1;n--){
+			if(currentNum++ >= 10){
+				break;
+			}
+			newtemp_ += '<li><span class="y Cred">'+newtemp[n].price+' 万元</span><a href="/sale/detail/'+newtemp[n].houseId+'" title="'+newtemp[n].housename+'" target="_blank"><span>'+newtemp[n].housename+' <span class="C999">'+newtemp[n].His_area+'㎡</span></span></a></li>'
+		}
+		$("#TradeData").html(newtemp_);
+		}
+	}
+	
+	function clear_hisHouse(){
+		$.cookie("sale_hisHouse", '', {expires:-1,path:"/"});
+		$("#TradeData").html('');
+	}
+	
+	$(".selectBox").mouseenter(function(){
+		$(this).find(".popList").css("display","block")
+	})
+	$(".selectBox").mouseleave(function(){
+		$(this).find(".popList").css("display","none")
+	})
+	
+	$(".popList li").click(function(){
+		$(this).parent().css("display","none");
+		$(this).parent().parent().find("span").html($(this).html());
+	})
+	
+	loadSearch();
+	function loadSearch()
+	{
+		var houseKind = ""; 
+		if(houseKind && houseKind!='')
+		{
+			$("#houseKind_show").html($(".houseKind_ul .ol").html());
+		}
+		
+		var deck = ""; 
+		if(deck && deck!='')
+		{
+			$("#deck_show").html($(".deck_ul .ol").html());
+		}
+		
+		var direction = ""; 
+		if(direction && direction!='')
+		{
+			$("#direction_show").html($(".direction_ul .ol").html());
+		}
+	}
+</script>
+</body>
+</html>

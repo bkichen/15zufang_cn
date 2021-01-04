@@ -1,0 +1,307 @@
+
+/* CSS Document */
+
+/*公用*/
+.arrow-icon {
+  margin-top: 5px;
+  margin-left: -5px;
+}
+.com-bottom{
+	border-bottom:none !important;
+	margin-bottom:0;
+}
+/*页面结构*/
+.chaqy{
+	margin-bottom:30px;
+}
+.chaqy .y{
+	*position:absolute;
+	*float:none;
+	*right:0;
+	*top:-5px;
+}
+.fang-all-box .left-box{
+	width:740px;
+	margin-right:30px;
+}
+.fang-all-box .right-box{
+	width:400px;
+	margin-left:30px;
+	margin-top:7px;
+}
+
+/*上端*/
+.chaqy {
+	margin-bottom:52px;
+	margin-top:17px;
+	line-height:26px;
+	position:relative;
+	border-bottom:1px solid #ddd;
+}
+.chaqy .chaqy-a{
+	min-height: 30px;
+    display: block;
+    float: left;
+    width: 900px;
+    padding-bottom: 10px;
+    line-height: 32px;
+}
+.chaqy .chaqy-a a {
+	display: inline;
+    margin-right: 12px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    word-break: keep-all;
+}
+.chaqy .chaqy-a a:hover {
+	color:#ff6600 !important;
+	/*background-image:url(../images/icon.png);
+	background-position:-57px -557px;*/
+}
+.chaqy .chaqy-a a.ol {
+	color:#ff6600;
+}
+/**/
+.chaqy .chaqyList {
+	max-width:500px;
+	line-height:25px;
+	background:#ffffff;
+	border:1px solid #dddddd;
+	padding:10px 20px;
+	font-size:12px;
+	font-weight:100;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, .1);
+	position:absolute;top:45px;left:184px;
+	z-index:90;
+	display:none;
+	_width:500px;
+}
+.chaqy .chaqyList a {
+	margin-right:15px;
+	cursor:pointer;
+	display:inline-block;
+	word-wrap: break-word;
+	word-break: normal;
+}
+a.add-fang-bnt{
+	  height: 25px;
+	  line-height: 25px;
+	  line-height: 27px\9;
+	  display: inline-block;
+	  padding: 0px 20px 0px 37px;
+	  background: #ff6600 url(../images/icon12.png) 17px 6px no-repeat;
+	  color: #ffffff;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  overflow: hidden;
+	  text-decoration:none;
+}
+a.add-fang-bnt:hover {
+	background-color:#e95d00;
+	text-decoration:none;
+	color:#ffffff !important;
+}
+
+
+/*左侧*/
+.left-box .aprice{
+	font-size:14px;
+}
+.left-box .aprice em{
+	font-size:30px;
+	margin-right:5px;
+	font-style:normal;
+	font-weight:bold;
+}
+.aprice span{ padding-right:10px;}
+.aprice>span{ margin-right:15px;}
+
+/*热门小区列表*/
+.xiaoqu-list-box{
+	margin-top:50px;
+	margin-right:-20px;
+}
+.xiaoqu-list-box .heading{
+	padding-bottom:10px;
+	border-bottom:1px solid #ddd;
+	margin-bottom:20px;
+	margin-right:16px;
+}
+.xiaoqu-list-box ul li{
+	margin-bottom:41px;
+}
+.xiaoqu-list-box dl dt,.xiaoqu-list-box dl dd{
+	display:inline-block;
+	*zoom:1;
+	*display:inline;
+	margin-right:17px;
+	vertical-align:top;
+}
+.xiaoqu-list-box dl dt{
+	width:130px;
+	height:90px;
+	padding:20px;
+	background:#00aa82;
+	overflow:hidden;
+	color:#fff;
+}
+.xiaoqu-list-box dl dt:hover{
+	background-color:#00916f;
+}
+
+
+.xiaoqu-list-box dl dt a{
+	color:#fff;
+	text-decoration:none;
+}
+.xiaoqu-list-box dl dt p{
+	margin-bottom:3px;
+}
+.xiaoqu-list-box dl dt p span{
+	margin:0 4px;
+}
+.xiaoqu-list-box dl dt p.mb10{
+	margin-bottom:9px;
+}
+
+.xiaoqu-list-box dl dd{
+	width:169px;
+	height:176px;
+	overflow:hidden;
+}
+.xiaoqu-list-box dl dd a{
+	color:#000;
+	text-decoration:none;
+}
+.xiaoqu-list-box dl dd a img{
+	width:170px;
+	height:130px;
+}
+.xiaoqu-list-box dl dd .xiaoqu-info span{
+	margin-right:13px;
+}
+
+
+/*右侧*/
+.tiaojian{
+	color:#ccc;
+	margin-bottom:40px;
+}
+.tiaojian p{
+	margin-bottom:5px;
+}
+.tiaojian a{
+    color:#666;
+    margin-right:10px;
+    white-space:nowrap;
+}
+.tiaojian a:hover{
+	color:#ff6600;
+}
+.module-g{
+	padding:35px 0 0 30px;
+	background:#eee;
+	overflow:hidden;
+	margin-bottom:45px;
+}
+.module-g .gujia-btn{
+	margin-bottom:35px;
+}
+.module-g .gujia-btn a{
+    background-image: url(../images/icon-2.png);
+    background-position: -97px -278px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 140px;
+    padding: 7px 4px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    _background-image: none;
+}
+.module-g .gujia-btn a:hover{
+	background-color:#e95d00;
+}
+.module-g .gujia-btn a span{
+	margin-left:20px;
+}
+.module-g .tools{
+	margin-bottom:23px;
+}
+.module-g .tools span{
+	display:inline-block;
+	width:155px;
+}
+.module-g .tools span a{
+	color:#666;
+}
+.module-g .tools span a:hover{
+	color:#ff6600;
+}
+
+.module-c{
+	display: block;
+	border:1px solid #ddd;
+	padding:23px 0 0 20px;
+}
+.chaxun{
+	padding-bottom:13px;
+	
+}
+.chaxun dl{
+	margin-right:18px;
+	margin-bottom:12px;
+	padding-right:26px;
+	padding-bottom:12px;
+	border-bottom:1px solid #eee;
+}
+.chaxun dl dt,.chaxun dl dd{
+	display:inline-block;
+	*zoom:1;
+	*display:inline;
+}
+.chaxun dl dt{
+	position:absolute;
+	width:36px;
+	color:#666;
+}
+.chaxun dl dd a{
+	color:#000;
+	margin-right:5px;
+	white-space:nowrap;
+}
+.chaxun dl dd a:hover{
+	color:#ff6600;
+}
+.chaxun dl dd{
+	margin-left:45px;
+}
+.ranking{
+	padding-bottom:17px;
+}
+.ranking ul li{
+	margin-right:30px;
+	margin-bottom:4px;
+}
+.ranking ul li a{
+	display:inline-block;
+	width:160px;
+	color:#000;
+}
+.ranking ul li a:hover{
+	color:#ff6600;
+}
+.ranking ul li .pr{
+	text-align:right;
+	display:block;
+	float:right;
+	*margin-top:-20px;
+}
+
+
+

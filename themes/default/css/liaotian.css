@@ -1,0 +1,384 @@
+
+/* CSS Document */
+
+/*
+	容器：talk-box
+	按钮状态：<div class="talk-box btn-state">        btn-state
+	联系人状态：<div class="talk-box contact-state">  contact-state
+	聊天状态：<div class="talk-box chat-state">       chat-state
+*/
+
+/*------------界面状态------------*/
+/*按钮状态*/
+.talk-box.btn-state .talk-btn{display:block;}
+.talk-box.btn-state .talk-contact{display:none;}
+.talk-box.btn-state .talk-chat{display:none;}
+
+/*联系人状态*/
+.talk-box.contact-state .talk-btn{display:none;}
+.talk-box.contact-state .talk-contact{display:block;}
+.talk-box.contact-state .talk-chat{display:none;}
+
+/*聊天状态*/
+.talk-box.chat-state .talk-btn{display:none;}
+.talk-box.chat-state .talk-contact{display:block;}
+.talk-box.chat-state .talk-chat{display:block;}
+
+
+/*------------图标------------*/
+
+/*聊天气泡图标*/
+.talk-popo{
+	display:inline-block;
+	width:23px;
+	height:16px;
+	background-image:url(../images/talk-icon.png);
+	background-position:0 0;
+}
+/**/
+.min-icon{
+	display:inline-block;
+	width:10px;
+	height:2px;
+	background-image:url(../images/talk-icon.png);
+	background-position:-10px -48px;
+	overflow:hidden;
+}
+
+.img-icon{
+	display:inline-block;
+	width:15px;
+	height:13px;
+	background-image:url(../images/talk-icon.png);
+	background-position:0 -50px;
+}
+.close-icon{
+	display:inline-block;
+	width:10px;
+	height:9px;
+	cursor:pointer;
+	background-image:url(../images/talk-icon.png);
+	background-position:-10px -76px;
+}
+.close-icon:hover{
+	background-position:0 -76px;
+}
+.voice-icon{
+	display:inline-block;
+	width:11px;
+	height:13px;
+	background-image:url(../images/talk-icon.png);
+	background-position:0 -85px;
+}
+.lit-search-icon{
+	display:inline-block;
+	width:11px;
+	height:11px;
+	background-image:url(../images/talk-icon.png);
+	background-position:0 -98px;
+}
+
+/*------------界面------------*/
+.talk-box{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	z-index:9999999999;
+	_position:absolute;
+	_zoom:1;
+	_display:inline;
+	_right:0;
+	_top: expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight-(documentElement.clientHeight/50));
+}
+
+/*按钮*/
+.talk-btn{
+	width:158px;
+	height:33px;
+	background:#f5f5f5;
+	border:1px solid #ddd;
+	cursor:pointer;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+.talk-btn .talk-popo{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+.talk-btn  span{
+	position:absolute;
+	left:40px;
+	font-size:14px;
+	line-height:33px;
+}
+.talk-btn .icon-down-01{
+	position:absolute;
+	right:13px;
+	top:14px;
+}
+/*按钮 消息状态*/
+.talk-btn.on{
+	border:1px solid #ff6600;
+}
+.talk-btn.on .talk-popo{
+	background-position:0 -32px;
+}
+.talk-btn.on span{
+	color:#ff6600;
+}
+
+/*联系人状态*/
+.talk-contact{
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+	z-index:9999999;
+}
+.talk-contact .talk-contact-title{
+	position:relative;
+	width:148px;
+	height:33px;
+	background:#f5f5f5;
+	border:1px solid #ddd;
+	padding-left:10px;
+	line-height:33px;
+	font-size:14px;
+}
+.talk-contact .talk-contact-title span{
+	vertical-align:3px;
+	_vertical-align:-2px;
+}
+.talk-contact .talk-contact-title em{
+	display:inline-block;
+	height:15px;
+	line-height:15px;
+	font-style:normal;
+	margin-left:15px;
+	margin-top:9px;
+	font-size:12px;
+	padding:0 3px;
+	background-color:#ff6600;
+	border-radius:12px;
+	color:#fff;
+	overflow:hidden;
+	
+	
+}
+.talk-contact .talk-minimize{
+	position:absolute;
+	display:inline-block;
+	width:33px;
+	height:33px;
+	right:0;
+	cursor:pointer;
+}
+.talk-contact .talk-contact-title .talk-minimize .min-icon{
+	position:absolute;
+	top:15px;
+	right:13px;
+}
+.talk-contact .talk-contact-list{
+	position:relative;
+	width:158px;
+	height:336px;
+	padding-top:4px;
+	padding-bottom:4px;
+	background:#fff;
+	border:1px solid #ddd;
+	border-top:none;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.talk-contact .talk-contact-list dl{
+	margin-bottom:15px;
+}
+.talk-contact .talk-contact-list dl dt,.talk-contact .talk-contact-list dl dd{
+	position:relative;
+	height:28px;
+	line-height:28px;
+	cursor:pointer;
+}
+.talk-contact .talk-contact-list dl dt span,.talk-contact .talk-contact-list dl dd span{
+	margin-left:24px;
+}
+.talk-contact .talk-contact-list dl dd .ms{
+	display:inline-block;
+	position:absolute;
+	right:10px;
+	top:12px;
+	width:5px;
+	height:5px;
+	background:#ff6600;
+	border-radius:5px;
+}
+.talk-contact .talk-contact-list dl dt span{
+	font-weight:bold;
+}
+.talk-contact .talk-contact-list dl dt i{
+	position:absolute;
+	left:10px;
+	top:9px;
+}
+.talk-contact .talk-contact-list dl dd em{
+	margin-left:5px;
+	font-style:normal;
+	color:#999;
+}
+.talk-contact .talk-contact-list dl dd.on,.talk-contact .talk-contact-list dl dd:hover{
+	background-color:#eee;
+}
+.talk-contact .talk-contact-list dl dd .online{
+	position:absolute;
+	left:10px;
+	top:11px;
+	display:inline-block;
+	width:7px;
+	height:7px;
+	background:#00aa82;
+}
+.talk-contact .talk-contact-list dl dd .offline{
+	position:absolute;
+	left:10px;
+	top:11px;
+	display:inline-block;
+	width:7px;
+	height:7px;
+	background:#999;
+}
+.talk-contact .talk-contact-search{
+	display:inline-block;
+	width:125px;
+	height:25px;
+	line-height:25px;
+	border:1px solid #ddd;
+	padding-left:5px;
+	margin-left:7px;
+	margin-bottom:7px;
+	color:#666;
+	text-decoration:none;
+	border-radius:4px;
+}
+.talk-contact .talk-contact-search i{
+	vertical-align:-2px;
+	padding-right:5px;
+}
+
+
+/*聊天状态*/
+.talk-chat{
+	position:absolute;
+	right:160px;
+	bottom:0;
+	width:360px;
+	height:380px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+	z-index:99999999;
+}
+.talk-chat .talk-chat-title{
+	position:relative;
+	width:359px;
+	height:33px;
+	background:#f5f5f5;
+	border:1px solid #ddd;
+	border-right:none;
+	line-height:33px;
+	font-size:14px;
+}
+.talk-chat .talk-chat-title a{
+	color:#000;
+	text-decoration:none;
+}
+.talk-chat .talk-chat-title span{
+	margin:0 9px;
+	line-height:33px;
+	vertical-align:top;
+	_vertical-align:7px;
+}
+.talk-chat .talk-chat-title i{
+	vertical-align:7px;
+}
+.talk-chat .talk-chat-title .close-icon{
+	position:absolute;
+	right:13px;
+	top:12px;	
+}
+.talk-chat .talk-window{
+	height:227px;
+	padding:10px;
+	border-left:1px solid #ddd;
+	overflow-y:auto;
+	background:#fff;
+	_height:225px;
+}
+.talk-chat .talk-window .voice{
+	padding:6px 8px;
+	display:inline-block;
+	color:#be7031;
+	background:#f8f5de;
+	border-radius:2px;
+}
+.talk-chat .talk-window .voice .voice-icon{
+	vertical-align:-2px;
+	margin-right:7px;
+}
+
+
+.talk-chat .talk-input{
+	height:96px;
+	border:1px solid #ddd;
+	border-right:none;
+	background:#fff;
+}
+.talk-chat .talk-input textarea{
+	height:47px;
+	width:335px;
+	border:none;
+	outline:none;
+	overflow:hidden;
+	resize : none;
+	padding:5px 10px;
+}
+.talk-chat .talk-input .talk-submit-tab{
+	position:relative;
+	height:33px;
+	background:#eee;
+}
+
+.talk-chat .talk-input .talk-submit{
+	width:90px;
+	height:25px;
+	background:#3399ff;
+	color:#fff;
+	border:none;
+	float:right;
+	margin-right:5px;
+	margin-top:5px;
+	_margin-top:-20px;
+}
+.talk-chat .talk-input .talk-submit:hover{
+	background-color:#2089f2;
+}
+.talk-chat .talk-input .talk-submit-tab i{
+	margin-top:10px;
+	margin-left:10px;
+}
+.talk-chat .talk-input .talk-submit-tab i:hover{
+	background-position:0 -63px
+}
+.talk-chat .talk-input .talk-submit-tab a{
+	margin-left:16px;
+	color:#000;
+	vertical-align:2px;
+}
+.talk-chat .talk-input .talk-submit-tab a:hover{
+	color:#ff6600;
+}
+.talk-chat .talk-input .talk-submit-tab .talk-img-upload{
+	position:absolute;
+	left:0;
+	width:40px;
+	height:35px;
+	overflow:hidden;
+	cursor:pointer;
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+

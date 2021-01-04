@@ -1,0 +1,22 @@
+
+
+/************小区************/
+
+/******小区列表*/
+.s-tiaojian {border:0px;/*padding:0px;*/background:none;}
+.s-tiaojian a.other-fang-go {bottom:0px;}
+.s-tiaojian dl dd.jiax {border-bottom:1px dashed #dddddd;}
+
+/**/
+ul.fang-list li a.newpan-info {position:absolute;bottom:20px;left:700px; z-index:99;background-color:#3399ff;padding:5px 10px;color:#ffffff;}
+ul.fang-list li a.newpan-info:hover {background-color:#2089f2; text-decoration:none;}
+ul.fang-list li .jiage {left:700px !important;top:60px !important;}
+/**/
+.module-c ul.hotxq {padding:15px 15px 0px 15px;}
+.module-c ul.hotxq li {width:100%;height:95px; display:block; overflow:hidden;}
+.module-c ul.hotxq li a.img {margin-right:10px;}
+.module-c ul.hotxq li a.img img {width:100px;height:80px;}
+
+
+
+

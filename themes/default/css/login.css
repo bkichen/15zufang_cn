@@ -1,0 +1,23 @@
+body {background-color:#3b3d46; background-image:url(../images/login-bg.png); background-position:top center; background-repeat:repeat;}
+
+/*****登录页面***********/
+.login-box-all {width:420px;margin:100px auto;}
+.login-box-all h3 {width:100%;height:45px; display:block;color:#ffffff;}
+.login-box-all h3 .t {font-size:30px;font-weight:bold;float:left;line-height:26px;}
+.login-box-all h3 .t a,.login-box-all h3 .t a:hover {color:#ffffff !important; text-decoration:none;}
+.login-box-all h3 .c {float:right;line-height:16px; text-align:right;}
+/**/
+.login-box {width:300px;padding:30px 60px 25px 60px;background:#ffffff;box-shadow: 0px 3px 10px rgba(0, 0, 0, .2);-webkit-border-radius: 5px;border-radius: 5px;}
+.login-box dl.login-in {width:100%; display:block;}
+.login-box dl.login-in dt {font-size:20px;line-height:50px;font-weight:bold;}
+.login-box dl.login-in dd input.name,.login-box dl.login-in dd input.pass {width:258px;height:38px;line-height:38px;padding-left:40px;background-color:#ffffff;margin-bottom:15px;border:1px solid #cccccc;font-size:14px;box-shadow: 0px 1px 3px rgba(0, 0, 0, .2);}
+.login-box dl.login-in dd input.name {background-image:url(../images/login.png); background-position:10px 12px; background-repeat:no-repeat;}
+.login-box dl.login-in dd input.pass {background-image:url(../images/login.png); background-position:10px -75px; background-repeat:no-repeat;}
+.login-box dl.login-in dd input.btn {width:300px;height:40px;background:#ff6600;border:0px;color:#ffffff;font-size:16px;}
+.login-box .error {width:100%;height:70px;display:block;line-height:70px;text-align:center;}
+.login-box .newacc {text-align:center;}
+.login-box .newacc a{width:50%; display:inline-block; color:#000000;}
+.login-box .newacc a:hover {color:#ff6600;}
+
+
+

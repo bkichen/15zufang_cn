@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>义务房产经纪人_义务房屋中介-义务房探007网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="keywords" content="义务房产经纪人，义务房屋中介">
+    <meta name="description" content="找专业的义务房产经纪人就上房探007，为您提供二手房，租房中介服务，安全放心有保障。">
+<link rel="stylesheet" href="../themes/default/css/common.css" type="text/css">
+<link href="../themes/default/css/liaotian.css" rel="stylesheet" type="text/css">
+<script src="../themes/default/js/jquery.min.js"></script>
+<script src="../themes/default/js/common.js" type="text/javascript"></script>
+<script src="../themes/default/js/liaotian.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?79f75de0162fdd2c54dce979ce05f82a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link href="../themes/default/css/fangList.css" rel="stylesheet" type="text/css">
+    <link href="../themes/default/css/jjr.css" rel="stylesheet" type="text/css">
+    <script src="../themes/default/js/jquery-1.8.3.min.js"></script>
+    
+    <script type="text/javascript" language="javascript">
+
+    </script>
+    </head>
+<body>
+
+
+<div class="header"> 
+	<div class="top">
+		<div class="web-width">
+        	<ul class="z">
+            	<li class="logo">
+   <a href="../index.html" title="房途网"><img src="../themes/default/images/logo.png" alt="义乌租房信息网"></a>
+</li>
+<li class="city" id="choiceCity" style="z-index:999;">
+    <a href="../index1.html">义务&nbsp;<i class="icon-right-small"></i></a>
+</li>
+                <li class="search">
+					<div class="search-top-box">
+						<div class="top-search-input"><input name="buildname" id="buildname" class="input top-search-input" type="text" placeholder="小区名称" onkeyup="onkeyword(this)" onfocus="onkeyword(this)" value=""><input name="searchBtn" id="searchBtn" class="search-bnt cursor" type="button">
+                        </div>
+                        
+                        <div class="search-result-box" style="display: none;">
+                        </div>
+					</div>
+        		</li>
+            </ul>                
+<ul class="y">
+	<li class="mya"> 
+	        <a href="../my/login.html" class="login"><span></span>登录</a>
+      <a href="../my/register.html" class="reg"><span></span>注册</a>
+      	<a href="../my/house.html" class="login"><span class="fang-icon"></span>我的房探</a>
+	</li>
+</ul>
+		</div>
+	</div>
+      
+<div class="title">
+	<div class="web-width"> 
+		<ul class="max-t z">
+           <li class="sy"><a href="../index.html" title="首页">首页</a></li>
+           <li class="esf"><a href="../sale/index.html" title="义务二手房">二手房</a></li>
+           <li class="czf"><a href="../rent/index.html" title="义务出租房">租房</a></li>
+           <li class="xq"><a href="../community/index.html" title="义务小区">小区</a></li>
+           <li class="cfj"><a href="../market/index.html" title="查房价">查房价</a></li>
+           <li class="jjr"><a href="" title="义务经纪人" class="ol">经纪人</a></li>
+           <li class="dt"><a href="../map/sale/index.html" title="地图找房">地图找房</a></li>
+           <li><i class="dhline"></i></li>
+	  	   <li class="dt"><a href="../index2.html" title="个人房源">个人房源</a></li>
+           <li class="dt"><a href="../index2.html" title="群发房源">群发房源</a></li>
+		</ul>
+          
+		<div class="mini-t y">
+			<a href="##" class="header-app" style="display:none"><i class="header-icon"></i><span>APP下载</span></a>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	function onkeyword(searchVar){
+		var searchVal = $(searchVar).val();
+			if($.trim(searchVal) == "")
+			{
+			    $(".search-result-box").slideUp(50);
+				return;
+			}
+			$.ajax({
+			type : "post",
+			url : "/community/jsonBuilding?t=" + Math.random(),
+			data : "buildName="+searchVal,
+			success : function(data) {
+				var obj = eval('(' + data + ')');
+				keyword_handler(obj,searchVal);
+            },
+   			error: function(XMLHttpRequest, textStatus, errorThrown) {
+   			 }	
+		});
+   }
+   
+   function keyword_handler(data,searchVal)
+   {
+	   if(!data){
+		   return;
+	   }
+   		var inHtml = "";
+   		for(i=0;i<data.length;i++)
+   		{
+   			inHtml += '<a class="C000 cursor" title="'+data[i].buildingName+'"><span class="xqm">'+data[i].buildingName.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span><span class="adds C999">'+data[i].addr.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span></a>';
+   		}
+   		if(inHtml!="")
+   		{
+	   		$(".search-result-box").html(inHtml);
+	   	   $(".search-result-box a").click(function(){
+				var v = $(this).attr("title");
+				$("input.top-search-input").val(v);
+				$("input.top-search-input").addClass("C000");
+				$(".search-result-box").slideUp(50);
+			});
+	   		$(".search-result-box").slideDown(100);
+   		}
+   		else
+   		{
+   			$(".search-result-box").html("");
+   			$(".search-result-box").slideUp(50);
+   		}
+   }
+   
+</script>
+
+<div class="web-width-all Beee mb10">
+        <div class="web-width" style=" position:relative;">
+ <div class="s-tiaojian noBorder Beee" style="position: relative; padding:10px 0px">
+
+    
+        <div class="quyun-box">
+            <dl class="quyun-box-t">
+            <dt>区域</dt>
+            <dd>
+            	<a class="ol" href="javascript:;" title="不限">不限</a>
+					<a href="javascript:;" title="天河">天河</a>
+					<a href="javascript:;" title="海珠">海珠</a>
+					<a href="javascript:;" title="越秀">越秀</a>
+					<a href="javascript:;" title="东莞">东莞</a>
+					<a href="javascript:;" title="白云">白云</a>
+					<a href="javascript:;" title="荔湾">荔湾</a>
+					<a href="javascript:;" title="番禺">番禺</a>
+					<a href="javascript:;" title="黄埔">黄埔</a>
+					<a href="javascript:;" title="花都">花都</a>
+					<a href="javascript:;" title="增城">增城</a>
+					<a href="javascript:;" title="佛山">佛山</a>
+					<a href="javascript:;" title="从化">从化</a>
+					<a href="javascript:;" title="其他">其他</a>
+					<a href="javascript:;" title="东山">东山</a>
+					<a href="javascript:;" title="南沙">南沙</a>
+					<a href="javascript:;" title="萝岗">萝岗</a>
+            </dd>
+            </dl>
+        </div>
+        
+        
+        <div class="quyun-box">
+            <dl class="quyun-box-t">
+                <dt>公司</dt>
+                <dd>
+					<a class="ol" href="" title="不限" rel="nofollow"> 不限</a>
+                </dd>
+            </dl>
+        </div>
+</div>
+           
+        </div>
+    </div>
+    
+<div class="fang-all-box web-width">
+	<ul class="jjr-list-d">
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="陈生" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="陈生" target="_blank" class="b">陈生</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">13824488284</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：家家顺</p>
+	                    <p>主营小区：
+				          				<a>侨林苑</a>
+				          				<a>恒达苑</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房12套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房34套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="杨智敏" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="杨智敏" target="_blank" class="b">杨智敏</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">13316157745</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：正家地产</p>
+	                    <p>主营小区：
+				          				<a>侨诚花园</a>
+				          				<a>晓港湾</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房120套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房42套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="徐国杰" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="徐国杰" target="_blank" class="b">徐国杰</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">13570581468</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：彰誉地产</p>
+	                    <p>主营小区：
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房0套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房4套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="吴显明" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="吴显明" target="_blank" class="b">吴显明</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">18898433771</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：义务市置家地产代理有限公司</p>
+	                    <p>主营小区：
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房0套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房6套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="徐永钙" target="_blank"><img src="http://img.518fang.com/img1/518upload/user/201602/067/059/4bb2bd116ada45fc8056378e9f5b349a.jpg" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="徐永钙" target="_blank" class="b">徐永钙</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">15889950849</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：义务市利峰房地产开发</p>
+	                    <p>主营小区：
+				          				<a>雅宝新城</a>
+				          				<a>利峰城</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房3套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房0套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="陈俊豪" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="陈俊豪" target="_blank" class="b">陈俊豪</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">18126762993</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：满懿地产</p>
+	                    <p>主营小区：
+				          				<a>金碧花园一至三期</a>
+				          				<a>45608</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房1套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房0套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="何家宁" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="何家宁" target="_blank" class="b">何家宁</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">13640693356</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：家家顺</p>
+	                    <p>主营小区：
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房0套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房4套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="钟百雄" target="_blank"><img src="http://img.518fang.com/img2/518upload/user/201601/038/842/c22a57eb26ae4ae78c21b8a120429890.jpg" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="钟百雄" target="_blank" class="b">钟百雄</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">15918517689</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：富中地产</p>
+	                    <p>主营小区：
+				          				<a>梅东路</a>
+				          				<a>共和大街</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房4套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房8套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="邵敏灵" target="_blank"><img src="../themes/default/images/brokerDefault.png" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="邵敏灵" target="_blank" class="b">邵敏灵</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">13544504457</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：置家地产</p>
+	                    <p>主营小区：
+				          				<a>亚太银座</a>
+				          				<a>富雅都市华庭</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房8套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房32套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+	    	<li>
+	        	<div class="z mr20 ml10">
+	            	<a href="javascript:;" title="吴土轩" target="_blank"><img src="http://img.518fang.com/img1/518upload/user/201511/257/731/49aeb8db15684f02b7386efb1576e1b4.jpg" onerror="this.src='/themes/default/images/brokerDefault.png'"></a>
+	            </div>
+	            <div class="consultation"></div>
+	            <div class="fang-info z">
+	            	<p class="title">
+	                	<a href="javascript:;" title="吴土轩" target="_blank" class="b">吴土轩</a>  <i class="paperwork-rz" title="已认证"></i>
+	                </p>
+	                <p class="fontS14 mb10">15811860586</p>
+	                
+	                <div class="adds black-link">
+	                    <p>所在公司：搜房网</p>
+	                    <p>主营小区：
+				          				<a>东圃广场</a>
+				          				<a>城市假日园</a>
+	                    </p>
+	                    <p>在售房源：
+	                        <a target="_blank" href="javascript:;" class="blue mr5">二手房214套</a>
+	                        <a target="_blank" href="javascript:;" class="blue">出租房0套</a>
+	                    </p>
+	                </div>
+	            </div>
+	        </li>
+    </ul>
+    <br>
+<div class="page">
+				<a href="javascript:;" class="nono">首页</a>
+					<a href="javascript:void(0);" class="ol">1</a>
+					<a href="javascript:;">2</a>
+					<a href="javascript:;">3</a>
+					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
+				<a href="javascript:;">下一页</a>
+</div>
+</div>
+ 
+
+<div class="append_box">
+</div>
+<a class="gotop cursor" onclick="GoTop()" title="回到顶部"></a>
+	<div class="footer web-width">
+	<div class="footer-menu">
+		<div class="link"> <a href="../about/aboutus.html" target="_blank" class="gray" rel="nofollow">关于房探</a><span>|</span><a href="../about/statement.html" target="_blank" class="gray" rel="nofollow">免责声明</a><span>|</span><a href="../my/app-down.html" target="_blank" class="red" rel="nofollow">用户帮助</a><span>|</span><a href="javascript:;" target="_blank" class="gray" rel="nofollow">购房工具</a><span>|</span><a href="../about/contacts.html" target="_blank" class="gray" rel="nofollow">联系我们</a>
+        </div>
+		<div> 客服热线： <span class="Cred"> 153-7240-7267 </span> <span class="C666">(周一至周五09:00-18:00)</span> <span class="ml10"> 客服QQ：<a class="Cred" href="javascript:;" title="在线客服" rel="nofollow"> 2529213742</a> </span>
+        </div>
+		<div> 版权所有 <a href="../index1.html" class="C000" title="义乌租房信息网">www.15zufang.cn</a> <a href="javascript:;" target="_blank" class="ml10 C000"></a>
+        </div>
+		<div class="falu" style="display:none;"> <a class="text-y C666">常年法律顾问<br>
+			高洪剑</a> <a><img src="../themes/default/images/home_143.png" alt="图标"></a>
+      	</div>
+	</div>
+</div>
+<div style="display:none">
+	<script src="../stat-2433734_2433734.js" language="JavaScript"></script>
+</div><script>
+$("#searchBtn").click(function() {
+		window.location.href = '/sale/kw'+encodeURI($("#buildname").val());
+})
+</script>
+</body>
+</html>

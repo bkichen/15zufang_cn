@@ -1,0 +1,942 @@
+<!DOCTYPE HTML>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	    <meta name="keywords" content="义务租房网,义务租房信息,义务房屋出租">
+	    <meta name="description" content="义务房探007租房频道-专业的义务租房网，提供最新最全的义务租房信息。">
+	    <title>义务租房网_义务租房信息_义务房屋出租-义务房探007网</title>
+<link rel="stylesheet" href="../themes/default/css/common.css" type="text/css">
+<link href="../themes/default/css/liaotian.css" rel="stylesheet" type="text/css">
+<script src="../themes/default/js/jquery.min.js"></script>
+<script src="../themes/default/js/common.js" type="text/javascript"></script>
+<script src="../themes/default/js/liaotian.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?79f75de0162fdd2c54dce979ce05f82a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link href="../themes/default/css/fangList.css" rel="stylesheet" type="text/css">
+    <script src="../themes/default/js/jcookie.js"></script>
+    <script>
+    function toUrl(curSelect)
+    {
+    	location.href=$(curSelect).val();
+    }
+    
+    function leaseWayCheck(checkVar,default_url)
+    {
+    	if(checkVar.checked)
+    	{
+    		location.href=checkVar.value;
+    	}
+    	else
+    	{
+    		location.href=default_url;
+    	}
+    }
+    
+    </script>
+    </head>
+<body>
+
+<div class="header"> 
+	<div class="top">
+		<div class="web-width">
+        	<ul class="z">
+            	<li class="logo">
+   <a href="../index.html" title="房途网"><img src="../themes/default/images/logo.png" alt="义乌租房信息网"></a>
+</li>
+<li class="city" id="choiceCity" style="z-index:999;">
+    <a href="../index1.html">义务&nbsp;<i class="icon-right-small"></i></a>
+</li>
+                <li class="search">
+					<div class="search-top-box">
+						<div class="top-search-input"><input name="buildname" id="buildname" class="input top-search-input" type="text" placeholder="小区名称" onkeyup="onkeyword(this)" onfocus="onkeyword(this)" value=""><input name="searchBtn" id="searchBtn" class="search-bnt cursor" type="button">
+                        </div>
+                        
+                        <div class="search-result-box" style="display: none;">
+                        </div>
+					</div>
+        		</li>
+            </ul>                
+<ul class="y">
+	<li class="mya"> 
+	        <a href="../my/login.html" class="login"><span></span>登录</a>
+      <a href="../my/register.html" class="reg"><span></span>注册</a>
+      	<a href="../my/house.html" class="login"><span class="fang-icon"></span>我的房探</a>
+	</li>
+</ul>
+		</div>
+	</div>
+      
+<div class="title">
+	<div class="web-width"> 
+		<ul class="max-t z">
+           <li class="sy"><a href="../index.html" title="首页">首页</a></li>
+           <li class="esf"><a href="../sale/index.html" title="义务二手房">二手房</a></li>
+           <li class="czf"><a href="" title="义务出租房" class="ol">租房</a></li>
+           <li class="xq"><a href="../community/index.html" title="义务小区">小区</a></li>
+           <li class="cfj"><a href="../market/index.html" title="查房价">查房价</a></li>
+           <li class="jjr"><a href="../broker/index.html" title="义务经纪人">经纪人</a></li>
+           <li class="dt"><a href="../map/sale/index.html" title="地图找房">地图找房</a></li>
+           <li><i class="dhline"></i></li>
+	  	   <li class="dt"><a href="../index2.html" title="个人房源">个人房源</a></li>
+           <li class="dt"><a href="../index2.html" title="群发房源">群发房源</a></li>
+		</ul>
+          
+		<div class="mini-t y">
+			<a href="##" class="header-app" style="display:none"><i class="header-icon"></i><span>APP下载</span></a>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	function onkeyword(searchVar){
+		var searchVal = $(searchVar).val();
+			if($.trim(searchVal) == "")
+			{
+			    $(".search-result-box").slideUp(50);
+				return;
+			}
+			$.ajax({
+			type : "post",
+			url : "/community/jsonBuilding?t=" + Math.random(),
+			data : "buildName="+searchVal,
+			success : function(data) {
+				var obj = eval('(' + data + ')');
+				keyword_handler(obj,searchVal);
+            },
+   			error: function(XMLHttpRequest, textStatus, errorThrown) {
+   			 }	
+		});
+   }
+   
+   function keyword_handler(data,searchVal)
+   {
+	   if(!data){
+		   return;
+	   }
+   		var inHtml = "";
+   		for(i=0;i<data.length;i++)
+   		{
+   			inHtml += '<a class="C000 cursor" title="'+data[i].buildingName+'"><span class="xqm">'+data[i].buildingName.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span><span class="adds C999">'+data[i].addr.replace(new RegExp(searchVal,"gm"),'<b class="Cred">'+searchVal+'</b>')+'</span></a>';
+   		}
+   		if(inHtml!="")
+   		{
+	   		$(".search-result-box").html(inHtml);
+	   	   $(".search-result-box a").click(function(){
+				var v = $(this).attr("title");
+				$("input.top-search-input").val(v);
+				$("input.top-search-input").addClass("C000");
+				$(".search-result-box").slideUp(50);
+			});
+	   		$(".search-result-box").slideDown(100);
+   		}
+   		else
+   		{
+   			$(".search-result-box").html("");
+   			$(".search-result-box").slideUp(50);
+   		}
+   }
+   
+</script>
+
+<div class="web-width-all" style="padding:15px 0px 5px 0px;">
+  <div class="web-width">
+    <div class="s-tab">
+      <ul class="title-tab z">
+        <li class="q ol"><a class="cursor"><i class="qy"></i>区域找房</a></li>
+        <li><a href="javascript:;"><i class="map"></i>地图找房</a></li>
+      </ul>
+      <div class="y"><a href="javascript:;" class="add-fang-bnt" target="_blank">发布房源</a></div>
+    </div>
+    <div class="s-tiaojian">
+      <div class="quyun-box">
+      <dl class="quyun-box-t">
+        <dt>区域</dt>
+        <dd>
+			<a href="" class="ol">不限</a>
+  			<a href="javascript:;">天河</a>
+  			<a href="javascript:;">海珠</a>
+  			<a href="javascript:;">越秀</a>
+  			<a href="javascript:;">东莞</a>
+  			<a href="javascript:;">白云</a>
+  			<a href="javascript:;">荔湾</a>
+  			<a href="javascript:;">番禺</a>
+  			<a href="javascript:;">黄埔</a>
+  			<a href="javascript:;">花都</a>
+  			<a href="javascript:;">增城</a>
+  			<a href="javascript:;">佛山</a>
+  			<a href="javascript:;">从化</a>
+  			<a href="javascript:;">其他</a>
+  			<a href="javascript:;">东山</a>
+  			<a href="javascript:;">南沙</a>
+  			<a href="javascript:;">萝岗</a>
+    		
+        </dd>
+      </dl>
+      </div>
+      <div class="ditu-box" style="display:none;">
+      <dl class="ditu-box-t">
+        <dt>地铁</dt>
+        <dd><a href="##" title="不限">不限</a><a href="##" title="1号线">1号线</a><a class="ol" title="1号支线">1号支线</a><a href="##" title="2号线<">2号线</a><a href="##" title="4号线">4号线</a></dd>
+      </dl>
+      <dl class="ditu-box-more" style="display:none;">
+        <dt>&nbsp;</dt>
+        <dd class="jiax"><a class="ol" href="##" title="不限">不限</a><a href="##" title="钱江路站">钱江路站</a><a href="##" title="盈丰路站">盈丰路站</a><a href="##" title="钱江路">钱江路</a><a href="##" title="飞虹路站">飞虹路站</a><a href="##" title="振宁路站">振宁路站</a><a href="##" title="建设三路站">建设三路站</a><a href="##" title="建设一路站">建设一路站</a><a href="##" title="人民广场站">人民广场站</a><a href="##" title="杭发厂站">杭发厂站</a><a href="##" title="人民路站">人民路站</a><a href="##" title="潘水路站">潘水路站</a><a href="##" title="曹家桥站">曹家桥站</a><a href="##" title="朝阳村站">朝阳村站</a></dd>
+      </dl>
+      </div>
+      <div class="gongj-box" style="position:relative;display:none;">
+      <dl class="gongj-box-t">
+        <dt>公交</dt>
+        <dd class="gongjiao-box">
+        <input name="" type="text" class="input C666" value="输入公交线路 如：24" onclick="this.value=''" onblur="if(this.value==''){this.value='输入公交线路'}">
+        <div class="gongjiao-result">
+          <a class="C000" title="24"><b class="Cred">24</b>/K<b class="Cred">24</b> <span class="C999">(上行)</span></a>
+          <a class="C000" title="324">3<b class="Cred">24</b>/K3<b class="Cred">24</b> <span class="C999">(下行)</span></a>
+        </div></dd>
+      </dl>
+      <dl class="gongj-box-more" style="display:none;">
+        <dt>站点</dt>
+        <dd class="jiax"><a href="##" title="不限">不限</a><a href="##" title="钱江路站">钱江路站</a><a href="##" title="盈丰路站">盈丰路站</a><a href="##" title="钱江路">钱江路</a><a href="##" title="飞虹路站">飞虹路站</a><a href="##" title="振宁路站">振宁路站</a><a href="##" title="建设三路站">建设三路站</a><a href="##" title="建设一路站">建设一路站</a><a href="##" title="人民广场站">人民广场站</a><a href="##" title="杭发厂站">杭发厂站</a><a href="##" title="人民路站">人民路站</a><a href="##" title="潘水路站">潘水路站</a><a href="##" title="曹家桥站">曹家桥站</a><a href="##" title="朝阳村站">朝阳村站</a></dd>
+      </dl>
+      </div>
+      <dl>
+        <dt>租金</dt>
+        <dd>
+        
+			 		<a href="" class="ol"> 不限</a>
+		          		<a href="javascript:;">500元以下</a>
+		          		<a href="javascript:;">500-1000元</a>
+		          		<a href="javascript:;">1000-2000元</a>
+		          		<a href="javascript:;">2000-3000元</a>
+		          		<a href="javascript:;">3000-5000元</a>
+		          		<a href="javascript:;">5000-8000元</a>
+		          		<a href="javascript:;">8000-10000元</a>
+		          		<a href="javascript:;">10000以上</a>
+		          	<span class="diy-search"><input id="lprice" name="lprice" type="text" maxlength="5" size="4" value="" class="inp"> - <input id="uprice" name="uprice" type="text" maxlength="5" size="4" value="" class="inp">   <input name="" class="bnt" type="button" value="确定" id="search_price"></span>
+        </dd>
+      </dl>
+      <dl>
+        <dt>面积</dt>
+        <dd><a href="" class="ol"> 不限</a>
+		          		<a href="javascript:;">50㎡以下</a>
+
+		          		<a href="javascript:;">50-70㎡</a>
+
+		          		<a href="javascript:;">70-90㎡</a>
+
+		          		<a href="javascript:;">90-110㎡</a>
+
+		          		<a href="javascript:;">110-130㎡</a>
+
+		          		<a href="javascript:;">130-150㎡</a>
+
+		          		<a href="javascript:;">150-200㎡</a>
+
+		          		<a href="javascript:;">200-300㎡</a>
+
+		          		<a href="javascript:;">300㎡以上</a>
+		          	<span class="diy-search"><input id="larea" name="larea" type="text" maxlength="4" size="4" value="" class="inp"> - <input id="uarea" name="uarea" type="text" maxlength="4" size="4" value="" class="inp"> ㎡ <input name="" class="bnt" type="button" value="确定" id="search_area"></span></dd>
+      </dl>
+      <dl>
+        <dt>户型</dt>
+                <dd>
+                
+	    		<span><a href="" class="ol"> 不限</a></span>
+	    		
+	          	<span><a href="javascript:;" title="1室出租房">1室</a>
+	          	<span><a href="javascript:;" title="2室出租房">2室</a>
+	          	<span><a href="javascript:;" title="3室出租房">3室</a>
+	          	<span><a href="javascript:;" title="4室出租房">4室</a>
+	          	<span><a href="javascript:;" title="5室及以上出租房">5室及以上</a>
+        </span></span></span></span></span></dd>
+      </dl>
+      <dl class="stab" style="border-top:1px solid #eeeeee;padding-top:15px;">
+        <dt>筛选</dt>
+        <dd><div id="oType" class="selectBox" value="房屋类型">
+           <span id="houseKind_show">房屋类型</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical houseKind_ul" style="display: none;">
+                  <li><a href="">全部</a></li>
+	                      
+		          	 <li><a href="javascript:;">公寓(小区房)</a></li>
+		          	 <li><a href="javascript:;">排屋</a></li>
+		          	 <li><a href="javascript:;">别墅</a></li>
+		          	 <li><a href="javascript:;">写字楼</a></li>
+		          	 <li><a href="javascript:;">商铺</a></li>
+		          	 <li><a href="javascript:;">农居房</a></li>
+		          	 <li><a href="javascript:;">单身公寓</a></li>
+		          	 <li><a href="javascript:;">其他</a></li>
+		      </ul>
+		  </div>
+         
+         <div id="oType" class="selectBox" value="装修情况">
+           <span id="deck_show">装修情况</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical deck_ul" style="display: none;">
+                  <li><a href="">全部</a></li>
+		          	 <li><a href="javascript:;">中装</a></li>
+		          	 <li><a href="javascript:;">简装</a></li>
+		          	 <li><a href="javascript:;">毛坯</a></li>
+		          	 <li><a href="javascript:;">精装</a></li>
+		          	 <li><a href="javascript:;">豪装</a></li>
+		          	 <li><a href="javascript:;">其它装修</a></li>
+		      </ul>
+		  </div>
+		  
+        <div id="oType" class="selectBox" value="朝向">
+           <span id="direction_show">朝向</span> 
+           <i class="down-icon"></i>               
+		      <ul class="popList vertical direction_ul" style="display: none;">
+                  <li><a href="">全部</a></li>
+		          	 <li><a href="javascript:;">南北</a></li>
+		          	 <li><a href="javascript:;">东南</a></li>
+		          	 <li><a href="javascript:;">正东</a></li>
+		          	 <li><a href="javascript:;">正西</a></li>
+		          	 <li><a href="javascript:;">正南</a></li>
+		          	 <li><a href="javascript:;">正北</a></li>
+		          	 <li><a href="javascript:;">东西</a></li>
+		          	 <li><a href="javascript:;">西南</a></li>
+		          	 <li><a href="javascript:;">东北</a></li>
+		          	 <li><a href="javascript:;">西北</a></li>
+		          	 <li><a href="javascript:;">未知</a></li>
+		      </ul>
+		  </div>
+        <span class="ml30 shaix">
+          <label><input type="checkbox" name="CheckboxGroup1" onclick="leaseWayCheck(this,'/rent/')" value="/rent/l98/">整租</label>
+          <label><input type="checkbox" name="CheckboxGroup1" onclick="leaseWayCheck(this,'/rent/')" value="/rent/l111/">合租</label>
+        </span></dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="fang-all-box web-width">
+    
+    <div class="fang-list-box z">
+        <div class="fang-list-title C999" style="">
+            <span class="z">排序： 
+    			<a class="C000" rel="nofollow" href="javascript:;">最新</a> 
+                <a class="ml10 C999 cursor" href="javascript:;">租金</a>
+                <a class="ml10 cursor C999" href="javascript:;">面积</a>
+            </span>
+            <span class="y">共找到 11868 套义务出租房</span>
+        </div>
+        <ul class="fang-list-tab mb10" style="display:none">
+			<li class="on"><a href="##">全部房源</a></li><li><a href="##">专家房源</a></li><li><a href="##" target="_blank">房东房源</a></li>
+            <span class="y">排序： 
+                <a class="C000 cursor" href="javascript:;">最新</a>
+                <a class="ml10 C999 cursor" href="javascript:;">租金<i class="sequence-icon bottom-blue"></i><i class="sequence-icon top-gray"></i></a>
+                <a class="ml10 C999 cursor" href="javascript:;">面积<i class="sequence-icon bottom-gray"></i><i class="sequence-icon top-blue"></i></a>
+            </span>
+            <i class="tuijian-icon" style="top:-9px;left:170px"></i>
+        </ul>
+        <ul class="fang-list">
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="黄石西路元邦航空家园电梯2房，房子干净整洁，家私电器全齐" target="_blank">
+                                <img rel="nofollow" alt="黄石西路元邦航空家园电梯2房，房子干净整洁，家私电器全齐" src="http://img.518fang.com/img3/518upload/201806/210/257/m_39270ec1758941d78ff9ee7b28672a4f.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>14</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【元邦航空家园】黄石西路元邦航空家园电梯2房，房子干净整洁，家私电器全齐
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>80㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">2/15层</span>
+                                <span class="ml20">南北</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="元邦航空家园" class="C000">元邦航空家园</a>
+<a class="ml20 C000" href="javascript:;">白云</a><span>-</span><a href="javascript:;" class="C000">黄石</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄石路黄石立交往西100米
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">3500</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">张丽芳</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="黄石富力阳光美居D区电梯高层2房，家私电器全齐，随时看房" target="_blank">
+                                <img rel="nofollow" alt="黄石富力阳光美居D区电梯高层2房，家私电器全齐，随时看房" src="http://img.518fang.com/img2/518upload/201806/681/072/m_18a6341cf1474aeda1b414a5d8308368.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>13</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【富力阳光美居】黄石富力阳光美居D区电梯高层2房，家私电器全齐，随时看房
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>73㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">15/15层</span>
+                                <span class="ml20">东北</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力阳光美居" class="C000">富力阳光美居</a>
+<a class="ml20 C000" href="javascript:;">白云</a><span>-</span><a href="javascript:;" class="C000">黄石</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄石路黄石立交往西200米
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">3300</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">张丽芳</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="富力阳光美居3室1厅东南豪装便宜出租" target="_blank">
+                                <img rel="nofollow" alt="富力阳光美居3室1厅东南豪装便宜出租" src="http://img.518fang.com/img1/518upload/201805/936/684/m_6a67354a04ba4eed815c0ef38fc990df.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>13</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【富力阳光美居】富力阳光美居3室1厅东南豪装便宜出租
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>112㎡</span>
+                                <span class="ml20">3室2厅</span>
+                                <span class="ml20">7/15层</span>
+                                <span class="ml20">东南</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力阳光美居" class="C000">富力阳光美居</a>
+<a class="ml20 C000" href="javascript:;">白云</a><span>-</span><a href="javascript:;" class="C000">黄石</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄石路黄石立交往西200米
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">南北通透</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">精装修</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">4300</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">余洁波</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="富力阳光美景正南向家电齐全通透，望中心花园，非常安静业主人好" target="_blank">
+                                <img rel="nofollow" alt="富力阳光美景正南向家电齐全通透，望中心花园，非常安静业主人好" src="http://img.518fang.com/img4/518upload/201805/290/670/m_28a41a4c7f274c9cb766296be94adc01.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>9</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【富力阳光美居】富力阳光美景正南向家电齐全通透，望中心花园，非常安静业主人好
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>76㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">5/15层</span>
+                                <span class="ml20">东南</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力阳光美居" class="C000">富力阳光美居</a>
+<a class="ml20 C000" href="javascript:;">白云</a><span>-</span><a href="javascript:;" class="C000">黄石</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄石路黄石立交往西200米
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">家具家电齐全</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">学校周边
+</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">3200</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">余洁波</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="绝对靓盘！超值家具家电齐全东南通透富力阳光美居中心花园" target="_blank">
+                                <img rel="nofollow" alt="绝对靓盘！超值家具家电齐全东南通透富力阳光美居中心花园" src="http://img.518fang.com/img2/518upload/201803/550/753/m_e8bbe76a782b4fa68f558c21688f3b11.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>8</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【富力阳光美居】绝对靓盘！超值家具家电齐全东南通透富力阳光美居中心花园
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>76㎡</span>
+                                <span class="ml20">2室2厅</span>
+                                <span class="ml20">2/16层</span>
+                                <span class="ml20">东南</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="富力阳光美居" class="C000">富力阳光美居</a>
+<a class="ml20 C000" href="javascript:;">白云</a><span>-</span><a href="javascript:;" class="C000">黄石</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    黄石路黄石立交往西200米
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">家具家电齐全</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">学校周边
+</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">3000</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">余洁波</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="新都盛世名门，钥匙在手，随时看房" target="_blank">
+                                <img rel="nofollow" alt="新都盛世名门，钥匙在手，随时看房" src="http://img.518fang.com/img1/518upload/201805/916/423/m_30ecfe33eff141869dfdc1f98aed0da3.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>7</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【新都盛世名门】新都盛世名门，钥匙在手，随时看房
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>50㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">18/23层</span>
+                                <span class="ml20">正南</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="新都盛世名门" class="C000">新都盛世名门</a>
+<a class="ml20 C000" href="javascript:;">增城</a><span>-</span><a href="javascript:;" class="C000">新塘</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    增城新塘镇广深大道中段新塘中学旁
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">独立电梯</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">钥匙</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">1500</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">吴先生</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="赤岗路89号大院，精致新净两房，采光好，拎包入住，交通生活好" target="_blank">
+                                <img rel="nofollow" alt="赤岗路89号大院，精致新净两房，采光好，拎包入住，交通生活好" src="http://img.518fang.com/img1/518upload/201805/117/804/m_9c36976c5fad43a1be9e38f48ed1a611.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>7</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【赤岗89号大院】赤岗路89号大院，精致新净两房，采光好，拎包入住，交通生活好
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>65㎡</span>
+                                <span class="ml20">2室1厅</span>
+                                <span class="ml20">8/8层</span>
+                                <span class="ml20">正南</span>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">2900</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">伍浩然</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="赤岗东三街毛纺厂宿舍，精装一房，新净装修，丰富的社区生活环境" target="_blank">
+                                <img rel="nofollow" alt="赤岗东三街毛纺厂宿舍，精装一房，新净装修，丰富的社区生活环境" src="http://img.518fang.com/img1/518upload/201805/720/730/m_681fa59c902b4abd9be0c36e78ae8d7b.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>5</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【赤岗东三街散盘】赤岗东三街毛纺厂宿舍，精装一房，新净装修，丰富的社区生活环境
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>45㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">3/6层</span>
+                                <span class="ml20">东南</span>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">2500</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">伍浩然</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="大塘/赤岗聚德花园，一房一厅，新净室内环境，丰富的小区生活！" target="_blank">
+                                <img rel="nofollow" alt="大塘/赤岗聚德花园，一房一厅，新净室内环境，丰富的小区生活！" src="http://img.518fang.com/img2/518upload/201805/765/259/m_aaa0a04ae0f64f1dace41459035db437.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>4</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【聚德花苑】大塘/赤岗聚德花园，一房一厅，新净室内环境，丰富的小区生活！
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>45㎡</span>
+                                <span class="ml20">1室1厅</span>
+                                <span class="ml20">3/9层</span>
+                                <span class="ml20">正北</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="聚德花苑" class="C000">聚德花苑</a>
+<a class="ml20 C000" href="javascript:;">海珠</a><span>-</span><a href="javascript:;" class="C000">赤岗</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    赤岗大塘聚德路13-15号
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">2600</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">伍浩然</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+                    <li class="list_item ">      
+                        <div class="slt z sub-left-img">
+                              <a href="javascript:;" title="滨江瑞城 豪装55方大单间 家电齐全 拎包入住 仅租3600" target="_blank">
+                                <img rel="nofollow" alt="滨江瑞城 豪装55方大单间 家电齐全 拎包入住 仅租3600" src="http://img.518fang.com/img3/518upload/201805/639/637/m_01f554586e4d44359664ecaa21aa21f1.jpg" onerror="this.src='/themes/default/images/house_none.png'">
+                                <span>6</span>
+                               </a>
+                        </div>
+                        <div class="fang-info ml20 z">
+                            <div class="title">
+                                 <a href="javascript:;" target="_blank" class="textEclip">
+                                    【滨江瑞城】滨江瑞城 豪装55方大单间 家电齐全 拎包入住 仅租3600
+                                </a>
+                            </div>
+                            <div class="qita">
+                                <span>55㎡</span>
+                                <span class="ml20">1室0厅</span>
+                                <span class="ml20">18/32层</span>
+                                <span class="ml20">正南</span>
+                            </div>
+                            <div class="adds">
+                                <a href="javascript:;" target="_blank" title="滨江瑞城" class="C000">滨江瑞城</a>
+<a class="ml20 C000" href="javascript:;">海珠</a><span>-</span><a href="javascript:;" class="C000">南洲</a>                                <a class="ml10 C000" href="javascript:;" rel="nofollow" target="_blank">
+                                    <i class="location"></i>
+                                    海珠区东晓南路与工业大道交界处
+                                </a>
+                            </div>
+                            <div class="fang-tag">
+              <div class="pt2 floatl">
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">放心房</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">南北通透</a>
+                <a href="javascript:void(0);" style=" cursor:default;" class="tag">拎包入住</a>
+              </div>
+                            </div>
+                        </div>
+                        <div class="jiage">
+                            <div class="Cred fontS14" style="padding-bottom: 8px;">
+                                    <span class="fontS30">3600</span> 元/月 </div>
+                            <div class="C999">
+                                    <a href="javascript:;" class="C999" target="_blank">张旺龙</a>
+                                <span>1月前</span>
+                            </div>
+                        </div>
+                        <div class="duibi-f fyprice" style="display: none;">
+                            
+                        </div>
+                    </li>
+        </ul>
+        
+<div class="page">
+				<a href="javascript:;" class="nono">首页</a>
+					<a href="javascript:void(0);" class="ol">1</a>
+					<a href="javascript:;">2</a>
+					<a href="javascript:;">3</a>
+					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
+				<a href="javascript:;">下一页</a>
+</div>
+    </div>
+    <div class="right-box y">
+
+<div class="module-c">
+    <h3>我浏览过的房源</h3>
+    <ul class="f-list" id="LeaseData">
+    </ul>
+    <h3><a href="javascript:clear_hisHouse();" style="font-size:12px">清除浏览历史>></a></h3>
+</div>
+
+<div><div id="Cooperation">
+</div>
+<script src="http://cp.edushi.com/Js/Cooperation.js?type=1&h=520&w=250" type="text/javascript"></script></div>        
+                  
+</div>
+ 
+</div>
+<div class="append_box">
+</div>
+<a class="gotop cursor" onclick="GoTop()" title="回到顶部"></a>
+	<div class="footer web-width">
+	<div class="footer-menu">
+		<div class="link"> <a href="../about/aboutus.html" target="_blank" class="gray" rel="nofollow">关于房探</a><span>|</span><a href="../about/statement.html" target="_blank" class="gray" rel="nofollow">免责声明</a><span>|</span><a href="../my/app-down.html" target="_blank" class="red" rel="nofollow">用户帮助</a><span>|</span><a href="javascript:;" target="_blank" class="gray" rel="nofollow">购房工具</a><span>|</span><a href="../about/contacts.html" target="_blank" class="gray" rel="nofollow">联系我们</a>
+        </div>
+		<div> 客服热线： <span class="Cred"> 153-7240-7267 </span> <span class="C666">(周一至周五09:00-18:00)</span> <span class="ml10"> 客服QQ：<a class="Cred" href="javascript:;" title="在线客服" rel="nofollow"> 2529213742</a> </span>
+        </div>
+		<div> 版权所有 <a href="../index1.html" class="C000" title="义乌租房信息网">www.15zufang.cn</a> <a href="javascript:;" target="_blank" class="ml10 C000"></a>
+        </div>
+		<div class="falu" style="display:none;"> <a class="text-y C666">常年法律顾问<br>
+			高洪剑</a> <a><img src="../themes/default/images/home_143.png" alt="图标"></a>
+      	</div>
+	</div>
+</div>
+<div style="display:none">
+	<script src="../stat-2433734_2433734.js" language="JavaScript"></script>
+</div><script>
+	$("#searchBtn").click(function() {
+			window.location.href = '/rent/kw'+encodeURI($("#buildname").val());
+	})
+
+	$(function(){
+		showHis();
+	})
+	function showHis()
+	{
+		var newtemp = eval('(' + $.cookie("rent_hisHouse") + ')');
+		var newtemp_ = "";
+		var currentNum = 0;
+		if(newtemp){
+		for(var n=newtemp.length-1;n>-1;n--){
+			if(currentNum++ >= 10){
+				break;
+			}
+			newtemp_ += '<li><span class="y Cred">'+newtemp[n].price+'</span><a href="/rent/detail/'+newtemp[n].houseId+'" title="'+newtemp[n].housename+'" target="_blank"><span>'+newtemp[n].housename+' <span class="C999">'+newtemp[n].roomCount+'室</span></span></a></li>'
+		}
+		$("#LeaseData").html(newtemp_);
+		}
+	}
+	
+	function clear_hisHouse(){
+		$.cookie("rent_hisHouse", '', {expires:-1,path:"/"});
+		$("#LeaseData").html('');
+	}
+	
+	$("#search_price").click(function() {
+		var lprice = $("#lprice").val();
+		if( !g_IsInt(lprice) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#lprice").val('');
+			$("#lprice").focus();
+			return ;
+		}
+		var uprice = $("#uprice").val();
+		if( !g_IsInt(uprice) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uprice").val('');
+			$("#uprice").focus();
+			return ;
+		}
+		if( parseInt(lprice) >= parseInt(uprice)  ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uprice").val('');
+			$("#uprice").focus();
+			return ;
+		}
+		var u = '/rent/';
+		if( u == '/rent/'){
+			u = u + 'j' + lprice + ',' + uprice + '/';
+		}else{
+			u = u + '-j' + lprice + ',' + uprice + '/';
+		}
+		window.location.href = u;
+	})
+	
+	function g_IsInt(s)
+	{
+		if(s==null) return false;
+		 var reg=/^[1-9]\d*$/;
+		 if(!reg.test(s)) return false;
+		 else return true;
+	}
+
+	$("#search_area").click(function() {
+		var larea = $("#larea").val();
+		if( !g_IsInt(larea) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#larea").val('');
+			$("#larea").focus();
+			return ;
+		}
+		var uarea = $("#uarea").val();
+		if( !g_IsInt(uarea) ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uarea").val('');
+			$("#uarea").focus();
+			return ;
+		}
+		if( parseInt(larea) >= parseInt(uarea)  ){
+			tishiBox("请正确填写！！","jinggao");
+			$("#uarea").val('');
+			$("#uarea").focus();
+			return ;
+		}
+		var u = '/rent/';
+		if( u == '/rent/'){
+			u = u + 'a' + larea + ',' + uarea + '/';
+		}else{
+			u = u + '-a' + larea + ',' + uarea + '/';
+		}
+		window.location.href = u;
+	})
+	
+	$(".selectBox").mouseenter(function(){
+		$(this).find(".popList").css("display","block")
+	})
+	$(".selectBox").mouseleave(function(){
+		$(this).find(".popList").css("display","none")
+	})
+	
+	$(".popList li").click(function(){
+		$(this).parent().css("display","none");
+		$(this).parent().parent().find("span").html($(this).html());
+	})
+	
+	loadSearch();
+	function loadSearch()
+	{
+		var houseKind = ""; 
+		if(houseKind && houseKind!='')
+		{
+			$("#houseKind_show").html($(".houseKind_ul .ol").html());
+		}
+		
+		var deck = ""; 
+		if(deck && deck!='')
+		{
+			$("#deck_show").html($(".deck_ul .ol").html());
+		}
+		
+		var direction = ""; 
+		if(direction && direction!='')
+		{
+			$("#direction_show").html($(".direction_ul .ol").html());
+		}
+	}
+</script>
+</body>
+</html>
